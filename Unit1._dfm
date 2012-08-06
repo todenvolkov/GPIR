@@ -1,0 +1,287 @@
+object Form1: TForm1
+  Left = 334
+  Top = 198
+  Caption = 'Form1'
+  ClientHeight = 648
+  ClientWidth = 1297
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object cxGrid1: TcxGrid
+    Left = 0
+    Top = 0
+    Width = 1297
+    Height = 648
+    Align = alClient
+    TabOrder = 0
+    LookAndFeel.Kind = lfOffice11
+    LookAndFeel.NativeStyle = True
+    LookAndFeel.SkinName = ''
+    RootLevelOptions.TabsForEmptyDetails = False
+    object cxGrid1DBTableView1: TcxGridDBTableView
+      DataController.DataSource = BudgetsDS
+      DataController.DetailKeyFieldNames = 'GUID'
+      DataController.Options = [dcoAssignGroupingValues, dcoAssignMasterDetailKeys, dcoSaveExpanding, dcoImmediatePost]
+      DataController.Summary.DefaultGroupSummaryItems = <>
+      DataController.Summary.FooterSummaryItems = <>
+      DataController.Summary.SummaryGroups = <>
+      NewItemRow.InfoText = #1053#1072#1078#1084#1080#1090#1077' '#1089#1102#1076#1072' '#1095#1090#1086#1073#1099' '#1076#1086#1073#1072#1074#1080#1090#1100' '#1089#1090#1088#1086#1082#1091
+      NewItemRow.Visible = True
+      OptionsBehavior.PostponedSynchronization = False
+      OptionsBehavior.CellHints = True
+      OptionsBehavior.FocusCellOnTab = True
+      OptionsBehavior.GoToNextCellOnEnter = True
+      OptionsBehavior.EditAutoHeight = eahRow
+      OptionsCustomize.ColumnHiding = True
+      OptionsCustomize.ColumnsQuickCustomization = True
+      OptionsSelection.HideFocusRectOnExit = False
+      OptionsView.CellEndEllipsis = True
+      OptionsView.NoDataToDisplayInfoText = '<'#1053#1077#1090' '#1076#1072#1085#1085#1099#1093'>'
+      OptionsView.ShowEditButtons = gsebForFocusedRecord
+      OptionsView.ExpandButtonsForEmptyDetails = False
+      OptionsView.HeaderAutoHeight = True
+      OptionsView.HeaderEndEllipsis = True
+      OptionsView.Indicator = True
+      Styles.StyleSheet = MainForm.GridTableViewStyleSheetDevExpress
+      object BudgetName: TcxGridDBColumn
+        Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077
+        DataBinding.FieldName = 'BudgetName'
+        Width = 250
+      end
+      object Version: TcxGridDBColumn
+        Caption = #1042#1077#1088#1089#1080#1103
+        DataBinding.FieldName = 'Version'
+        Width = 50
+      end
+      object DateChange: TcxGridDBColumn
+        Caption = #1044#1072#1090#1072'/'#1074#1088#1077#1084#1103
+        DataBinding.FieldName = 'DateChange'
+        Options.Editing = False
+        Width = 100
+      end
+      object UsernameChange: TcxGridDBColumn
+        Caption = #1055#1086#1083#1100#1079#1086#1074#1072#1090#1077#1083#1100
+        DataBinding.FieldName = 'UsernameChange'
+        Options.Editing = False
+        Width = 100
+      end
+      object cxGrid1DBTableView1Comment: TcxGridDBColumn
+        Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+        DataBinding.FieldName = 'Comment'
+        Width = 100
+      end
+      object cxGrid1DBTableView1Price: TcxGridDBColumn
+        Caption = #1057#1090#1086#1080#1084#1086#1089#1090#1100
+        DataBinding.FieldName = 'Price'
+        PropertiesClassName = 'TcxCurrencyEditProperties'
+        Width = 100
+      end
+      object cxGrid1DBTableView1ID: TcxGridDBColumn
+        DataBinding.FieldName = 'ID'
+      end
+      object cxGrid1DBTableView1GUID: TcxGridDBColumn
+        DataBinding.FieldName = 'GUID'
+      end
+      object cxGrid1DBTableView1NumbersContractsID: TcxGridDBColumn
+        DataBinding.FieldName = 'NumbersContractsID'
+      end
+    end
+    object cxGrid1DBTableView2: TcxGridDBTableView
+      DataController.DataSource = ArticleToBudgetBydates
+      DataController.DetailKeyFieldNames = 'BudgetGUID'
+      DataController.MasterKeyFieldNames = 'GUID'
+      DataController.Summary.DefaultGroupSummaryItems = <>
+      DataController.Summary.FooterSummaryItems = <>
+      DataController.Summary.SummaryGroups = <>
+      OptionsView.GroupByBox = False
+      object cxGrid1DBTableView2BudgetArticleNumber: TcxGridDBColumn
+        DataBinding.FieldName = 'BudgetArticleNumber'
+        Width = 56
+      end
+      object cxGrid1DBTableView2BudgetArticleGUID: TcxGridDBColumn
+        DataBinding.FieldName = 'BudgetArticleGUID'
+        Width = 249
+      end
+      object cxGrid1DBTableView2ID: TcxGridDBColumn
+        DataBinding.FieldName = 'ID'
+      end
+      object cxGrid1DBTableView2Value: TcxGridDBColumn
+        DataBinding.FieldName = 'Value'
+        Width = 124
+      end
+      object cxGrid1DBTableView2GUID: TcxGridDBColumn
+        DataBinding.FieldName = 'GUID'
+        Width = 232
+      end
+      object cxGrid1DBTableView2BudgetGUID: TcxGridDBColumn
+        DataBinding.FieldName = 'BudgetGUID'
+        Width = 232
+      end
+    end
+    object cxGrid1DBTableView3: TcxGridDBTableView
+      DataController.DataSource = ArticleToBudgetBydates
+      DataController.DetailKeyFieldNames = 'ArticleToBudgetGUID'
+      DataController.MasterKeyFieldNames = 'GUID'
+      DataController.Summary.DefaultGroupSummaryItems = <>
+      DataController.Summary.FooterSummaryItems = <>
+      DataController.Summary.SummaryGroups = <>
+      OptionsView.GroupByBox = False
+      object cxGrid1DBTableView3ID: TcxGridDBColumn
+        DataBinding.FieldName = 'ID'
+      end
+      object cxGrid1DBTableView3GUID: TcxGridDBColumn
+        DataBinding.FieldName = 'GUID'
+        Width = 232
+      end
+      object cxGrid1DBTableView3ArticleToBudgetGUID: TcxGridDBColumn
+        DataBinding.FieldName = 'ArticleToBudgetGUID'
+        Width = 232
+      end
+      object cxGrid1DBTableView3BudgetDateGUID: TcxGridDBColumn
+        DataBinding.FieldName = 'BudgetDateGUID'
+        Width = 232
+      end
+      object cxGrid1DBTableView3value: TcxGridDBColumn
+        DataBinding.FieldName = 'value'
+      end
+    end
+    object cxGrid1DBTableView4: TcxGridDBTableView
+      DataController.DataSource = MonthsValues
+      DataController.DetailKeyFieldNames = 'GUID'
+      DataController.MasterKeyFieldNames = 'BudgetDateGUID'
+      DataController.Summary.DefaultGroupSummaryItems = <>
+      DataController.Summary.FooterSummaryItems = <>
+      DataController.Summary.SummaryGroups = <>
+      OptionsView.CellEndEllipsis = True
+      OptionsView.CellAutoHeight = True
+      OptionsView.ColumnAutoWidth = True
+      object cxGrid1DBTableView4ID: TcxGridDBColumn
+        DataBinding.FieldName = 'ID'
+      end
+      object cxGrid1DBTableView4GUID: TcxGridDBColumn
+        DataBinding.FieldName = 'GUID'
+        Width = 232
+      end
+      object cxGrid1DBTableView4Months: TcxGridDBColumn
+        DataBinding.FieldName = 'Months'
+      end
+      object cxGrid1DBTableView4Years: TcxGridDBColumn
+        DataBinding.FieldName = 'Years'
+      end
+      object cxGrid1DBTableView4ContractID: TcxGridDBColumn
+        DataBinding.FieldName = 'ContractID'
+        Width = 94
+      end
+    end
+    object cxGrid1Level1: TcxGridLevel
+      GridView = cxGrid1DBTableView1
+      object cxGrid1Level2: TcxGridLevel
+        Caption = #1057#1090#1072#1090#1100#1080' '#1073#1102#1076#1078#1077#1090#1072
+        GridView = cxGrid1DBTableView2
+        Options.DetailTabsPosition = dtpTop
+        object cxGrid1Level3: TcxGridLevel
+          GridView = cxGrid1DBTableView3
+          object cxGrid1Level4: TcxGridLevel
+            GridView = cxGrid1DBTableView4
+          end
+        end
+      end
+    end
+  end
+  object BudgetsQ: TADOQuery
+    Active = True
+    Connection = MainForm.MainConnection
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'select * from Budgets')
+    Left = 272
+    Top = 344
+  end
+  object BudgetArticlesQ: TADOQuery
+    Active = True
+    Connection = MainForm.MainConnection
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'select * from ArticleToBudget')
+    Left = 256
+    Top = 264
+  end
+  object BudgetArticlesDataset: TDataSource
+    DataSet = BudgetArticlesQ
+    Left = 336
+    Top = 264
+  end
+  object BudgetsDS: TDataSource
+    DataSet = BudgetsQ
+    Left = 336
+    Top = 344
+  end
+  object DataSource1: TDataSource
+    DataSet = BudgetArticlesByDate
+    Left = 640
+    Top = 296
+  end
+  object BudgetArticlesByDate: TADOQuery
+    Active = True
+    Connection = MainForm.MainConnection
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'select * from BudgetArticlesBydates')
+    Left = 536
+    Top = 296
+  end
+  object DataSource2: TDataSource
+    DataSet = ADOQuery2
+    Left = 680
+    Top = 536
+  end
+  object ADOQuery2: TADOQuery
+    Active = True
+    Connection = MainForm.MainConnection
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'select * from BudgetArticles')
+    Left = 616
+    Top = 536
+  end
+  object ArticleToBudgetByDatesQ: TADOQuery
+    Active = True
+    Connection = MainForm.MainConnection
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'select * from BudgetArticlesByDates')
+    Left = 704
+    Top = 408
+  end
+  object ArticleToBudgetBydates: TDataSource
+    DataSet = ArticleToBudgetByDatesQ
+    Left = 856
+    Top = 416
+  end
+  object MonthValues: TADOQuery
+    Active = True
+    Connection = MainForm.MainConnection
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'select * from numbercontractDates')
+    Left = 760
+    Top = 504
+  end
+  object MonthsValues: TDataSource
+    DataSet = MonthValues
+    Left = 848
+    Top = 504
+  end
+end

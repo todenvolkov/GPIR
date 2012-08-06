@@ -1,0 +1,30 @@
+program ProjectX7;
+
+uses
+  Forms,
+  Main in 'Main.pas' {MainForm},
+  Splash in 'Splash.pas' {SplashForm},
+  TaskBar in 'TaskBar.pas' {TaskBarForm},
+  sprUnitAccountingHours in 'sprUnitAccountingHours.pas' {SprFormAccountingHours},
+  routines in 'routines.pas',
+  SQLRoutines1 in 'SQLRoutines1.pas',
+  GridViewTemplate in 'GridViewTemplate.pas' {Form1},
+  sprUnitAccountingHourValues in 'sprUnitAccountingHourValues.pas' {SprFormAccountingHourValues};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.ShowMainForm := False;
+  Application.CreateForm(TMainForm, MainForm);
+  Application.CreateForm(TSplashForm, SplashForm);
+  Application.CreateForm(TTaskBarForm, TaskBarForm);
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TSprFormAccountingHours, SprFormAccountingHours);
+  Application.CreateForm(TSprFormAccountingHourValues, SprFormAccountingHourValues);
+  MayClose := False;
+  SplashForm.Show;
+  SplashForm.SetFocus;
+  
+  Application.Run;
+end.

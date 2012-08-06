@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2011.05.11 16:37:03.580.pas,C:\Users\PavelS\Documents\Borland Studio Projects\Unit1.pas=L:\Projects\X7\Main.pas</Transaction>
+    <Transaction>2011.05.11 16:37:03.588.dfm,C:\Users\PavelS\Documents\Borland Studio Projects\Unit1.dfm=L:\Projects\X7\Main.dfm</Transaction>
+    <Transaction>2011.05.11 17:02:41.769.pas,L:\Projects\X7\Unit1.pas=L:\Projects\X7\Splash.pas</Transaction>
+    <Transaction>2011.05.11 17:02:41.769.dfm,L:\Projects\X7\Unit1.dfm=L:\Projects\X7\Splash.dfm</Transaction>
+    <Transaction>2011.05.12 09:49:58.160.pas,L:\Projects\X7\Unit1.pas=L:\Projects\X7\TaskBar.pas</Transaction>
+    <Transaction>2011.05.12 09:49:58.161.dfm,L:\Projects\X7\Unit1.dfm=L:\Projects\X7\TaskBar.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

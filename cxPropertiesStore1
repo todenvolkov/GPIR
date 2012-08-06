@@ -1,0 +1,917 @@
+﻿[Main]
+Version=2
+
+[cxLookAndFeelController1: TcxPropertiesStoreComponent]
+=
+Kind="lfOffice11"
+Name="cxLookAndFeelController1"
+NativeStyle="True"
+SkinName="Blue"
+Tag=0
+
+[cxStyle1: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont]"
+Color=15451300
+Name="cxStyle1"
+Tag=0
+TextColor=536870912
+
+[cxStyle1/Bitmap: TBitmap]
+=
+
+[cxStyle1/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-11
+Name="Tahoma"
+Orientation=0
+Pitch="fpDefault"
+Size=8
+Style="[]"
+Quality="fqDefault"
+
+[cxStyle10: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont]"
+Color=15451300
+Name="cxStyle10"
+Tag=0
+TextColor=536870912
+
+[cxStyle10/Bitmap: TBitmap]
+=
+
+[cxStyle10/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-11
+Name="Tahoma"
+Orientation=0
+Pitch="fpDefault"
+Size=8
+Style="[]"
+Quality="fqDefault"
+
+[cxStyle11: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=4707838
+Name="cxStyle11"
+Tag=0
+TextColor=0
+
+[cxStyle11/Bitmap: TBitmap]
+=
+
+[cxStyle11/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-11
+Name="Tahoma"
+Orientation=0
+Pitch="fpDefault"
+Size=8
+Style="[]"
+Quality="fqDefault"
+
+[cxStyle12: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont]"
+Color=15451300
+Name="cxStyle12"
+Tag=0
+TextColor=536870912
+
+[cxStyle12/Bitmap: TBitmap]
+=
+
+[cxStyle12/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-11
+Name="Tahoma"
+Orientation=0
+Pitch="fpDefault"
+Size=8
+Style="[]"
+Quality="fqDefault"
+
+[cxStyle13: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=14811135
+Name="cxStyle13"
+Tag=0
+TextColor=8388608
+
+[cxStyle13/Bitmap: TBitmap]
+=
+
+[cxStyle13/Font: TFont]
+=
+Charset=1
+Color=8388608
+Height=-11
+Name="MS Sans Serif"
+Orientation=0
+Pitch="fpDefault"
+Size=8
+Style="[fsBold]"
+Quality="fqDefault"
+
+[cxStyle14: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=12937777
+Name="cxStyle14"
+Tag=0
+TextColor=16777215
+
+[cxStyle14/Bitmap: TBitmap]
+=
+
+[cxStyle14/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-11
+Name="Tahoma"
+Orientation=0
+Pitch="fpDefault"
+Size=8
+Style="[]"
+Quality="fqDefault"
+
+[cxStyle15: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=16777215
+Name="cxStyle15"
+Tag=0
+TextColor=0
+
+[cxStyle15/Bitmap: TBitmap]
+=
+
+[cxStyle15/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-27
+Name="Tahoma"
+Orientation=0
+Pitch="fpDefault"
+Size=20
+Style="[]"
+Quality="fqDefault"
+
+[cxStyle16: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=16775416
+Name="cxStyle16"
+Tag=0
+TextColor=0
+
+[cxStyle16/Bitmap: TBitmap]
+=
+
+[cxStyle16/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-27
+Name="Tahoma"
+Orientation=0
+Pitch="fpDefault"
+Size=20
+Style="[]"
+Quality="fqDefault"
+
+[cxStyle17: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=16443110
+Name="cxStyle17"
+Tag=0
+TextColor=0
+
+[cxStyle17/Bitmap: TBitmap]
+=
+
+[cxStyle17/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-11
+Name="Tahoma"
+Orientation=0
+Pitch="fpDefault"
+Size=8
+Style="[]"
+Quality="fqDefault"
+
+[cxStyle18: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=13749760
+Name="cxStyle18"
+Tag=0
+TextColor=0
+
+[cxStyle18/Bitmap: TBitmap]
+=
+
+[cxStyle18/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-13
+Name="Tahoma"
+Orientation=0
+Pitch="fpDefault"
+Size=10
+Style="[]"
+Quality="fqDefault"
+
+[cxStyle19: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=14599344
+Name="cxStyle19"
+Tag=0
+TextColor=0
+
+[cxStyle19/Bitmap: TBitmap]
+=
+
+[cxStyle19/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-13
+Name="Tahoma"
+Orientation=0
+Pitch="fpDefault"
+Size=10
+Style="[]"
+Quality="fqDefault"
+
+[cxStyle2: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=16247513
+Name="cxStyle2"
+Tag=0
+TextColor=0
+
+[cxStyle2/Bitmap: TBitmap]
+=
+
+[cxStyle2/Font: TFont]
+=
+Charset=1
+Color=0
+Height=-11
+Name="MS Sans Serif"
+Orientation=0
+Pitch="fpDefault"
+Size=8
+Style="[]"
+Quality="fqDefault"
+
+[cxStyle20: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=8519755
+Name="cxStyle20"
+Tag=0
+TextColor=14481663
+
+[cxStyle20/Bitmap: TBitmap]
+=
+
+[cxStyle20/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-13
+Name="Tahoma"
+Orientation=0
+Pitch="fpDefault"
+Size=10
+Style="[]"
+Quality="fqDefault"
+
+[cxStyle21: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=13749760
+Name="cxStyle21"
+Tag=0
+TextColor=0
+
+[cxStyle21/Bitmap: TBitmap]
+=
+
+[cxStyle21/Font: TFont]
+=
+Charset=1
+Color=0
+Height=-12
+Name="Arial"
+Orientation=0
+Pitch="fpDefault"
+Size=9
+Style="[fsBold]"
+Quality="fqDefault"
+
+[cxStyle22: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=191
+Name="cxStyle22"
+Tag=0
+TextColor=16777215
+
+[cxStyle22/Bitmap: TBitmap]
+=
+
+[cxStyle22/Font: TFont]
+=
+Charset=1
+Color=16777215
+Height=-12
+Name="Arial"
+Orientation=0
+Pitch="fpDefault"
+Size=9
+Style="[fsBold]"
+Quality="fqDefault"
+
+[cxStyle23: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=13749760
+Name="cxStyle23"
+Tag=0
+TextColor=0
+
+[cxStyle23/Bitmap: TBitmap]
+=
+
+[cxStyle23/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-13
+Name="Arial"
+Orientation=0
+Pitch="fpDefault"
+Size=10
+Style="[fsBold]"
+Quality="fqDefault"
+
+[cxStyle24: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=16777215
+Name="cxStyle24"
+Tag=0
+TextColor=16711680
+
+[cxStyle24/Bitmap: TBitmap]
+=
+
+[cxStyle24/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-13
+Name="Tahoma"
+Orientation=0
+Pitch="fpDefault"
+Size=10
+Style="[]"
+Quality="fqDefault"
+
+[cxStyle25: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=166
+Name="cxStyle25"
+Tag=0
+TextColor=16777215
+
+[cxStyle25/Bitmap: TBitmap]
+=
+
+[cxStyle25/Font: TFont]
+=
+Charset=1
+Color=16777215
+Height=-12
+Name="Arial"
+Orientation=0
+Pitch="fpDefault"
+Size=9
+Style="[fsBold]"
+Quality="fqDefault"
+
+[cxStyle26: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont]"
+Color=16777215
+Name="cxStyle26"
+Tag=0
+TextColor=536870912
+
+[cxStyle26/Bitmap: TBitmap]
+=
+
+[cxStyle26/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-11
+Name="Tahoma"
+Orientation=0
+Pitch="fpDefault"
+Size=8
+Style="[]"
+Quality="fqDefault"
+
+[cxStyle27: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=16777215
+Name="cxStyle27"
+Tag=0
+TextColor=0
+
+[cxStyle27/Bitmap: TBitmap]
+=
+
+[cxStyle27/Font: TFont]
+=
+Charset=1
+Color=0
+Height=-11
+Name="MS Sans Serif"
+Orientation=0
+Pitch="fpDefault"
+Size=8
+Style="[]"
+Quality="fqDefault"
+
+[cxStyle28: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=16777215
+Name="cxStyle28"
+Tag=0
+TextColor=0
+
+[cxStyle28/Bitmap: TBitmap]
+=
+
+[cxStyle28/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-11
+Name="Tahoma"
+Orientation=0
+Pitch="fpDefault"
+Size=8
+Style="[]"
+Quality="fqDefault"
+
+[cxStyle29: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=16777215
+Name="cxStyle29"
+Tag=0
+TextColor=0
+
+[cxStyle29/Bitmap: TBitmap]
+=
+
+[cxStyle29/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-11
+Name="Tahoma"
+Orientation=0
+Pitch="fpDefault"
+Size=8
+Style="[]"
+Quality="fqDefault"
+
+[cxStyle3: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=16247513
+Name="cxStyle3"
+Tag=0
+TextColor=0
+
+[cxStyle3/Bitmap: TBitmap]
+=
+
+[cxStyle3/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-11
+Name="Tahoma"
+Orientation=0
+Pitch="fpDefault"
+Size=8
+Style="[]"
+Quality="fqDefault"
+
+[cxStyle30: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=14811135
+Name="cxStyle30"
+Tag=0
+TextColor=0
+
+[cxStyle30/Bitmap: TBitmap]
+=
+
+[cxStyle30/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-11
+Name="Tahoma"
+Orientation=0
+Pitch="fpDefault"
+Size=8
+Style="[]"
+Quality="fqDefault"
+
+[cxStyle31: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=14811135
+Name="cxStyle31"
+Tag=0
+TextColor=8388608
+
+[cxStyle31/Bitmap: TBitmap]
+=
+
+[cxStyle31/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-11
+Name="MS Sans Serif"
+Orientation=0
+Pitch="fpDefault"
+Size=8
+Style="[fsBold]"
+Quality="fqDefault"
+
+[cxStyle32: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont]"
+Color=14872561
+Name="cxStyle32"
+Tag=0
+TextColor=536870912
+
+[cxStyle32/Bitmap: TBitmap]
+=
+
+[cxStyle32/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-11
+Name="Tahoma"
+Orientation=0
+Pitch="fpDefault"
+Size=8
+Style="[]"
+Quality="fqDefault"
+
+[cxStyle33: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=12639424
+Name="cxStyle33"
+Tag=0
+TextColor=0
+
+[cxStyle33/Bitmap: TBitmap]
+=
+
+[cxStyle33/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-11
+Name="Tahoma"
+Orientation=0
+Pitch="fpDefault"
+Size=8
+Style="[]"
+Quality="fqDefault"
+
+[cxStyle34: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=12937777
+Name="cxStyle34"
+Tag=0
+TextColor=0
+
+[cxStyle34/Bitmap: TBitmap]
+=
+
+[cxStyle34/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-11
+Name="MS Sans Serif"
+Orientation=0
+Pitch="fpDefault"
+Size=8
+Style="[fsBold]"
+Quality="fqDefault"
+
+[cxStyle35: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont]"
+Color=15451300
+Name="cxStyle35"
+Tag=0
+TextColor=536870912
+
+[cxStyle35/Bitmap: TBitmap]
+=
+
+[cxStyle35/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-11
+Name="Tahoma"
+Orientation=0
+Pitch="fpDefault"
+Size=8
+Style="[]"
+Quality="fqDefault"
+
+[cxStyle36: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=4707838
+Name="cxStyle36"
+Tag=0
+TextColor=0
+
+[cxStyle36/Bitmap: TBitmap]
+=
+
+[cxStyle36/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-11
+Name="Tahoma"
+Orientation=0
+Pitch="fpDefault"
+Size=8
+Style="[]"
+Quality="fqDefault"
+
+[cxStyle37: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont]"
+Color=15451300
+Name="cxStyle37"
+Tag=0
+TextColor=536870912
+
+[cxStyle37/Bitmap: TBitmap]
+=
+
+[cxStyle37/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-11
+Name="Tahoma"
+Orientation=0
+Pitch="fpDefault"
+Size=8
+Style="[]"
+Quality="fqDefault"
+
+[cxStyle38: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=14811135
+Name="cxStyle38"
+Tag=0
+TextColor=8388608
+
+[cxStyle38/Bitmap: TBitmap]
+=
+
+[cxStyle38/Font: TFont]
+=
+Charset=1
+Color=8388608
+Height=-11
+Name="MS Sans Serif"
+Orientation=0
+Pitch="fpDefault"
+Size=8
+Style="[fsBold]"
+Quality="fqDefault"
+
+[cxStyle39: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=12937777
+Name="cxStyle39"
+Tag=0
+TextColor=16777215
+
+[cxStyle39/Bitmap: TBitmap]
+=
+
+[cxStyle39/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-11
+Name="Tahoma"
+Orientation=0
+Pitch="fpDefault"
+Size=8
+Style="[]"
+Quality="fqDefault"
+
+[cxStyle4: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=16247513
+Name="cxStyle4"
+Tag=0
+TextColor=0
+
+[cxStyle4/Bitmap: TBitmap]
+=
+
+[cxStyle4/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-11
+Name="Tahoma"
+Orientation=0
+Pitch="fpDefault"
+Size=8
+Style="[]"
+Quality="fqDefault"
+
+[cxStyle5: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=14811135
+Name="cxStyle5"
+Tag=0
+TextColor=0
+
+[cxStyle5/Bitmap: TBitmap]
+=
+
+[cxStyle5/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-11
+Name="Tahoma"
+Orientation=0
+Pitch="fpDefault"
+Size=8
+Style="[]"
+Quality="fqDefault"
+
+[cxStyle6: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=14811135
+Name="cxStyle6"
+Tag=0
+TextColor=8388608
+
+[cxStyle6/Bitmap: TBitmap]
+=
+
+[cxStyle6/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-11
+Name="MS Sans Serif"
+Orientation=0
+Pitch="fpDefault"
+Size=8
+Style="[fsBold]"
+Quality="fqDefault"
+
+[cxStyle7: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont]"
+Color=14872561
+Name="cxStyle7"
+Tag=0
+TextColor=536870912
+
+[cxStyle7/Bitmap: TBitmap]
+=
+
+[cxStyle7/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-11
+Name="Tahoma"
+Orientation=0
+Pitch="fpDefault"
+Size=8
+Style="[]"
+Quality="fqDefault"
+
+[cxStyle8: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=12639424
+Name="cxStyle8"
+Tag=0
+TextColor=0
+
+[cxStyle8/Bitmap: TBitmap]
+=
+
+[cxStyle8/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-11
+Name="Tahoma"
+Orientation=0
+Pitch="fpDefault"
+Size=8
+Style="[]"
+Quality="fqDefault"
+
+[cxStyle9: TcxPropertiesStoreComponent]
+=
+AssignedValues="[svColor,svFont,svTextColor]"
+Color=12937777
+Name="cxStyle9"
+Tag=0
+TextColor=0
+
+[cxStyle9/Bitmap: TBitmap]
+=
+
+[cxStyle9/Font: TFont]
+=
+Charset=1
+Color=-16777208
+Height=-11
+Name="MS Sans Serif"
+Orientation=0
+Pitch="fpDefault"
+Size=8
+Style="[fsBold]"
+Quality="fqDefault"
+
+[cxStyleRepository1: TcxPropertiesStoreComponent]
+=
+FakeComponentLink1=""
+FakeComponentLink2=""
+FakeComponentLink3=""
+Name="cxStyleRepository1"
+Scalable="False"
+Tag=0
+

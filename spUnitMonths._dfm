@@ -1,0 +1,152 @@
+inherited sprMonthsForm: TsprMonthsForm
+  Caption = #1057#1087#1088#1072#1074#1086#1095#1085#1080#1082' "'#1052#1077#1089#1103#1094#1072' '#1076#1083#1103' '#1076#1086#1075#1086#1074#1086#1088#1072'"'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel1: TPanel
+    inherited ImageButton10: TImageButton
+      ExplicitWidth = 28
+      ExplicitHeight = 22
+    end
+  end
+  inherited Panel2: TPanel
+    inherited Panel3: TPanel
+      inherited cxGrid3: TcxGrid
+        inherited cxGrid3DBTableView1: TcxGridDBTableView
+          Styles.Background = nil
+          Styles.Content = nil
+          Styles.ContentEven = nil
+          Styles.ContentOdd = nil
+          Styles.FilterBox = nil
+          Styles.Inactive = nil
+          Styles.IncSearch = nil
+          Styles.Selection = nil
+          Styles.Footer = nil
+          Styles.Group = nil
+          Styles.GroupByBox = nil
+          Styles.Header = nil
+          Styles.Indicator = nil
+          Styles.Preview = nil
+        end
+      end
+    end
+    inherited Panel4: TPanel
+      inherited cxGrid2: TcxGrid
+        LookAndFeel.SkinName = ''
+        inherited cxGridDBTableView1: TcxGridDBTableView
+          Styles.Background = nil
+          Styles.Content = nil
+          Styles.ContentEven = nil
+          Styles.ContentOdd = nil
+          Styles.FilterBox = nil
+          Styles.Inactive = nil
+          Styles.IncSearch = nil
+          Styles.Selection = nil
+          Styles.Footer = nil
+          Styles.Group = nil
+          Styles.GroupByBox = nil
+          Styles.Header = nil
+          Styles.Indicator = nil
+          Styles.Preview = nil
+        end
+      end
+    end
+    inherited Panel5: TPanel
+      inherited cxGrid1: TcxGrid
+        LookAndFeel.SkinName = ''
+        inherited cxGrid1DBTableView1: TcxGridDBTableView
+          Styles.Background = nil
+          Styles.Content = nil
+          Styles.ContentEven = nil
+          Styles.ContentOdd = nil
+          Styles.FilterBox = nil
+          Styles.Inactive = nil
+          Styles.IncSearch = nil
+          Styles.Selection = nil
+          Styles.Footer = nil
+          Styles.Group = nil
+          Styles.GroupByBox = nil
+          Styles.Header = nil
+          Styles.Indicator = nil
+          Styles.Preview = nil
+          object cxGrid1DBTableView1ID: TcxGridDBColumn
+            DataBinding.FieldName = 'ID'
+            Visible = False
+            VisibleForCustomization = False
+          end
+          object cxGrid1DBTableView1NumbersContractsID: TcxGridDBColumn
+            Caption = #1044#1086#1075#1086#1074#1086#1088
+            DataBinding.FieldName = 'NumbersContractsID'
+            PropertiesClassName = 'TcxLookupComboBoxProperties'
+            Properties.KeyFieldNames = 'ID'
+            Properties.ListColumns = <
+              item
+                FieldName = 'Name'
+              end>
+            Properties.ListSource = NumberContractDatasource
+            Width = 328
+          end
+          object cxGrid1DBTableView1MonthName: TcxGridDBColumn
+            Caption = #1052#1077#1089#1103#1094
+            DataBinding.FieldName = 'MonthName'
+            PropertiesClassName = 'TcxDateEditProperties'
+            Properties.DateButtons = []
+            Properties.InputKind = ikMask
+            Properties.SaveTime = False
+            Properties.ShowTime = False
+            Properties.WeekNumbers = True
+            DateTimeGrouping = dtgByMonth
+            Width = 217
+          end
+          object cxGrid1DBTableView1GUID: TcxGridDBColumn
+            DataBinding.FieldName = 'GUID'
+            Visible = False
+            VisibleForCustomization = False
+          end
+        end
+      end
+    end
+  end
+  inherited ADOQuery1: TADOQuery
+    SQL.Strings = (
+      'exec MonthsShow')
+  end
+  inherited dxComponentPrinter1: TdxComponentPrinter
+    inherited dxComponentPrinter1Link1: TdxGridReportLink
+      ReportDocument.CreationDate = 40921.617930763890000000
+      Styles.BandHeader = nil
+      Styles.Caption = nil
+      Styles.CardCaptionRow = nil
+      Styles.CardRowCaption = nil
+      Styles.Content = nil
+      Styles.ContentEven = nil
+      Styles.ContentOdd = nil
+      Styles.FilterBar = nil
+      Styles.Footer = nil
+      Styles.Group = nil
+      Styles.Header = nil
+      Styles.Preview = nil
+      Styles.Selection = nil
+      BuiltInReportLink = True
+    end
+  end
+  inherited cxStyleRepository1: TcxStyleRepository
+    PixelsPerInch = 96
+    inherited dxGridReportLinkStyleSheet1: TdxGridReportLinkStyleSheet
+      BuiltIn = True
+    end
+  end
+  object NumberContractDatasource: TDataSource
+    DataSet = NumberContractQuery
+    Left = 552
+    Top = 336
+  end
+  object NumberContractQuery: TADOQuery
+    Connection = MainForm.MainConnection
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'exec [NumberContractsShow]')
+    Left = 584
+    Top = 272
+  end
+end
