@@ -939,7 +939,7 @@ begin
    Result := '';
    s := ExtractFilePath(Path);
    s := Copy(s,1,Length(s)-1);
-   s := ExtractFilePath(s + '.txt');
+   s := ExtractFilePath(s + '.txt');        // Нафига?
    Result := s;
 end;
 

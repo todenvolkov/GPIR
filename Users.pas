@@ -283,6 +283,7 @@ end;
 procedure TUsersForm.cxButton1Click(Sender: TObject);
 begin
   MainForm.UploadToExcel(cxGrid2, Caption);
+  MainForm.UploadToExcel(cxGrid3, Caption);
 end;
 
 procedure TUsersForm.cxButton2Click(Sender: TObject);

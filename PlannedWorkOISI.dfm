@@ -1329,7 +1329,7 @@ object PlannedWorkOISIForm: TPlannedWorkOISIForm
       PrinterPage.PageSize.Y = 297000
       PrinterPage._dxMeasurementUnits_ = 0
       PrinterPage._dxLastMU_ = 2
-      ReportDocument.CreationDate = 41114.681878969910000000
+      ReportDocument.CreationDate = 41127.894115486110000000
       OptionsCards.AutoWidth = True
       OptionsExpanding.ExpandGroupRows = True
       OptionsExpanding.ExpandMasterRows = True

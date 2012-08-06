@@ -312,7 +312,7 @@ end;
 
 procedure TArticleToBudgetForm.cxButton1Click(Sender: TObject);
 begin
-  messagedlg('Ёкспорт в Excel', mtConfirmation, [mbYes], 0);
+  MainForm.UploadToExcel(cxGrid1, Caption+'_'+ButtonDownName);
 end;
 
 procedure TArticleToBudgetForm.cxButton2Click(Sender: TObject);

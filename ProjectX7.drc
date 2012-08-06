@@ -8,335 +8,312 @@
   resources were bound to the produced executable.
 */
 
-#define cxPivotGridStrs_scxAdvancedCustomizationFormFilterAreaCaption 62560
-#define cxPivotGridStrs_scxAdvancedCustomizationFormColumnAreaCaption 62561
-#define cxPivotGridStrs_scxAdvancedCustomizationFormRowAreaCaption 62562
-#define cxPivotGridStrs_scxAdvancedCustomizationFormDataAreaCaption 62563
-#define cxPivotGridStrs_scxAdvancedCustomizationFormBottomPanelOnly1by4 62564
-#define cxPivotGridStrs_scxAdvancedCustomizationFormBottomPanelOnly2by2 62565
-#define cxPivotGridStrs_scxAdvancedCustomizationFormStackedDefault 62566
-#define cxPivotGridStrs_scxAdvancedCustomizationFormStackedSideBySide 62567
-#define cxPivotGridStrs_scxAdvancedCustomizationFormTopPanelOnly 62568
-#define cxPivotGridStrs_scxPrefilterIsEmpty 62576
-#define cxPivotGridStrs_scxPrefilterCustomizeButtonCaption 62577
-#define cxPivotGridStrs_scxConnectUsing 62578
-#define cxPivotGridStrs_scxAnalysisServer 62579
-#define cxPivotGridStrs_scxCubeFile 62580
-#define cxPivotGridStrs_scxFile 62581
-#define cxPivotGridStrs_scxServer 62582
-#define cxPivotGridStrs_scxDatabase 62583
-#define cxPivotGridStrs_scxCube 62584
-#define cxPivotGridStrs_scxMeasures 62585
-#define cxPivotGridStrs_scxUnsupportedProviderVersion 62586
-#define cxPivotGridStrs_scxInvalidProviderVersion 62587
-#define cxPivotGridStrs_scxUpdate 62588
-#define cxPivotGridStrs_scxDeferLayoutUpdate 62589
-#define cxPivotGridStrs_scxAdvancedCustomizationFormMainCaption 62590
-#define cxPivotGridStrs_scxAdvancedCustomizationFormFieldsCaption 62591
-#define cxPivotGridStrs_scxInvalidLayout 62592
-#define cxPivotGridStrs_scxNotImplemented 62593
-#define cxPivotGridStrs_scxSeparator 62594
-#define cxPivotGridStrs_scxHide 62595
-#define cxPivotGridStrs_scxOrder 62596
-#define cxPivotGridStrs_scxMoveToBeginning 62597
-#define cxPivotGridStrs_scxMoveToEnd 62598
-#define cxPivotGridStrs_scxMoveToLeft 62599
-#define cxPivotGridStrs_scxMoveToRight 62600
-#define cxPivotGridStrs_scxExpand 62601
-#define cxPivotGridStrs_scxCollapse 62602
-#define cxPivotGridStrs_scxExpandAll 62603
-#define cxPivotGridStrs_scxCollapseAll 62604
-#define cxPivotGridStrs_scxShowCustomization 62605
-#define cxPivotGridStrs_scxHideCustomization 62606
-#define cxPivotGridStrs_scxShowPrefilterDialog 62607
-#define cxPivotGridStrs_scxGroupCount 62608
-#define cxPivotGridStrs_scxGroupSum 62609
-#define cxPivotGridStrs_scxGroupMin 62610
-#define cxPivotGridStrs_scxGroupMax 62611
-#define cxPivotGridStrs_scxGroupAverage 62612
-#define cxPivotGridStrs_scxGroupStdDev 62613
-#define cxPivotGridStrs_scxGroupStdDevP 62614
-#define cxPivotGridStrs_scxGroupVariance 62615
-#define cxPivotGridStrs_scxGroupVarianceP 62616
-#define cxPivotGridStrs_scxGroupCustom 62617
-#define cxPivotGridStrs_scxOthers 62618
-#define cxPivotGridStrs_scxPivotGridShowAll 62619
-#define cxPivotGridStrs_scxPivotGridOk 62620
-#define cxPivotGridStrs_scxPivotGridCancel 62621
-#define cxPivotGridStrs_scxQuarterFormat 62622
-#define cxPivotGridStrs_scxFieldNotADataField 62623
-#define bdeconst_SLocalTransDirty 62624
-#define cxPivotGridStrs_scxDataField 62625
-#define cxPivotGridStrs_scxDropFilterFields 62626
-#define cxPivotGridStrs_scxDropDataItems 62627
-#define cxPivotGridStrs_scxDropRowFields 62628
-#define cxPivotGridStrs_scxDropColumnFields 62629
-#define cxPivotGridStrs_scxGrandTotal 62630
-#define cxPivotGridStrs_scxNoDataToDisplay 62631
-#define cxPivotGridStrs_scxAddTo 62632
-#define cxPivotGridStrs_scxDragItems 62633
-#define cxPivotGridStrs_scxFieldListCaption 62634
-#define cxPivotGridStrs_scxRowArea 62635
-#define cxPivotGridStrs_scxColumnArea 62636
-#define cxPivotGridStrs_scxFilterArea 62637
-#define cxPivotGridStrs_scxDataArea 62638
-#define cxPivotGridStrs_scxGroupTotal 62639
-#define bdeconst_SNoReferenceTableName 62640
-#define bdeconst_SCompositeIndexError 62641
-#define bdeconst_SInvalidBatchMove 62642
-#define bdeconst_SNoParameterValue 62643
-#define bdeconst_SLoginError 62644
-#define bdeconst_SInitError 62645
-#define bdeconst_SIDAPILangID 62646
-#define bdeconst_SBDEError 62647
-#define bdeconst_SIndexDoesNotExist 62648
-#define bdeconst_SNoTableName 62649
-#define bdeconst_SNoDataSetField 62650
-#define bdeconst_SNoCachedUpdates 62651
-#define bdeconst_SInvalidAliasName 62652
-#define bdeconst_SNoFieldAccess 62653
-#define bdeconst_SUntitled 62654
-#define bdeconst_SUpdateWrongDB 62655
-#define cxSSRes_sxlfLower 62656
-#define cxSSRes_sxlfUpper 62657
-#define bdeconst_SAutoSessionExclusive 62658
-#define bdeconst_SAutoSessionExists 62659
-#define bdeconst_SAutoSessionActive 62660
-#define bdeconst_SDuplicateDatabaseName 62661
-#define bdeconst_SDuplicateSessionName 62662
-#define bdeconst_SInvalidSessionName 62663
-#define bdeconst_SDatabaseNameMissing 62664
-#define bdeconst_SSessionNameMissing 62665
-#define bdeconst_SDatabaseOpen 62666
-#define bdeconst_SDatabaseClosed 62667
-#define bdeconst_SDatabaseHandleSet 62668
-#define bdeconst_SSessionActive 62669
-#define bdeconst_SHandleError 62670
-#define bdeconst_STableMismatch 62671
-#define cxSSRes_sxlfFixed 62672
-#define cxSSRes_sxlfHour 62673
-#define cxSSRes_sxlfMinute 62674
-#define cxSSRes_sxlfSecond 62675
-#define cxSSRes_sxlfIsBlank 62676
-#define cxSSRes_sxlfIsNa 62677
-#define cxSSRes_sxlfIsLogical 62678
-#define cxSSRes_sxlfIsErr 62679
-#define cxSSRes_sxlfIsError 62680
-#define cxSSRes_sxlfIsNonText 62681
-#define cxSSRes_sxlfIsNumber 62682
-#define cxSSRes_sxlfIsText 62683
-#define cxSSRes_sxlfLen 62684
-#define cxSSRes_sxlfLeft 62685
-#define cxSSRes_sxlfRight 62686
-#define cxSSRes_sxlfMid 62687
-#define cxSSRes_sxlfSumsq 62688
-#define cxSSRes_sxlfTan 62689
-#define cxSSRes_sxlfTanh 62690
-#define cxSSRes_sxlfTime 62691
-#define cxSSRes_sxlfToday 62692
-#define cxSSRes_sxlfTrunc 62693
-#define cxSSRes_sxlfYear 62694
-#define cxSSRes_sxlfWeekDay 62695
-#define cxSSRes_sxlfFalse 62696
-#define cxSSRes_sxlfTrue 62697
-#define cxSSRes_sxlfEven 62698
-#define cxSSRes_sxlfTrim 62699
-#define cxSSRes_sxlfCeiling 62700
-#define cxSSRes_sxlfFloor 62701
-#define cxSSRes_sxlfConcatenate 62702
-#define cxSSRes_sxlfDegrees 62703
-#define cxSSRes_sxlfNot 62704
-#define cxSSRes_sxlfNow 62705
-#define cxSSRes_sxlfOdd 62706
-#define cxSSRes_sxlfOr 62707
-#define cxSSRes_sxlfPi 62708
-#define cxSSRes_sxlfPower 62709
-#define cxSSRes_sxlfRadians 62710
-#define cxSSRes_sxlfRand 62711
-#define cxSSRes_sxlfRound 62712
-#define cxSSRes_sxlfRounddown 62713
-#define cxSSRes_sxlfRoundup 62714
-#define cxSSRes_sxlfSign 62715
-#define cxSSRes_sxlfSin 62716
-#define cxSSRes_sxlfSinh 62717
-#define cxSSRes_sxlfSqrt 62718
-#define cxSSRes_sxlfSum 62719
-#define cxSSRes_sxlfCountblank 62720
-#define cxSSRes_sxlfCountif 62721
-#define cxSSRes_sxlfDate 62722
-#define cxSSRes_sxlfDay 62723
-#define cxSSRes_sxlfDollar 62724
-#define cxSSRes_sxlfExp 62725
-#define cxSSRes_sxlfFact 62726
-#define cxSSRes_sxlfInt 62727
-#define cxSSRes_sxlfIF 62728
-#define cxSSRes_sxlfLn 62729
-#define cxSSRes_sxlfLog 62730
-#define cxSSRes_sxlfLog10 62731
-#define cxSSRes_sxlfMax 62732
-#define cxSSRes_sxlfMin 62733
-#define cxSSRes_sxlfMod 62734
-#define cxSSRes_sxlfMonth 62735
-#define cxSSRes_scxWorkbookRead 62736
-#define cxSSRes_sxlfAbs 62737
-#define cxSSRes_sxlfAcos 62738
-#define cxSSRes_sxlfAcosh 62739
-#define cxSSRes_sxlfAnd 62740
-#define cxSSRes_sxlfAsin 62741
-#define cxSSRes_sxlfAsinh 62742
-#define cxSSRes_sxlfAtan 62743
-#define cxSSRes_sxlfAtan2 62744
-#define cxSSRes_sxlfAtanh 62745
-#define cxSSRes_sxlfAverage 62746
-#define cxSSRes_sxlfAverageA 62747
-#define cxSSRes_sxlfCos 62748
-#define cxSSRes_sxlfCosh 62749
-#define cxSSRes_sxlfCount 62750
-#define cxSSRes_sxlfCounta 62751
-#define cxSSRes_scxPasteCommand 62752
-#define cxSSRes_scxCutCommand 62753
-#define cxSSRes_scxMergeCells 62754
-#define cxSSRes_scxSplitCells 62755
-#define cxSSRes_scxSortCellsAction 62756
-#define cxSSRes_scxClearCells 62757
-#define cxSSRes_scxClearAllAction 62758
-#define cxSSRes_scxColorBoxAutomatic 62759
-#define cxSSRes_scxColorBoxNone 62760
-#define cxSSRes_scxExcelImportUndefinedString 62761
-#define cxSSRes_scxXLSFuncCustructErr 62762
-#define cxSSRes_scxXLSUnknownFunc 62763
-#define cxSSRes_scxXLSSharedFunc 62764
-#define cxSSRes_scxXLSNameRef 62765
-#define cxSSRes_scxXLSFileHasUnknownFunction 62766
-#define cxSSRes_scxWorkbookWrite 62767
-#define cxSSRes_scxFormatDialogItems 62768
-#define cxSSRes_scxFormatDialogAllBorder 62769
-#define cxSSRes_scxFormatDialogLine 62770
-#define cxSSRes_scxFormatDialogStyle 62771
-#define cxSSRes_scxFormatDialogColor 62772
-#define cxSSRes_scxFormatDialogTextStr 62773
-#define cxSSRes_scxFormatDialogCellShading 62774
-#define cxSSRes_scxFormatDialogSample 62775
-#define cxSSRes_scxFormatDialogPattern 62776
-#define cxSSRes_scxFormatDialogSampleText 62777
-#define cxSSRes_scxUseDefaultColor 62778
-#define cxSSRes_scxColorEditorCaption 62779
-#define cxSSRes_scxChangeCellsStyle 62780
-#define cxSSRes_scxChangeCellsData 62781
-#define cxSSRes_scxChangeInsertCells 62782
-#define cxSSRes_scxChangeDeleteCells 62783
-#define cxSSRes_scxFormatDialogTextAlignment 62784
-#define cxSSRes_scxFormatDialogTextControl 62785
-#define cxSSRes_scxFormatDialogGeneral 62786
-#define cxSSRes_scxFormatDialogLeft 62787
-#define cxSSRes_scxFormatDialogCenter 62788
-#define cxSSRes_scxFormatDialogRight 62789
-#define cxSSRes_scxFormatDialogFill 62790
-#define cxSSRes_scxFormatDialogJustify 62791
-#define cxSSRes_scxFormatDialogTop 62792
-#define cxSSRes_scxFormatDialogBottom 62793
-#define cxSSRes_scxFormatDialogWrap 62794
-#define cxSSRes_scxFormatDialogFont 62795
-#define cxSSRes_scxFormatDialogNone 62796
-#define cxSSRes_scxFormatDialogNone2 62797
-#define cxSSRes_scxFormatDialogOutline 62798
-#define cxSSRes_scxFormatDialogInside 62799
-#define cxSSRes_scxFormatStyleStyleSettings 62800
-#define cxSSRes_scxFormatStyleGeneral 62801
-#define cxSSRes_scxFormatStyleCurrency 62802
-#define cxSSRes_scxFormatStyleNumber 62803
-#define cxSSRes_scxFormatStyleDateTime 62804
-#define cxSSRes_scxFormatStyleText 62805
-#define cxSSRes_scxGeneralStyleDescription 62806
-#define cxSSRes_scxNumberStyleDescription 62807
-#define cxSSRes_scxCurrencyStyleDescription 62808
-#define cxSSRes_scxDateTimeStyleDescription 62809
-#define cxSSRes_scxTextStyleDescription 62810
-#define cxSSRes_scxFormatDialogText 62811
-#define cxSSRes_scxFormatDialogBorder 62812
-#define cxSSRes_scxFormatDialogPatterns 62813
-#define cxSSRes_scxFormatDialogHorzAlign 62814
-#define cxSSRes_scxFormatDialogVertAlign 62815
-#define cxSSRes_scxCaclulatorMissingTokens 62816
-#define cxSSRes_scxCaclulatorMissingParamters 62817
-#define cxSSRes_scxCaclulatorFuncNeedResult 62818
-#define cxSSRes_scxNullError 62819
-#define cxSSRes_scxDivZeroError 62820
-#define cxSSRes_scxValueError 62821
-#define cxSSRes_scxNameError 62822
-#define cxSSRes_scxNumError 62823
-#define cxSSRes_scxRefError 62824
-#define cxSSRes_scxNAError 62825
-#define cxSSRes_scxFormApply 62826
-#define cxSSRes_scxFormCancel 62827
-#define cxSSRes_scxFormOk 62828
-#define cxSSRes_scxFormatDialogFormatCaption 62829
-#define cxSSRes_scxFormatCellStyle 62830
-#define cxSSRes_scxFormatCellStyleType 62831
-#define cxSSRes_scxDataStorageErrorReadCellRecord 62832
-#define cxSSRes_scxDataStorageErrorSetCellRecord 62833
-#define cxSSRes_scxStyleInvalidColorIndex 62834
-#define cxSSRes_scxStyleInvalidCellStyle 62835
-#define cxSSRes_scxCaclulatorCyclingError 62836
-#define cxSSRes_scxCaclulatorConstructFormula 62837
-#define cxSSRes_scxCaclulatorParseFormula 62838
-#define cxSSRes_scxCaclulatorStringExpression 62839
-#define cxSSRes_scxCaclulatorFuncInvalidIndex 62840
-#define cxSSRes_scxCaclulatorFuncInvalidName 62841
-#define cxSSRes_scxCaclulatorErrorSymbol 62842
-#define cxSSRes_scxCaclulatorErrorString 62843
-#define cxSSRes_scxCaclulatorUnknownExpression 62844
-#define cxSSRes_scxCaclulatorUnknownToken 62845
-#define cxSSRes_scxCaclulatorDivByZero 62846
-#define cxSSRes_scxCaclulatorTypeErr 62847
-#define cxSSRes_scxSpreadSheetDeleteLastSheet 62848
-#define cxSSRes_scxPopupMenuMergeCells 62849
-#define cxSSRes_scxPopupMenuSplitCells 62850
-#define cxSSRes_scxPopupMenuFormatCells 62851
-#define cxSSRes_scxPopupMenuHideRows 62852
-#define cxSSRes_scxPopupMenuUnhideRows 62853
-#define cxSSRes_scxPopupMenuHideCols 62854
-#define cxSSRes_scxPopupMenuUnhideCols 62855
-#define cxSSRes_scxSpreadSheetShiftCellLeft 62856
-#define cxSSRes_scxSpreadSheetShiftCellTop 62857
-#define cxSSRes_scxSpreadSheetShiftCellRight 62858
-#define cxSSRes_scxSpreadSheetShiftCellBottom 62859
-#define cxSSRes_scxSpreadSheetAllRow 62860
-#define cxSSRes_scxSpreadSheetAllColumn 62861
-#define cxSSRes_scxSpreadSheetDeleteCells 62862
-#define cxSSRes_scxSpreadSheetInsertCells 62863
-#define XLSPNGLang_EPNGHeaderNotPresentText 62864
-#define XLSPNGLang_EInvalidNewSize 62865
-#define XLSPNGLang_EInvalidSpec 62866
-#define cxSSRes_scxSheetName 62867
-#define cxSSRes_scxSpreadSheetErrorReadSST 62868
-#define cxSSRes_scxSpreadSheetInvalidSheetNumber 62869
-#define cxSSRes_scxSpreadSheetInvalidFileName 62870
-#define cxSSRes_scxSpreadSheetInvalidFileFormat 62871
-#define cxSSRes_scxSpreadSheetInvalidStreamFormat 62872
-#define cxSSRes_scxSpreadSheetInvalidSheetCaption 62873
-#define cxSSRes_scxSpreadSheetSheetPageExist 62874
-#define cxSSRes_scxSpreadSheetMergeCellError 62875
-#define cxSSRes_scxChangePartOfMergeCells 62876
-#define cxSSRes_scxSpreadSheetMergeCellError2 62877
-#define cxSSRes_scxSpreadSheetDefineNameError 62878
-#define cxSSRes_scxSpreadSheetDefineNameError2 62879
-#define XLSPNGLang_EPNGInvalidPaletteText 62880
-#define XLSPNGLang_EPNGInvalidFileHeaderText 62881
-#define XLSPNGLang_EPNGIHDRNotFirstText 62882
-#define XLSPNGLang_EPNGSizeExceedsText 62883
-#define XLSPNGLang_EPNGUnknownPalEntryText 62884
-#define XLSPNGLang_EPNGUnknownCriticalChunkText 62885
-#define XLSPNGLang_EPNGUnknownCompressionText 62886
-#define XLSPNGLang_EPNGUnknownInterlaceText 62887
-#define XLSPNGLang_EPNGCannotAssignChunkText 62888
-#define XLSPNGLang_EPNGUnexpectedEndText 62889
-#define XLSPNGLang_EPNGNoImageDataText 62890
-#define XLSPNGLang_EPNGCannotAddChunkText 62891
-#define XLSPNGLang_EPNGCannotAddInvalidImageText 62892
-#define XLSPNGLang_EPNGCouldNotLoadResourceText 62893
-#define XLSPNGLang_EPNGOutMemoryText 62894
-#define XLSPNGLang_EPNGCannotChangeTransparentText 62895
+#define cxPivotGridStrs_scxAdvancedCustomizationFormStackedSideBySide 62576
+#define cxPivotGridStrs_scxAdvancedCustomizationFormTopPanelOnly 62577
+#define cxPivotGridStrs_scxDatabase 62592
+#define cxPivotGridStrs_scxCube 62593
+#define cxPivotGridStrs_scxMeasures 62594
+#define cxPivotGridStrs_scxUnsupportedProviderVersion 62595
+#define cxPivotGridStrs_scxInvalidProviderVersion 62596
+#define cxPivotGridStrs_scxUpdate 62597
+#define cxPivotGridStrs_scxDeferLayoutUpdate 62598
+#define cxPivotGridStrs_scxAdvancedCustomizationFormMainCaption 62599
+#define cxPivotGridStrs_scxAdvancedCustomizationFormFieldsCaption 62600
+#define cxPivotGridStrs_scxAdvancedCustomizationFormFilterAreaCaption 62601
+#define cxPivotGridStrs_scxAdvancedCustomizationFormColumnAreaCaption 62602
+#define cxPivotGridStrs_scxAdvancedCustomizationFormRowAreaCaption 62603
+#define cxPivotGridStrs_scxAdvancedCustomizationFormDataAreaCaption 62604
+#define cxPivotGridStrs_scxAdvancedCustomizationFormBottomPanelOnly1by4 62605
+#define cxPivotGridStrs_scxAdvancedCustomizationFormBottomPanelOnly2by2 62606
+#define cxPivotGridStrs_scxAdvancedCustomizationFormStackedDefault 62607
+#define cxPivotGridStrs_scxMoveToLeft 62608
+#define cxPivotGridStrs_scxMoveToRight 62609
+#define cxPivotGridStrs_scxExpand 62610
+#define cxPivotGridStrs_scxCollapse 62611
+#define cxPivotGridStrs_scxExpandAll 62612
+#define cxPivotGridStrs_scxCollapseAll 62613
+#define cxPivotGridStrs_scxShowCustomization 62614
+#define cxPivotGridStrs_scxHideCustomization 62615
+#define cxPivotGridStrs_scxShowPrefilterDialog 62616
+#define cxPivotGridStrs_scxPrefilterIsEmpty 62617
+#define cxPivotGridStrs_scxPrefilterCustomizeButtonCaption 62618
+#define cxPivotGridStrs_scxConnectUsing 62619
+#define cxPivotGridStrs_scxAnalysisServer 62620
+#define cxPivotGridStrs_scxCubeFile 62621
+#define cxPivotGridStrs_scxFile 62622
+#define cxPivotGridStrs_scxServer 62623
+#define cxPivotGridStrs_scxGroupVariance 62624
+#define cxPivotGridStrs_scxGroupVarianceP 62625
+#define cxPivotGridStrs_scxGroupCustom 62626
+#define cxPivotGridStrs_scxOthers 62627
+#define cxPivotGridStrs_scxPivotGridShowAll 62628
+#define cxPivotGridStrs_scxPivotGridOk 62629
+#define cxPivotGridStrs_scxPivotGridCancel 62630
+#define cxPivotGridStrs_scxQuarterFormat 62631
+#define cxPivotGridStrs_scxFieldNotADataField 62632
+#define cxPivotGridStrs_scxInvalidLayout 62633
+#define cxPivotGridStrs_scxNotImplemented 62634
+#define cxPivotGridStrs_scxSeparator 62635
+#define cxPivotGridStrs_scxHide 62636
+#define cxPivotGridStrs_scxOrder 62637
+#define cxPivotGridStrs_scxMoveToBeginning 62638
+#define cxPivotGridStrs_scxMoveToEnd 62639
+#define cxPivotGridStrs_scxNoDataToDisplay 62640
+#define cxPivotGridStrs_scxAddTo 62641
+#define cxPivotGridStrs_scxDragItems 62642
+#define cxPivotGridStrs_scxFieldListCaption 62643
+#define cxPivotGridStrs_scxRowArea 62644
+#define cxPivotGridStrs_scxColumnArea 62645
+#define cxPivotGridStrs_scxFilterArea 62646
+#define cxPivotGridStrs_scxDataArea 62647
+#define cxPivotGridStrs_scxGroupTotal 62648
+#define cxPivotGridStrs_scxGroupCount 62649
+#define cxPivotGridStrs_scxGroupSum 62650
+#define cxPivotGridStrs_scxGroupMin 62651
+#define cxPivotGridStrs_scxGroupMax 62652
+#define cxPivotGridStrs_scxGroupAverage 62653
+#define cxPivotGridStrs_scxGroupStdDev 62654
+#define cxPivotGridStrs_scxGroupStdDevP 62655
+#define bdeconst_SBDEError 62656
+#define bdeconst_SIndexDoesNotExist 62657
+#define bdeconst_SNoTableName 62658
+#define bdeconst_SNoDataSetField 62659
+#define bdeconst_SNoCachedUpdates 62660
+#define bdeconst_SInvalidAliasName 62661
+#define bdeconst_SNoFieldAccess 62662
+#define bdeconst_SUntitled 62663
+#define bdeconst_SUpdateWrongDB 62664
+#define bdeconst_SLocalTransDirty 62665
+#define cxPivotGridStrs_scxDataField 62666
+#define cxPivotGridStrs_scxDropFilterFields 62667
+#define cxPivotGridStrs_scxDropDataItems 62668
+#define cxPivotGridStrs_scxDropRowFields 62669
+#define cxPivotGridStrs_scxDropColumnFields 62670
+#define cxPivotGridStrs_scxGrandTotal 62671
+#define bdeconst_SInvalidSessionName 62672
+#define bdeconst_SDatabaseNameMissing 62673
+#define bdeconst_SSessionNameMissing 62674
+#define bdeconst_SDatabaseOpen 62675
+#define bdeconst_SDatabaseClosed 62676
+#define bdeconst_SDatabaseHandleSet 62677
+#define bdeconst_SSessionActive 62678
+#define bdeconst_SHandleError 62679
+#define bdeconst_STableMismatch 62680
+#define bdeconst_SNoReferenceTableName 62681
+#define bdeconst_SCompositeIndexError 62682
+#define bdeconst_SInvalidBatchMove 62683
+#define bdeconst_SNoParameterValue 62684
+#define bdeconst_SLoginError 62685
+#define bdeconst_SInitError 62686
+#define bdeconst_SIDAPILangID 62687
+#define cxSSRes_sxlfIsErr 62688
+#define cxSSRes_sxlfIsError 62689
+#define cxSSRes_sxlfIsNonText 62690
+#define cxSSRes_sxlfIsNumber 62691
+#define cxSSRes_sxlfIsText 62692
+#define cxSSRes_sxlfLen 62693
+#define cxSSRes_sxlfLeft 62694
+#define cxSSRes_sxlfRight 62695
+#define cxSSRes_sxlfMid 62696
+#define cxSSRes_sxlfLower 62697
+#define cxSSRes_sxlfUpper 62698
+#define bdeconst_SAutoSessionExclusive 62699
+#define bdeconst_SAutoSessionExists 62700
+#define bdeconst_SAutoSessionActive 62701
+#define bdeconst_SDuplicateDatabaseName 62702
+#define bdeconst_SDuplicateSessionName 62703
+#define cxSSRes_sxlfWeekDay 62704
+#define cxSSRes_sxlfFalse 62705
+#define cxSSRes_sxlfTrue 62706
+#define cxSSRes_sxlfEven 62707
+#define cxSSRes_sxlfTrim 62708
+#define cxSSRes_sxlfCeiling 62709
+#define cxSSRes_sxlfFloor 62710
+#define cxSSRes_sxlfConcatenate 62711
+#define cxSSRes_sxlfDegrees 62712
+#define cxSSRes_sxlfFixed 62713
+#define cxSSRes_sxlfHour 62714
+#define cxSSRes_sxlfMinute 62715
+#define cxSSRes_sxlfSecond 62716
+#define cxSSRes_sxlfIsBlank 62717
+#define cxSSRes_sxlfIsNa 62718
+#define cxSSRes_sxlfIsLogical 62719
+#define cxSSRes_sxlfRand 62720
+#define cxSSRes_sxlfRound 62721
+#define cxSSRes_sxlfRounddown 62722
+#define cxSSRes_sxlfRoundup 62723
+#define cxSSRes_sxlfSign 62724
+#define cxSSRes_sxlfSin 62725
+#define cxSSRes_sxlfSinh 62726
+#define cxSSRes_sxlfSqrt 62727
+#define cxSSRes_sxlfSum 62728
+#define cxSSRes_sxlfSumsq 62729
+#define cxSSRes_sxlfTan 62730
+#define cxSSRes_sxlfTanh 62731
+#define cxSSRes_sxlfTime 62732
+#define cxSSRes_sxlfToday 62733
+#define cxSSRes_sxlfTrunc 62734
+#define cxSSRes_sxlfYear 62735
+#define cxSSRes_sxlfInt 62736
+#define cxSSRes_sxlfIF 62737
+#define cxSSRes_sxlfLn 62738
+#define cxSSRes_sxlfLog 62739
+#define cxSSRes_sxlfLog10 62740
+#define cxSSRes_sxlfMax 62741
+#define cxSSRes_sxlfMin 62742
+#define cxSSRes_sxlfMod 62743
+#define cxSSRes_sxlfMonth 62744
+#define cxSSRes_sxlfNot 62745
+#define cxSSRes_sxlfNow 62746
+#define cxSSRes_sxlfOdd 62747
+#define cxSSRes_sxlfOr 62748
+#define cxSSRes_sxlfPi 62749
+#define cxSSRes_sxlfPower 62750
+#define cxSSRes_sxlfRadians 62751
+#define cxSSRes_sxlfAtan 62752
+#define cxSSRes_sxlfAtan2 62753
+#define cxSSRes_sxlfAtanh 62754
+#define cxSSRes_sxlfAverage 62755
+#define cxSSRes_sxlfAverageA 62756
+#define cxSSRes_sxlfCos 62757
+#define cxSSRes_sxlfCosh 62758
+#define cxSSRes_sxlfCount 62759
+#define cxSSRes_sxlfCounta 62760
+#define cxSSRes_sxlfCountblank 62761
+#define cxSSRes_sxlfCountif 62762
+#define cxSSRes_sxlfDate 62763
+#define cxSSRes_sxlfDay 62764
+#define cxSSRes_sxlfDollar 62765
+#define cxSSRes_sxlfExp 62766
+#define cxSSRes_sxlfFact 62767
+#define cxSSRes_scxColorBoxAutomatic 62768
+#define cxSSRes_scxColorBoxNone 62769
+#define cxSSRes_scxExcelImportUndefinedString 62770
+#define cxSSRes_scxXLSFuncCustructErr 62771
+#define cxSSRes_scxXLSUnknownFunc 62772
+#define cxSSRes_scxXLSSharedFunc 62773
+#define cxSSRes_scxXLSNameRef 62774
+#define cxSSRes_scxXLSFileHasUnknownFunction 62775
+#define cxSSRes_scxWorkbookWrite 62776
+#define cxSSRes_scxWorkbookRead 62777
+#define cxSSRes_sxlfAbs 62778
+#define cxSSRes_sxlfAcos 62779
+#define cxSSRes_sxlfAcosh 62780
+#define cxSSRes_sxlfAnd 62781
+#define cxSSRes_sxlfAsin 62782
+#define cxSSRes_sxlfAsinh 62783
+#define cxSSRes_scxFormatDialogSample 62784
+#define cxSSRes_scxFormatDialogPattern 62785
+#define cxSSRes_scxFormatDialogSampleText 62786
+#define cxSSRes_scxUseDefaultColor 62787
+#define cxSSRes_scxColorEditorCaption 62788
+#define cxSSRes_scxChangeCellsStyle 62789
+#define cxSSRes_scxChangeCellsData 62790
+#define cxSSRes_scxChangeInsertCells 62791
+#define cxSSRes_scxChangeDeleteCells 62792
+#define cxSSRes_scxPasteCommand 62793
+#define cxSSRes_scxCutCommand 62794
+#define cxSSRes_scxMergeCells 62795
+#define cxSSRes_scxSplitCells 62796
+#define cxSSRes_scxSortCellsAction 62797
+#define cxSSRes_scxClearCells 62798
+#define cxSSRes_scxClearAllAction 62799
+#define cxSSRes_scxFormatDialogJustify 62800
+#define cxSSRes_scxFormatDialogTop 62801
+#define cxSSRes_scxFormatDialogBottom 62802
+#define cxSSRes_scxFormatDialogWrap 62803
+#define cxSSRes_scxFormatDialogFont 62804
+#define cxSSRes_scxFormatDialogNone 62805
+#define cxSSRes_scxFormatDialogNone2 62806
+#define cxSSRes_scxFormatDialogOutline 62807
+#define cxSSRes_scxFormatDialogInside 62808
+#define cxSSRes_scxFormatDialogItems 62809
+#define cxSSRes_scxFormatDialogAllBorder 62810
+#define cxSSRes_scxFormatDialogLine 62811
+#define cxSSRes_scxFormatDialogStyle 62812
+#define cxSSRes_scxFormatDialogColor 62813
+#define cxSSRes_scxFormatDialogTextStr 62814
+#define cxSSRes_scxFormatDialogCellShading 62815
+#define cxSSRes_scxNumberStyleDescription 62816
+#define cxSSRes_scxCurrencyStyleDescription 62817
+#define cxSSRes_scxDateTimeStyleDescription 62818
+#define cxSSRes_scxTextStyleDescription 62819
+#define cxSSRes_scxFormatDialogText 62820
+#define cxSSRes_scxFormatDialogBorder 62821
+#define cxSSRes_scxFormatDialogPatterns 62822
+#define cxSSRes_scxFormatDialogHorzAlign 62823
+#define cxSSRes_scxFormatDialogVertAlign 62824
+#define cxSSRes_scxFormatDialogTextAlignment 62825
+#define cxSSRes_scxFormatDialogTextControl 62826
+#define cxSSRes_scxFormatDialogGeneral 62827
+#define cxSSRes_scxFormatDialogLeft 62828
+#define cxSSRes_scxFormatDialogCenter 62829
+#define cxSSRes_scxFormatDialogRight 62830
+#define cxSSRes_scxFormatDialogFill 62831
+#define cxSSRes_scxNumError 62832
+#define cxSSRes_scxRefError 62833
+#define cxSSRes_scxNAError 62834
+#define cxSSRes_scxFormApply 62835
+#define cxSSRes_scxFormCancel 62836
+#define cxSSRes_scxFormOk 62837
+#define cxSSRes_scxFormatDialogFormatCaption 62838
+#define cxSSRes_scxFormatCellStyle 62839
+#define cxSSRes_scxFormatCellStyleType 62840
+#define cxSSRes_scxFormatStyleStyleSettings 62841
+#define cxSSRes_scxFormatStyleGeneral 62842
+#define cxSSRes_scxFormatStyleCurrency 62843
+#define cxSSRes_scxFormatStyleNumber 62844
+#define cxSSRes_scxFormatStyleDateTime 62845
+#define cxSSRes_scxFormatStyleText 62846
+#define cxSSRes_scxGeneralStyleDescription 62847
+#define cxSSRes_scxCaclulatorStringExpression 62848
+#define cxSSRes_scxCaclulatorFuncInvalidIndex 62849
+#define cxSSRes_scxCaclulatorFuncInvalidName 62850
+#define cxSSRes_scxCaclulatorErrorSymbol 62851
+#define cxSSRes_scxCaclulatorErrorString 62852
+#define cxSSRes_scxCaclulatorUnknownExpression 62853
+#define cxSSRes_scxCaclulatorUnknownToken 62854
+#define cxSSRes_scxCaclulatorDivByZero 62855
+#define cxSSRes_scxCaclulatorTypeErr 62856
+#define cxSSRes_scxCaclulatorMissingTokens 62857
+#define cxSSRes_scxCaclulatorMissingParamters 62858
+#define cxSSRes_scxCaclulatorFuncNeedResult 62859
+#define cxSSRes_scxNullError 62860
+#define cxSSRes_scxDivZeroError 62861
+#define cxSSRes_scxValueError 62862
+#define cxSSRes_scxNameError 62863
+#define cxSSRes_scxPopupMenuUnhideCols 62864
+#define cxSSRes_scxSpreadSheetShiftCellLeft 62865
+#define cxSSRes_scxSpreadSheetShiftCellTop 62866
+#define cxSSRes_scxSpreadSheetShiftCellRight 62867
+#define cxSSRes_scxSpreadSheetShiftCellBottom 62868
+#define cxSSRes_scxSpreadSheetAllRow 62869
+#define cxSSRes_scxSpreadSheetAllColumn 62870
+#define cxSSRes_scxSpreadSheetDeleteCells 62871
+#define cxSSRes_scxSpreadSheetInsertCells 62872
+#define cxSSRes_scxDataStorageErrorReadCellRecord 62873
+#define cxSSRes_scxDataStorageErrorSetCellRecord 62874
+#define cxSSRes_scxStyleInvalidColorIndex 62875
+#define cxSSRes_scxStyleInvalidCellStyle 62876
+#define cxSSRes_scxCaclulatorCyclingError 62877
+#define cxSSRes_scxCaclulatorConstructFormula 62878
+#define cxSSRes_scxCaclulatorParseFormula 62879
+#define cxSSRes_scxSpreadSheetInvalidFileFormat 62880
+#define cxSSRes_scxSpreadSheetInvalidStreamFormat 62881
+#define cxSSRes_scxSpreadSheetInvalidSheetCaption 62882
+#define cxSSRes_scxSpreadSheetSheetPageExist 62883
+#define cxSSRes_scxSpreadSheetMergeCellError 62884
+#define cxSSRes_scxChangePartOfMergeCells 62885
+#define cxSSRes_scxSpreadSheetMergeCellError2 62886
+#define cxSSRes_scxSpreadSheetDefineNameError 62887
+#define cxSSRes_scxSpreadSheetDefineNameError2 62888
+#define cxSSRes_scxSpreadSheetDeleteLastSheet 62889
+#define cxSSRes_scxPopupMenuMergeCells 62890
+#define cxSSRes_scxPopupMenuSplitCells 62891
+#define cxSSRes_scxPopupMenuFormatCells 62892
+#define cxSSRes_scxPopupMenuHideRows 62893
+#define cxSSRes_scxPopupMenuUnhideRows 62894
+#define cxSSRes_scxPopupMenuHideCols 62895
 #define cxVGridConsts_cxSvgRTTICollectionEditCaption 62896
 #define cxVGridConsts_cxSvgRTTICollectionAdd 62897
 #define cxVGridConsts_cxSvgRTTICollectionAddHint 62898
@@ -349,10 +326,10 @@
 #define cxVGridConsts_cxSvgRTTICollectionMoveUpHint 62905
 #define cxVGridConsts_cxSvgRTTICollectionMoveDown 62906
 #define cxVGridConsts_cxSvgRTTICollectionMoveDownHint 62907
-#define XLSPNGLang_EPngInvalidCRCText 62908
-#define XLSPNGLang_EPNGInvalidIHDRText 62909
-#define XLSPNGLang_EPNGMissingMultipleIDATText 62910
-#define XLSPNGLang_EPNGZLIBErrorText 62911
+#define cxSSRes_scxSheetName 62908
+#define cxSSRes_scxSpreadSheetErrorReadSST 62909
+#define cxSSRes_scxSpreadSheetInvalidSheetNumber 62910
+#define cxSSRes_scxSpreadSheetInvalidFileName 62911
 #define cxVGridConsts_cxSvgDeletingFocusedConfirmationText 62912
 #define cxVGridConsts_cxSvgDeletingConfirmationCaption 62913
 #define cxVGridConsts_cxSvgOKCaption 62914
@@ -2979,22 +2956,8 @@
 #define SysConst_SInvalidOp 65535
 STRINGTABLE
 BEGIN
-	cxPivotGridStrs_scxAdvancedCustomizationFormFilterAreaCaption,	"Filter Area"
-	cxPivotGridStrs_scxAdvancedCustomizationFormColumnAreaCaption,	"Column Area"
-	cxPivotGridStrs_scxAdvancedCustomizationFormRowAreaCaption,	"Row Area"
-	cxPivotGridStrs_scxAdvancedCustomizationFormDataAreaCaption,	"Data Area"
-	cxPivotGridStrs_scxAdvancedCustomizationFormBottomPanelOnly1by4,	"Areas Section Only (1 by 4)"
-	cxPivotGridStrs_scxAdvancedCustomizationFormBottomPanelOnly2by2,	"Areas Section Only (2 by 2)"
-	cxPivotGridStrs_scxAdvancedCustomizationFormStackedDefault,	"Fields Section and Areas Section Stacked"
 	cxPivotGridStrs_scxAdvancedCustomizationFormStackedSideBySide,	"Fields Section and Areas Section Side-By-Side"
 	cxPivotGridStrs_scxAdvancedCustomizationFormTopPanelOnly,	"Fields Section Only"
-	cxPivotGridStrs_scxPrefilterIsEmpty,	"<Prefilter is Empty>"
-	cxPivotGridStrs_scxPrefilterCustomizeButtonCaption,	"Prefilter..."
-	cxPivotGridStrs_scxConnectUsing,	"Connect using"
-	cxPivotGridStrs_scxAnalysisServer,	"Analysis server"
-	cxPivotGridStrs_scxCubeFile,	"Cube file"
-	cxPivotGridStrs_scxFile,	"File"
-	cxPivotGridStrs_scxServer,	"Server"
 	cxPivotGridStrs_scxDatabase,	"Database"
 	cxPivotGridStrs_scxCube,	"Cube"
 	cxPivotGridStrs_scxMeasures,	"Measures"
@@ -3004,13 +2967,13 @@ BEGIN
 	cxPivotGridStrs_scxDeferLayoutUpdate,	"Defer Layout Update"
 	cxPivotGridStrs_scxAdvancedCustomizationFormMainCaption,	"Drag fields to the pivot grid"
 	cxPivotGridStrs_scxAdvancedCustomizationFormFieldsCaption,	"Drag fields between areas below:"
-	cxPivotGridStrs_scxInvalidLayout,	"Invalid layout!"
-	cxPivotGridStrs_scxNotImplemented,	"Not implemented yet!"
-	cxPivotGridStrs_scxSeparator,	"-"
-	cxPivotGridStrs_scxHide,	"Hide"
-	cxPivotGridStrs_scxOrder,	"Order"
-	cxPivotGridStrs_scxMoveToBeginning,	"Move to Beginning"
-	cxPivotGridStrs_scxMoveToEnd,	"Move to End"
+	cxPivotGridStrs_scxAdvancedCustomizationFormFilterAreaCaption,	"Filter Area"
+	cxPivotGridStrs_scxAdvancedCustomizationFormColumnAreaCaption,	"Column Area"
+	cxPivotGridStrs_scxAdvancedCustomizationFormRowAreaCaption,	"Row Area"
+	cxPivotGridStrs_scxAdvancedCustomizationFormDataAreaCaption,	"Data Area"
+	cxPivotGridStrs_scxAdvancedCustomizationFormBottomPanelOnly1by4,	"Areas Section Only (1 by 4)"
+	cxPivotGridStrs_scxAdvancedCustomizationFormBottomPanelOnly2by2,	"Areas Section Only (2 by 2)"
+	cxPivotGridStrs_scxAdvancedCustomizationFormStackedDefault,	"Fields Section and Areas Section Stacked"
 	cxPivotGridStrs_scxMoveToLeft,	"Move to Left"
 	cxPivotGridStrs_scxMoveToRight,	"Move to Right"
 	cxPivotGridStrs_scxExpand,	"Expand"
@@ -3020,13 +2983,13 @@ BEGIN
 	cxPivotGridStrs_scxShowCustomization,	"Show Field List"
 	cxPivotGridStrs_scxHideCustomization,	"Hide Field List"
 	cxPivotGridStrs_scxShowPrefilterDialog,	"Show Prefilter Dialog"
-	cxPivotGridStrs_scxGroupCount,	"%s Count"
-	cxPivotGridStrs_scxGroupSum,	"%s Sum"
-	cxPivotGridStrs_scxGroupMin,	"%s Min"
-	cxPivotGridStrs_scxGroupMax,	"%s Max"
-	cxPivotGridStrs_scxGroupAverage,	"%s Average"
-	cxPivotGridStrs_scxGroupStdDev,	"%s StdDev"
-	cxPivotGridStrs_scxGroupStdDevP,	"%s StdDevP"
+	cxPivotGridStrs_scxPrefilterIsEmpty,	"<Prefilter is Empty>"
+	cxPivotGridStrs_scxPrefilterCustomizeButtonCaption,	"Prefilter..."
+	cxPivotGridStrs_scxConnectUsing,	"Connect using"
+	cxPivotGridStrs_scxAnalysisServer,	"Analysis server"
+	cxPivotGridStrs_scxCubeFile,	"Cube file"
+	cxPivotGridStrs_scxFile,	"File"
+	cxPivotGridStrs_scxServer,	"Server"
 	cxPivotGridStrs_scxGroupVariance,	"%s Var"
 	cxPivotGridStrs_scxGroupVarianceP,	"%s VarP"
 	cxPivotGridStrs_scxGroupCustom,	"%s Custom"
@@ -3036,13 +2999,13 @@ BEGIN
 	cxPivotGridStrs_scxPivotGridCancel,	"Cancel"
 	cxPivotGridStrs_scxQuarterFormat,	"Qtr %d"
 	cxPivotGridStrs_scxFieldNotADataField,	"Field must be in data area!"
-	bdeconst_SLocalTransDirty,	"The transaction isolation level must be dirty read for local databases"
-	cxPivotGridStrs_scxDataField,	"Data"
-	cxPivotGridStrs_scxDropFilterFields,	"Drop Filter Fields Here"
-	cxPivotGridStrs_scxDropDataItems,	"Drop Data Fields Here"
-	cxPivotGridStrs_scxDropRowFields,	"Drop Row Fields Here"
-	cxPivotGridStrs_scxDropColumnFields,	"Drop Column Fields Here"
-	cxPivotGridStrs_scxGrandTotal,	"Grand Total"
+	cxPivotGridStrs_scxInvalidLayout,	"Invalid layout!"
+	cxPivotGridStrs_scxNotImplemented,	"Not implemented yet!"
+	cxPivotGridStrs_scxSeparator,	"-"
+	cxPivotGridStrs_scxHide,	"Hide"
+	cxPivotGridStrs_scxOrder,	"Order"
+	cxPivotGridStrs_scxMoveToBeginning,	"Move to Beginning"
+	cxPivotGridStrs_scxMoveToEnd,	"Move to End"
 	cxPivotGridStrs_scxNoDataToDisplay,	"<No data to display>"
 	cxPivotGridStrs_scxAddTo,	"Add To"
 	cxPivotGridStrs_scxDragItems,	"Drag Items to the PivotGrid"
@@ -3052,13 +3015,13 @@ BEGIN
 	cxPivotGridStrs_scxFilterArea,	"Filter Area"
 	cxPivotGridStrs_scxDataArea,	"Data Area"
 	cxPivotGridStrs_scxGroupTotal,	"%s Total"
-	bdeconst_SNoReferenceTableName,	"ReferenceTableName not specified for field '%s'"
-	bdeconst_SCompositeIndexError,	"Cannot use array of Field values with Expression Indices"
-	bdeconst_SInvalidBatchMove,	"Invalid batch move parameters"
-	bdeconst_SNoParameterValue,	"No value for parameter '%s'"
-	bdeconst_SLoginError,	"Cannot connect to database '%s'"
-	bdeconst_SInitError,	"An error occurred while attempting to initialize the Borland Database Engine (error $%.4x)"
-	bdeconst_SIDAPILangID,	"0009"
+	cxPivotGridStrs_scxGroupCount,	"%s Count"
+	cxPivotGridStrs_scxGroupSum,	"%s Sum"
+	cxPivotGridStrs_scxGroupMin,	"%s Min"
+	cxPivotGridStrs_scxGroupMax,	"%s Max"
+	cxPivotGridStrs_scxGroupAverage,	"%s Average"
+	cxPivotGridStrs_scxGroupStdDev,	"%s StdDev"
+	cxPivotGridStrs_scxGroupStdDevP,	"%s StdDevP"
 	bdeconst_SBDEError,	"BDE error $%.4x"
 	bdeconst_SIndexDoesNotExist,	"Index does not exist. Index: %s"
 	bdeconst_SNoTableName,	"Missing TableName property"
@@ -3068,13 +3031,13 @@ BEGIN
 	bdeconst_SNoFieldAccess,	"Cannot access field '%s' in a filter"
 	bdeconst_SUntitled,	"Untitled Application"
 	bdeconst_SUpdateWrongDB,	"Cannot update, %s is not owned by %s"
-	cxSSRes_sxlfLower,	"LOWER"
-	cxSSRes_sxlfUpper,	"UPPER"
-	bdeconst_SAutoSessionExclusive,	"Cannot enable AutoSessionName property with more than one session on a form or data-module"
-	bdeconst_SAutoSessionExists,	"Cannot add a session to the form or data-module while session '%s' has AutoSessionName enabled"
-	bdeconst_SAutoSessionActive,	"Cannot modify SessionName while AutoSessionName is enabled"
-	bdeconst_SDuplicateDatabaseName,	"Duplicate database name '%s'"
-	bdeconst_SDuplicateSessionName,	"Duplicate session name '%s'"
+	bdeconst_SLocalTransDirty,	"The transaction isolation level must be dirty read for local databases"
+	cxPivotGridStrs_scxDataField,	"Data"
+	cxPivotGridStrs_scxDropFilterFields,	"Drop Filter Fields Here"
+	cxPivotGridStrs_scxDropDataItems,	"Drop Data Fields Here"
+	cxPivotGridStrs_scxDropRowFields,	"Drop Row Fields Here"
+	cxPivotGridStrs_scxDropColumnFields,	"Drop Column Fields Here"
+	cxPivotGridStrs_scxGrandTotal,	"Grand Total"
 	bdeconst_SInvalidSessionName,	"Invalid session name %s"
 	bdeconst_SDatabaseNameMissing,	"Database name missing"
 	bdeconst_SSessionNameMissing,	"Session name missing"
@@ -3084,13 +3047,13 @@ BEGIN
 	bdeconst_SSessionActive,	"Cannot perform this operation on an active session"
 	bdeconst_SHandleError,	"Error creating cursor handle"
 	bdeconst_STableMismatch,	"Source and destination tables are incompatible"
-	cxSSRes_sxlfFixed,	"FIXED"
-	cxSSRes_sxlfHour,	"HOUR"
-	cxSSRes_sxlfMinute,	"MINUTE"
-	cxSSRes_sxlfSecond,	"SECOND"
-	cxSSRes_sxlfIsBlank,	"ISBLANK"
-	cxSSRes_sxlfIsNa,	"ISNA"
-	cxSSRes_sxlfIsLogical,	"ISLOGICAL"
+	bdeconst_SNoReferenceTableName,	"ReferenceTableName not specified for field '%s'"
+	bdeconst_SCompositeIndexError,	"Cannot use array of Field values with Expression Indices"
+	bdeconst_SInvalidBatchMove,	"Invalid batch move parameters"
+	bdeconst_SNoParameterValue,	"No value for parameter '%s'"
+	bdeconst_SLoginError,	"Cannot connect to database '%s'"
+	bdeconst_SInitError,	"An error occurred while attempting to initialize the Borland Database Engine (error $%.4x)"
+	bdeconst_SIDAPILangID,	"0009"
 	cxSSRes_sxlfIsErr,	"ISERR"
 	cxSSRes_sxlfIsError,	"ISERROR"
 	cxSSRes_sxlfIsNonText,	"ISNONTEXT"
@@ -3100,13 +3063,13 @@ BEGIN
 	cxSSRes_sxlfLeft,	"LEFT"
 	cxSSRes_sxlfRight,	"RIGHT"
 	cxSSRes_sxlfMid,	"MID"
-	cxSSRes_sxlfSumsq,	"SUMSQ"
-	cxSSRes_sxlfTan,	"TAN"
-	cxSSRes_sxlfTanh,	"TANH"
-	cxSSRes_sxlfTime,	"TIME"
-	cxSSRes_sxlfToday,	"TODAY"
-	cxSSRes_sxlfTrunc,	"TRUNC"
-	cxSSRes_sxlfYear,	"YEAR"
+	cxSSRes_sxlfLower,	"LOWER"
+	cxSSRes_sxlfUpper,	"UPPER"
+	bdeconst_SAutoSessionExclusive,	"Cannot enable AutoSessionName property with more than one session on a form or data-module"
+	bdeconst_SAutoSessionExists,	"Cannot add a session to the form or data-module while session '%s' has AutoSessionName enabled"
+	bdeconst_SAutoSessionActive,	"Cannot modify SessionName while AutoSessionName is enabled"
+	bdeconst_SDuplicateDatabaseName,	"Duplicate database name '%s'"
+	bdeconst_SDuplicateSessionName,	"Duplicate session name '%s'"
 	cxSSRes_sxlfWeekDay,	"WEEKDAY"
 	cxSSRes_sxlfFalse,	"FALSE"
 	cxSSRes_sxlfTrue,	"TRUE"
@@ -3116,13 +3079,13 @@ BEGIN
 	cxSSRes_sxlfFloor,	"FLOOR"
 	cxSSRes_sxlfConcatenate,	"CONCATENATE"
 	cxSSRes_sxlfDegrees,	"DEGREES"
-	cxSSRes_sxlfNot,	"NOT"
-	cxSSRes_sxlfNow,	"NOW"
-	cxSSRes_sxlfOdd,	"ODD"
-	cxSSRes_sxlfOr,	"OR"
-	cxSSRes_sxlfPi,	"PI"
-	cxSSRes_sxlfPower,	"POWER"
-	cxSSRes_sxlfRadians,	"RADIANS"
+	cxSSRes_sxlfFixed,	"FIXED"
+	cxSSRes_sxlfHour,	"HOUR"
+	cxSSRes_sxlfMinute,	"MINUTE"
+	cxSSRes_sxlfSecond,	"SECOND"
+	cxSSRes_sxlfIsBlank,	"ISBLANK"
+	cxSSRes_sxlfIsNa,	"ISNA"
+	cxSSRes_sxlfIsLogical,	"ISLOGICAL"
 	cxSSRes_sxlfRand,	"RAND"
 	cxSSRes_sxlfRound,	"ROUND"
 	cxSSRes_sxlfRounddown,	"ROUNDDOWN"
@@ -3132,13 +3095,13 @@ BEGIN
 	cxSSRes_sxlfSinh,	"SINH"
 	cxSSRes_sxlfSqrt,	"SQRT"
 	cxSSRes_sxlfSum,	"SUM"
-	cxSSRes_sxlfCountblank,	"COUNTBLANK"
-	cxSSRes_sxlfCountif,	"COUNTIF"
-	cxSSRes_sxlfDate,	"DATE"
-	cxSSRes_sxlfDay,	"DAY"
-	cxSSRes_sxlfDollar,	"DOLLAR"
-	cxSSRes_sxlfExp,	"EXP"
-	cxSSRes_sxlfFact,	"FACT"
+	cxSSRes_sxlfSumsq,	"SUMSQ"
+	cxSSRes_sxlfTan,	"TAN"
+	cxSSRes_sxlfTanh,	"TANH"
+	cxSSRes_sxlfTime,	"TIME"
+	cxSSRes_sxlfToday,	"TODAY"
+	cxSSRes_sxlfTrunc,	"TRUNC"
+	cxSSRes_sxlfYear,	"YEAR"
 	cxSSRes_sxlfInt,	"INT"
 	cxSSRes_sxlfIF,	"IF"
 	cxSSRes_sxlfLn,	"LN"
@@ -3148,13 +3111,13 @@ BEGIN
 	cxSSRes_sxlfMin,	"MIN"
 	cxSSRes_sxlfMod,	"MOD"
 	cxSSRes_sxlfMonth,	"MONTH"
-	cxSSRes_scxWorkbookRead,	"Error read workbook stream"
-	cxSSRes_sxlfAbs,	"ABS"
-	cxSSRes_sxlfAcos,	"ACOS"
-	cxSSRes_sxlfAcosh,	"ACOSH"
-	cxSSRes_sxlfAnd,	"AND"
-	cxSSRes_sxlfAsin,	"ASIN"
-	cxSSRes_sxlfAsinh,	"ASINH"
+	cxSSRes_sxlfNot,	"NOT"
+	cxSSRes_sxlfNow,	"NOW"
+	cxSSRes_sxlfOdd,	"ODD"
+	cxSSRes_sxlfOr,	"OR"
+	cxSSRes_sxlfPi,	"PI"
+	cxSSRes_sxlfPower,	"POWER"
+	cxSSRes_sxlfRadians,	"RADIANS"
 	cxSSRes_sxlfAtan,	"ATAN"
 	cxSSRes_sxlfAtan2,	"ATAN2"
 	cxSSRes_sxlfAtanh,	"ATANH"
@@ -3164,13 +3127,13 @@ BEGIN
 	cxSSRes_sxlfCosh,	"COSH"
 	cxSSRes_sxlfCount,	"COUNT"
 	cxSSRes_sxlfCounta,	"COUNTA"
-	cxSSRes_scxPasteCommand,	"Paste cells"
-	cxSSRes_scxCutCommand,	"Cut cells"
-	cxSSRes_scxMergeCells,	"Merge cells"
-	cxSSRes_scxSplitCells,	"Split cells"
-	cxSSRes_scxSortCellsAction,	"Sort cells"
-	cxSSRes_scxClearCells,	"Clear cells"
-	cxSSRes_scxClearAllAction,	"Clear all"
+	cxSSRes_sxlfCountblank,	"COUNTBLANK"
+	cxSSRes_sxlfCountif,	"COUNTIF"
+	cxSSRes_sxlfDate,	"DATE"
+	cxSSRes_sxlfDay,	"DAY"
+	cxSSRes_sxlfDollar,	"DOLLAR"
+	cxSSRes_sxlfExp,	"EXP"
+	cxSSRes_sxlfFact,	"FACT"
 	cxSSRes_scxColorBoxAutomatic,	"Automatic"
 	cxSSRes_scxColorBoxNone,	"None"
 	cxSSRes_scxExcelImportUndefinedString,	"Undefined string in shared string table!"
@@ -3180,13 +3143,13 @@ BEGIN
 	cxSSRes_scxXLSNameRef,	"Invalid name reference: "
 	cxSSRes_scxXLSFileHasUnknownFunction,	"Stream has unknown function's"
 	cxSSRes_scxWorkbookWrite,	"Error store workbook stream"
-	cxSSRes_scxFormatDialogItems,	"Items"
-	cxSSRes_scxFormatDialogAllBorder,	"All borders"
-	cxSSRes_scxFormatDialogLine,	"Line"
-	cxSSRes_scxFormatDialogStyle,	"&Style:"
-	cxSSRes_scxFormatDialogColor,	"&Color:"
-	cxSSRes_scxFormatDialogTextStr,	"Text"
-	cxSSRes_scxFormatDialogCellShading,	"Cell shading"
+	cxSSRes_scxWorkbookRead,	"Error read workbook stream"
+	cxSSRes_sxlfAbs,	"ABS"
+	cxSSRes_sxlfAcos,	"ACOS"
+	cxSSRes_sxlfAcosh,	"ACOSH"
+	cxSSRes_sxlfAnd,	"AND"
+	cxSSRes_sxlfAsin,	"ASIN"
+	cxSSRes_sxlfAsinh,	"ASINH"
 	cxSSRes_scxFormatDialogSample,	"Sample"
 	cxSSRes_scxFormatDialogPattern,	"&Pattern:"
 	cxSSRes_scxFormatDialogSampleText,	"The quick brown fox jumps over the lazy dog"
@@ -3196,13 +3159,13 @@ BEGIN
 	cxSSRes_scxChangeCellsData,	"Change cells"
 	cxSSRes_scxChangeInsertCells,	"Insert cells"
 	cxSSRes_scxChangeDeleteCells,	"Delete cells"
-	cxSSRes_scxFormatDialogTextAlignment,	"Text alignment"
-	cxSSRes_scxFormatDialogTextControl,	"Text control"
-	cxSSRes_scxFormatDialogGeneral,	"General"
-	cxSSRes_scxFormatDialogLeft,	"Left"
-	cxSSRes_scxFormatDialogCenter,	"Center"
-	cxSSRes_scxFormatDialogRight,	"Right"
-	cxSSRes_scxFormatDialogFill,	"Fill"
+	cxSSRes_scxPasteCommand,	"Paste cells"
+	cxSSRes_scxCutCommand,	"Cut cells"
+	cxSSRes_scxMergeCells,	"Merge cells"
+	cxSSRes_scxSplitCells,	"Split cells"
+	cxSSRes_scxSortCellsAction,	"Sort cells"
+	cxSSRes_scxClearCells,	"Clear cells"
+	cxSSRes_scxClearAllAction,	"Clear all"
 	cxSSRes_scxFormatDialogJustify,	"Justify"
 	cxSSRes_scxFormatDialogTop,	"Top"
 	cxSSRes_scxFormatDialogBottom,	"Bottom"
@@ -3212,13 +3175,13 @@ BEGIN
 	cxSSRes_scxFormatDialogNone2,	"None"
 	cxSSRes_scxFormatDialogOutline,	"&Ou&tl&ine"
 	cxSSRes_scxFormatDialogInside,	"&Inside"
-	cxSSRes_scxFormatStyleStyleSettings,	"Style settings"
-	cxSSRes_scxFormatStyleGeneral,	"&General"
-	cxSSRes_scxFormatStyleCurrency,	"&Currency"
-	cxSSRes_scxFormatStyleNumber,	"&Number"
-	cxSSRes_scxFormatStyleDateTime,	"&Date/Time"
-	cxSSRes_scxFormatStyleText,	"&Text"
-	cxSSRes_scxGeneralStyleDescription,	"General format cells have no specific format."
+	cxSSRes_scxFormatDialogItems,	"Items"
+	cxSSRes_scxFormatDialogAllBorder,	"All borders"
+	cxSSRes_scxFormatDialogLine,	"Line"
+	cxSSRes_scxFormatDialogStyle,	"&Style:"
+	cxSSRes_scxFormatDialogColor,	"&Color:"
+	cxSSRes_scxFormatDialogTextStr,	"Text"
+	cxSSRes_scxFormatDialogCellShading,	"Cell shading"
 	cxSSRes_scxNumberStyleDescription,	"Number is used for general display of numbers."
 	cxSSRes_scxCurrencyStyleDescription,	"Currency formats are used for general monetary amounts."
 	cxSSRes_scxDateTimeStyleDescription,	"Date/Time formats are used for date and time serial numbers as Date/Time values."
@@ -3228,13 +3191,13 @@ BEGIN
 	cxSSRes_scxFormatDialogPatterns,	"&Patterns"
 	cxSSRes_scxFormatDialogHorzAlign,	"&Horizontal"
 	cxSSRes_scxFormatDialogVertAlign,	"&Vertical"
-	cxSSRes_scxCaclulatorMissingTokens,	"Missing tokens"
-	cxSSRes_scxCaclulatorMissingParamters,	"Missing stack parameters"
-	cxSSRes_scxCaclulatorFuncNeedResult,	"Function need result"
-	cxSSRes_scxNullError,	"#NULL!"
-	cxSSRes_scxDivZeroError,	"#DIV/0!"
-	cxSSRes_scxValueError,	"#VALUE!"
-	cxSSRes_scxNameError,	"#NAME!"
+	cxSSRes_scxFormatDialogTextAlignment,	"Text alignment"
+	cxSSRes_scxFormatDialogTextControl,	"Text control"
+	cxSSRes_scxFormatDialogGeneral,	"General"
+	cxSSRes_scxFormatDialogLeft,	"Left"
+	cxSSRes_scxFormatDialogCenter,	"Center"
+	cxSSRes_scxFormatDialogRight,	"Right"
+	cxSSRes_scxFormatDialogFill,	"Fill"
 	cxSSRes_scxNumError,	"#NUM!"
 	cxSSRes_scxRefError,	"#REF!"
 	cxSSRes_scxNAError,	"#N/A!"
@@ -3244,13 +3207,13 @@ BEGIN
 	cxSSRes_scxFormatDialogFormatCaption,	"Format cells"
 	cxSSRes_scxFormatCellStyle,	"Cell style"
 	cxSSRes_scxFormatCellStyleType,	"Style type"
-	cxSSRes_scxDataStorageErrorReadCellRecord,	"Error reading cell record"
-	cxSSRes_scxDataStorageErrorSetCellRecord,	"Error setting cell record"
-	cxSSRes_scxStyleInvalidColorIndex,	"Invalid color index"
-	cxSSRes_scxStyleInvalidCellStyle,	"Invalid cell style"
-	cxSSRes_scxCaclulatorCyclingError,	"Calculation error. Formula cycled indexes present"
-	cxSSRes_scxCaclulatorConstructFormula,	"Error constructing formula. Parsed expression error offset at"
-	cxSSRes_scxCaclulatorParseFormula,	"Error parsing formula at string position"
+	cxSSRes_scxFormatStyleStyleSettings,	"Style settings"
+	cxSSRes_scxFormatStyleGeneral,	"&General"
+	cxSSRes_scxFormatStyleCurrency,	"&Currency"
+	cxSSRes_scxFormatStyleNumber,	"&Number"
+	cxSSRes_scxFormatStyleDateTime,	"&Date/Time"
+	cxSSRes_scxFormatStyleText,	"&Text"
+	cxSSRes_scxGeneralStyleDescription,	"General format cells have no specific format."
 	cxSSRes_scxCaclulatorStringExpression,	"Error syntax in string expression"
 	cxSSRes_scxCaclulatorFuncInvalidIndex,	"Invalid function index"
 	cxSSRes_scxCaclulatorFuncInvalidName,	"Invalid function name"
@@ -3260,13 +3223,13 @@ BEGIN
 	cxSSRes_scxCaclulatorUnknownToken,	"Unknown token in expression"
 	cxSSRes_scxCaclulatorDivByZero,	"Division by zero!"
 	cxSSRes_scxCaclulatorTypeErr,	"Incompatible operands type!"
-	cxSSRes_scxSpreadSheetDeleteLastSheet,	"Cannot delete the last sheet"
-	cxSSRes_scxPopupMenuMergeCells,	"Merge cells"
-	cxSSRes_scxPopupMenuSplitCells,	"Split cells"
-	cxSSRes_scxPopupMenuFormatCells,	"Format cells"
-	cxSSRes_scxPopupMenuHideRows,	"Hide rows"
-	cxSSRes_scxPopupMenuUnhideRows,	"Unhide rows"
-	cxSSRes_scxPopupMenuHideCols,	"Hide column"
+	cxSSRes_scxCaclulatorMissingTokens,	"Missing tokens"
+	cxSSRes_scxCaclulatorMissingParamters,	"Missing stack parameters"
+	cxSSRes_scxCaclulatorFuncNeedResult,	"Function need result"
+	cxSSRes_scxNullError,	"#NULL!"
+	cxSSRes_scxDivZeroError,	"#DIV/0!"
+	cxSSRes_scxValueError,	"#VALUE!"
+	cxSSRes_scxNameError,	"#NAME!"
 	cxSSRes_scxPopupMenuUnhideCols,	"Unhide column"
 	cxSSRes_scxSpreadSheetShiftCellLeft,	"Shift cells left"
 	cxSSRes_scxSpreadSheetShiftCellTop,	"Shift cells top"
@@ -3276,13 +3239,13 @@ BEGIN
 	cxSSRes_scxSpreadSheetAllColumn,	"Entire column"
 	cxSSRes_scxSpreadSheetDeleteCells,	"Delete"
 	cxSSRes_scxSpreadSheetInsertCells,	"Insert"
-	XLSPNGLang_EPNGHeaderNotPresentText,	"This operation is not valid because the current image contains no valid header."
-	XLSPNGLang_EInvalidNewSize,	"The new size provided for image resizing is invalid."
-	XLSPNGLang_EInvalidSpec,	"The \"Portable Network Graphics\" could not be created because invalid image type parameters have being provided."
-	cxSSRes_scxSheetName,	"Sheet"
-	cxSSRes_scxSpreadSheetErrorReadSST,	"Reading SST record error"
-	cxSSRes_scxSpreadSheetInvalidSheetNumber,	"Invalid page number"
-	cxSSRes_scxSpreadSheetInvalidFileName,	"Invalid file %s name"
+	cxSSRes_scxDataStorageErrorReadCellRecord,	"Error reading cell record"
+	cxSSRes_scxDataStorageErrorSetCellRecord,	"Error setting cell record"
+	cxSSRes_scxStyleInvalidColorIndex,	"Invalid color index"
+	cxSSRes_scxStyleInvalidCellStyle,	"Invalid cell style"
+	cxSSRes_scxCaclulatorCyclingError,	"Calculation error. Formula cycled indexes present"
+	cxSSRes_scxCaclulatorConstructFormula,	"Error constructing formula. Parsed expression error offset at"
+	cxSSRes_scxCaclulatorParseFormula,	"Error parsing formula at string position"
 	cxSSRes_scxSpreadSheetInvalidFileFormat,	"Invalid %s file format"
 	cxSSRes_scxSpreadSheetInvalidStreamFormat,	"Invalid stream format"
 	cxSSRes_scxSpreadSheetInvalidSheetCaption,	"Sheet caption invalid or already exist"
@@ -3292,22 +3255,13 @@ BEGIN
 	cxSSRes_scxSpreadSheetMergeCellError2,	"Some modified cells are merged"
 	cxSSRes_scxSpreadSheetDefineNameError,	"Error define name, name already exist"
 	cxSSRes_scxSpreadSheetDefineNameError2,	"Error define name, name contains extra characters"
-	XLSPNGLang_EPNGInvalidPaletteText,	"The \"Portable Network Graphics\" image contains an invalid palette."
-	XLSPNGLang_EPNGInvalidFileHeaderText,	"The file being readed is not a valid \"Portable Network Graphics\" image because it contains an invalid header. This file may be corruped, try obtaining it again."
-	XLSPNGLang_EPNGIHDRNotFirstText,	"This \"Portable Network Graphics\" image is not supported or it might be invalid.\r\n(IHDR chunk is not the first)"
-	XLSPNGLang_EPNGSizeExceedsText,	"This \"Portable Network Graphics\" image is not supported because either it's width or height exceeds the maximum size, which is 65535 pixels length."
-	XLSPNGLang_EPNGUnknownPalEntryText,	"There is no such palette entry."
-	XLSPNGLang_EPNGUnknownCriticalChunkText,	"This \"Portable Network Graphics\" image contains an unknown critical part which could not be decoded."
-	XLSPNGLang_EPNGUnknownCompressionText,	"This \"Portable Network Graphics\" image is encoded with an unknown compression scheme which could not be decoded."
-	XLSPNGLang_EPNGUnknownInterlaceText,	"This \"Portable Network Graphics\" image uses an unknown interlace scheme which could not be decoded."
-	XLSPNGLang_EPNGCannotAssignChunkText,	"The chunks must be compatible to be assigned."
-	XLSPNGLang_EPNGUnexpectedEndText,	"This \"Portable Network Graphics\" image is invalid because the decoder found an unexpected end of the file."
-	XLSPNGLang_EPNGNoImageDataText,	"This \"Portable Network Graphics\" image contains no data."
-	XLSPNGLang_EPNGCannotAddChunkText,	"The program tried to add a existent critical chunk to the current image which is not allowed."
-	XLSPNGLang_EPNGCannotAddInvalidImageText,	"It's not allowed to add a new chunk because the current image is invalid."
-	XLSPNGLang_EPNGCouldNotLoadResourceText,	"The png image could not be loaded from the resource ID."
-	XLSPNGLang_EPNGOutMemoryText,	"Some operation could not be performed because the system is out of resources. Close some windows and try again."
-	XLSPNGLang_EPNGCannotChangeTransparentText,	"Setting bit transparency color is not allowed for png images containing alpha value for each pixel (COLOR_RGBALPHA and COLOR_GRAYSCALEALPHA)"
+	cxSSRes_scxSpreadSheetDeleteLastSheet,	"Cannot delete the last sheet"
+	cxSSRes_scxPopupMenuMergeCells,	"Merge cells"
+	cxSSRes_scxPopupMenuSplitCells,	"Split cells"
+	cxSSRes_scxPopupMenuFormatCells,	"Format cells"
+	cxSSRes_scxPopupMenuHideRows,	"Hide rows"
+	cxSSRes_scxPopupMenuUnhideRows,	"Unhide rows"
+	cxSSRes_scxPopupMenuHideCols,	"Hide column"
 	cxVGridConsts_cxSvgRTTICollectionEditCaption,	"Editing %s%s%s"
 	cxVGridConsts_cxSvgRTTICollectionAdd,	"&Add"
 	cxVGridConsts_cxSvgRTTICollectionAddHint,	"Add New"
@@ -3320,10 +3274,10 @@ BEGIN
 	cxVGridConsts_cxSvgRTTICollectionMoveUpHint,	"Move Selected Up"
 	cxVGridConsts_cxSvgRTTICollectionMoveDown,	"Move Dow&n"
 	cxVGridConsts_cxSvgRTTICollectionMoveDownHint,	"Move Selected Down"
-	XLSPNGLang_EPngInvalidCRCText,	"This \"Portable Network Graphics\" image is not valid because it contains invalid pieces of data (crc error)"
-	XLSPNGLang_EPNGInvalidIHDRText,	"The \"Portable Network Graphics\" image could not be loaded because one of its main piece of data (ihdr) might be corrupted"
-	XLSPNGLang_EPNGMissingMultipleIDATText,	"This \"Portable Network Graphics\" image is invalid because it has missing image parts."
-	XLSPNGLang_EPNGZLIBErrorText,	"Could not decompress the image because it contains invalid compressed data.\r\n Description: "
+	cxSSRes_scxSheetName,	"Sheet"
+	cxSSRes_scxSpreadSheetErrorReadSST,	"Reading SST record error"
+	cxSSRes_scxSpreadSheetInvalidSheetNumber,	"Invalid page number"
+	cxSSRes_scxSpreadSheetInvalidFileName,	"Invalid file %s name"
 	cxVGridConsts_cxSvgDeletingFocusedConfirmationText,	"Delete record?"
 	cxVGridConsts_cxSvgDeletingConfirmationCaption,	"Confirm"
 	cxVGridConsts_cxSvgOKCaption,	"OK"
@@ -6015,7 +5969,7 @@ END
 /* C:\Program Files\DevExpress VCL\ExpressNavBar\Sources\dxNavBar.res */
 /* C:\Program Files\DevExpress VCL\ExpressQuantumTreeList\Sources\cxTL.res */
 /* C:\Program Files\DevExpress VCL\ExpressDocking Library\Sources\dxDockStyleVS2005.res */
-/* C:\Lib\ImageButton\ImageButton.RES */
+/* \\psf\Home\Desktop\ImageButton\ImageButton.RES */
 /* C:\Program Files\DevExpress VCL\ExpressPrinting System\Sources\dxPSImgs.res */
 /* C:\Program Files\DevExpress VCL\ExpressPrinting System\Sources\dxPSPrVwOpt.DFM */
 /* C:\Program Files\DevExpress VCL\ExpressPrinting System\Sources\dxfmClr.DFM */
@@ -6054,77 +6008,77 @@ END
 /* C:\Program Files\DevExpress VCL\ExpressPrinting System\Sources\dxPSTVLnk.DFM */
 /* C:\Program Files\DevExpress VCL\ExpressPrinting System\Sources\dxPSLVLnk.DFM */
 /* C:\Program Files\DevExpress VCL\ExpressPrinting System\Sources\dxPScxMCListBoxLnk.dfm */
-/* C:\LastBuild\GridViewTemplateSource.dfm */
-/* C:\LastBuild\sprUnitOrganizations.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\GridViewTemplateSource.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\sprUnitOrganizations.dfm */
 /* c:\program files\embarcadero\rad studio\8.0\lib\Win32\release\Tabs.res */
-/* C:\LastBuild\Splash.dfm */
-/* C:\LastBuild\TaskBar.dfm */
-/* C:\LastBuild\sprUnitAccountingHours.dfm */
-/* C:\LastBuild\spUnitDepartments.dfm */
-/* C:\LastBuild\sprUnitAccountingHourValues.dfm */
-/* C:\LastBuild\NumbersContracts.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\Splash.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\TaskBar.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\sprUnitAccountingHours.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\spUnitDepartments.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\sprUnitAccountingHourValues.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\NumbersContracts.dfm */
 /* C:\Program Files\DevExpress VCL\ExpressVerticalGrid\Sources\cxVGridNewCategory.DFM */
 /* C:\Program Files\DevExpress VCL\ExpressVerticalGrid\Sources\cxInsCur.res */
-/* C:\LastBuild\sprUnitBudgetArticles.dfm */
-/* C:\LastBuild\spUnitCities.dfm */
-/* C:\LastBuild\spUnitConformityArticles.dfm */
-/* C:\LastBuild\PlannedWork.dfm */
-/* C:\LastBuild\PlannedWorkOISI.dfm */
-/* C:\LastBuild\PlannedRent.dfm */
-/* C:\LastBuild\PlannedTransport.dfm */
-/* C:\LastBuild\PlannedFieldContentment.dfm */
-/* C:\LastBuild\PlannedManualValue.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\sprUnitBudgetArticles.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\spUnitCities.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\spUnitConformityArticles.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\PlannedWork.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\PlannedWorkOISI.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\PlannedRent.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\PlannedTransport.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\PlannedFieldContentment.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\PlannedManualValue.dfm */
 /* C:\Program Files\DevExpress VCL\ExpressSpreadSheet\Sources\cxSSDesigner.dfm */
 /* C:\Program Files\DevExpress VCL\ExpressSpreadSheet\Sources\cxSSheet.res */
-/* C:\LastBuild\XLS1CImport.dfm */
-/* C:\LastBuild\Files.dfm */
-/* C:\LastBuild\XLSImportUnit.dfm */
-/* C:\LastBuild\PlannedTrips.dfm */
-/* C:\LastBuild\PlannedTripsShift.dfm */
-/* C:\LastBuild\sprUnitDivisions.dfm */
-/* C:\LastBuild\sprUnitEmployees.dfm */
-/* C:\LastBuild\sprUnitFieldContentment.dfm */
-/* C:\LastBuild\sprUnitGroups.dfm */
-/* C:\LastBuild\sprUnitContracts.dfm */
-/* C:\LastBuild\sprUnitPosts.dfm */
-/* C:\LastBuild\sprUnitMeasures.dfm */
-/* C:\LastBuild\sprUnitConformityPosts.dfm */
-/* C:\LastBuild\sprUnitCostResiding.dfm */
-/* C:\LastBuild\sprUnitCostTrip.dfm */
-/* C:\LastBuild\sprUnitDirections.dfm */
-/* C:\LastBuild\sprUnitPlaceResidense.dfm */
-/* C:\LastBuild\sprUnitSectors.dfm */
-/* C:\LastBuild\sprUnitTypesTransport.dfm */
-/* C:\LastBuild\sprUnitTypesWork.dfm */
-/* C:\LastBuild\spUnitDailyAllowances.dfm */
-/* C:\LastBuild\Users.dfm */
-/* C:\LastBuild\NewTask.dfm */
-/* C:\LastBuild\Tasks.dfm */
-/* C:\LastBuild\PlannedWorkSelect.dfm */
-/* C:\LastBuild\PlannedWorkOISISelect.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\XLS1CImport.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\Files.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\XLSImportUnit.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\PlannedTrips.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\PlannedTripsShift.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\sprUnitDivisions.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\sprUnitEmployees.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\sprUnitFieldContentment.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\sprUnitGroups.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\sprUnitContracts.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\sprUnitPosts.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\sprUnitMeasures.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\sprUnitConformityPosts.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\sprUnitCostResiding.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\sprUnitCostTrip.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\sprUnitDirections.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\sprUnitPlaceResidense.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\sprUnitSectors.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\sprUnitTypesTransport.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\sprUnitTypesWork.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\spUnitDailyAllowances.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\Users.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\NewTask.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\Tasks.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\PlannedWorkSelect.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\PlannedWorkOISISelect.dfm */
 /* c:\program files\embarcadero\rad studio\8.0\lib\Win32\release\DBGrids.res */
-/* C:\LastBuild\BudgetOrgFlow.dfm */
-/* C:\LastBuild\ArticleToBudget.dfm */
-/* C:\LastBuild\PlannedRentSelect.dfm */
-/* C:\LastBuild\PlannedTransportSelect.dfm */
-/* C:\LastBuild\PlannedManualValueSelect.dfm */
-/* C:\LastBuild\PlannedTripsSelect.dfm */
-/* C:\LastBuild\PlannedTripsShiftSelect.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\BudgetOrgFlow.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\ArticleToBudget.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\PlannedRentSelect.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\PlannedTransportSelect.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\PlannedManualValueSelect.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\PlannedTripsSelect.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\PlannedTripsShiftSelect.dfm */
 /* C:\Program Files\DevExpress VCL\ExpressPivotGrid\Sources\cxPivotGridAdvancedCustomization.DFM */
 /* C:\Program Files\DevExpress VCL\ExpressPivotGrid\Sources\cxCustomPivotGrid.res */
 /* C:\Program Files\DevExpress VCL\ExpressPrinting System\Sources\dxPScxPivotGridLnk.dfm */
 /* C:\Program Files\DevExpress VCL\ExpressPrinting System\Sources\dxPScxPivotGridLnk.res */
-/* C:\LastBuild\ArticleToBudgetExt.dfm */
-/* C:\LastBuild\Options.dfm */
-/* C:\LastBuild\Sessions.dfm */
-/* C:\LastBuild\History.dfm */
-/* C:\LastBuild\Stages.dfm */
-/* C:\LastBuild\StageXLSImport.dfm */
-/* C:\LastBuild\PlannedSubcontract.dfm */
-/* C:\LastBuild\Reports.dfm */
-/* C:\LastBuild\Main.dfm */
-/* C:\LastBuild\Hint.dfm */
-/* C:\LastBuild\TreeUnit.dfm */
-/* C:\LastBuild\Budgets.dfm */
-/* C:\LastBuild\ProjectX7.res */
-/* C:\LastBuild\ProjectX7.drf */
+/* \\psf\Home\Desktop\GitHub\GPIR\ArticleToBudgetExt.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\Options.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\Sessions.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\History.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\Stages.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\StageXLSImport.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\PlannedSubcontract.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\Reports.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\Main.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\Hint.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\TreeUnit.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\Budgets.dfm */
+/* \\psf\Home\Desktop\GitHub\GPIR\ProjectX7.res */
+/* \\psf\Home\Desktop\GitHub\GPIR\ProjectX7.drf */

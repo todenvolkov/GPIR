@@ -1,6 +1,6 @@
 object PlannedWorkForm: TPlannedWorkForm
-  Left = 369
-  Top = 351
+  Left = 240
+  Top = 202
   Caption = #1057#1087#1088#1072#1074#1086#1095#1085#1080#1082
   ClientHeight = 536
   ClientWidth = 1020
@@ -770,6 +770,10 @@ object PlannedWorkForm: TPlannedWorkForm
               FieldName = 'plannedHours'
               Column = cxGrid1DBTableView1plannedHours
               DisplayText = #1050#1086#1083#1080#1095#1077#1089#1090#1074#1086
+            end
+            item
+              Kind = skSum
+              Column = cxGrid1DBTableView1PlannedHoursManual
             end>
           DataController.Summary.SummaryGroups = <>
           NewItemRow.InfoText = #1053#1072#1078#1084#1080#1090#1077' '#1089#1102#1076#1072' '#1095#1090#1086#1073#1099' '#1076#1086#1073#1072#1074#1080#1090#1100' '#1089#1090#1088#1086#1082#1091
@@ -995,6 +999,10 @@ object PlannedWorkForm: TPlannedWorkForm
               Format = ',0;-,0'
               Kind = skSum
               Column = cxGridDBTableView1plannedHours
+            end
+            item
+              Kind = skSum
+              Column = cxGridDBTableView1PlannedHoursManual
             end>
           DataController.Summary.SummaryGroups = <>
           NewItemRow.InfoText = #1053#1072#1078#1084#1080#1090#1077' '#1089#1102#1076#1072' '#1095#1090#1086#1073#1099' '#1076#1086#1073#1072#1074#1080#1090#1100' '#1089#1090#1088#1086#1082#1091
@@ -1262,7 +1270,7 @@ object PlannedWorkForm: TPlannedWorkForm
       PrinterPage.PageSize.Y = 297000
       PrinterPage._dxMeasurementUnits_ = 0
       PrinterPage._dxLastMU_ = 2
-      ReportDocument.CreationDate = 41114.681785474540000000
+      ReportDocument.CreationDate = 41127.882941979170000000
       OptionsCards.AutoWidth = True
       OptionsExpanding.ExpandGroupRows = True
       OptionsExpanding.ExpandMasterRows = True

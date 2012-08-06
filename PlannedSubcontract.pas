@@ -430,7 +430,9 @@ end;
 
 procedure TPlannedSubcontractForm.ImageButton1Click(Sender: TObject);
 begin
-  MainForm.UploadToExcel(cxGrid1, Caption);
+  MainForm.UploadToExcel(cxGrid1, Caption+'_'+ButtonDownName);
+  MainForm.UploadToExcel(cxGrid2, Caption+'_'+ButtonDownName);
+
 end;
 
 procedure TPlannedSubcontractForm.ImageButton3Click(Sender: TObject);

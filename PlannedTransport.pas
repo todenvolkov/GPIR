@@ -573,7 +573,8 @@ end;
 
 procedure TPlannedTransportForm.ImageButton7Click(Sender: TObject);
 begin
-  MainForm.UploadToExcel(cxGrid1, Caption);
+  MainForm.UploadToExcel(cxGrid1, Caption+'_'+ButtonDownName);
+   MainForm.UploadToExcel(cxGrid1, Caption+'_'+ButtonDownName);
 end;
 
 procedure TPlannedTransportForm.MonthQAfterPost(DataSet: TDataSet);

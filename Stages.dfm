@@ -1,6 +1,6 @@
 object StagesForm: TStagesForm
-  Left = 371
-  Top = 317
+  Left = 130
+  Top = 275
   Caption = 'StagesForm'
   ClientHeight = 609
   ClientWidth = 1152
@@ -1209,7 +1209,7 @@ object StagesForm: TStagesForm
       PrinterPage.PageSize.Y = 297000
       PrinterPage._dxMeasurementUnits_ = 0
       PrinterPage._dxLastMU_ = 2
-      ReportDocument.CreationDate = 41114.682033414350000000
+      ReportDocument.CreationDate = 41127.909261423620000000
       OptionsCards.AutoWidth = True
       OptionsExpanding.ExpandGroupRows = True
       OptionsExpanding.ExpandMasterRows = True

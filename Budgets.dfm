@@ -1,6 +1,6 @@
 object BudgetsForm: TBudgetsForm
-  Left = 496
-  Top = 269
+  Left = 434
+  Top = 267
   AlphaBlendValue = 0
   Caption = #1057#1087#1088#1072#1074#1086#1095#1085#1080#1082
   ClientHeight = 494
@@ -845,7 +845,7 @@ object BudgetsForm: TBudgetsForm
       PrinterPage.PageSize.Y = 297000
       PrinterPage._dxMeasurementUnits_ = 0
       PrinterPage._dxLastMU_ = 2
-      ReportDocument.CreationDate = 41110.733319942120000000
+      ReportDocument.CreationDate = 41127.911156319440000000
       OptionsCards.AutoWidth = True
       OptionsExpanding.ExpandGroupRows = True
       OptionsExpanding.ExpandMasterRows = True

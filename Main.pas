@@ -1682,10 +1682,13 @@ begin
 end;
 
 procedure TMainForm.UploadToExcel(Grid: TcxGrid; FirstName: string);
-var GUID: TGUID;
+var GUID: TGUID;            filepath:string;
 begin
   CoCreateGuid(GUID);
-  ExportGridToExcel(GetCurrentDir + '\' + GUIDToString(GUID) + '.xls', Grid, True, True, True, 'xls');
+  filepath:=GetCurrentDir + '\'+FirstName+'_'+GUIDToString(GUID) + '.xls';
+  ExportGridToExcel(filepath, Grid, True, True, True, 'xls');
+    ShellExecute(0,'open',pchar(filepath),PChar(ExtractFileDir(Application.ExeName)),'',SW_SHOW);
+
 end;
 
 procedure TMainForm.XLSImportExecute(Sender: TObject);

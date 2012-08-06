@@ -226,6 +226,7 @@ begin
   FileName := RndFileName;
   FileName := filename + '_' + FormatDateTime('dd-mm-yyyy-hh-nn-ss',now);
   cxExportPivotGridToExcel(filename,cxDBPivotGrid1,true,true,'xls');
+
 //   ShellExecute(Handle,
 //                  'OPEN',
 //                  PChar('explorer.exe'),

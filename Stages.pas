@@ -399,7 +399,8 @@ end;
 
 procedure TStagesForm.ImageButton1Click(Sender: TObject);
 begin
-  MainForm.UploadToExcel(cxGrid1, Caption);
+  MainForm.UploadToExcel(cxGrid1, Caption+'_'+ButtonDownName);
+    MainForm.UploadToExcel(cxGrid1, Caption+'_'+ButtonDownName);
 end;
 
 procedure TStagesForm.ImageButton3Click(Sender: TObject);
