@@ -366,7 +366,7 @@ end;
 procedure TPlannedTripsForm.BudgetAllClick(Sender: TObject);
 begin
   ShowPlanData(TcxButton(Sender));
-  Caption := TimeToStr(Now);
+ // Caption := TimeToStr(Now);       Убрано, так как глючит выгрузка в ексель которая берет caption
 end;
 
 procedure TPlannedTripsForm.BudgetNIOClick(Sender: TObject);

@@ -1,6 +1,6 @@
 object NumbersContractsForm: TNumbersContractsForm
-  Left = 595
-  Top = 286
+  Left = 452
+  Top = 285
   Caption = #1064#1080#1092#1088#1099' '#1076#1086#1075#1086
   ClientHeight = 475
   ClientWidth = 834
@@ -768,7 +768,7 @@ object NumbersContractsForm: TNumbersContractsForm
       PrinterPage.PageSize.Y = 297000
       PrinterPage._dxMeasurementUnits_ = 0
       PrinterPage._dxLastMU_ = 2
-      ReportDocument.CreationDate = 41114.422208113430000000
+      ReportDocument.CreationDate = 41127.911589444450000000
       OptionsCards.AutoWidth = True
       OptionsExpanding.ExpandGroupRows = True
       OptionsExpanding.ExpandMasterRows = True

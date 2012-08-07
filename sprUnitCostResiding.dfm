@@ -1,9 +1,9 @@
 inherited sprCostResidingForm: TsprCostResidingForm
-  Left = 567
-  Top = 295
+  Left = 428
+  Top = 289
   Caption = #1057#1088#1077#1076#1085#1103#1103' '#1089#1090#1086#1080#1084#1086#1089#1090#1100' '#1087#1088#1086#1078#1080#1074#1072#1085#1080#1103' '#1074' '#1082#1086#1084#1072#1085#1076#1080#1088#1086#1074#1082#1072#1093
-  ExplicitLeft = 567
-  ExplicitTop = 295
+  ExplicitLeft = 428
+  ExplicitTop = 289
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel2: TPanel
@@ -238,9 +238,6 @@ inherited sprCostResidingForm: TsprCostResidingForm
         end
       end
     end
-  end
-  inherited TopSplitter: TcxSplitter
-    ExplicitWidth = 8
   end
   inherited ADOQuery1: TADOQuery
     SQL.Strings = (

@@ -1,9 +1,9 @@
 inherited ConformityPostsForm: TConformityPostsForm
-  Left = 616
-  Top = 359
+  Left = 372
+  Top = 325
   Caption = #1057#1087#1088#1072#1074#1086#1095#1085#1080#1082' "'#1057#1086#1086#1090#1074#1077#1090#1089#1090#1074#1080#1077' '#1076#1086#1083#1078#1085#1086#1089#1090#1077#1081'"'
-  ExplicitLeft = 616
-  ExplicitTop = 359
+  ExplicitLeft = 372
+  ExplicitTop = 325
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel2: TPanel
