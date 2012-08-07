@@ -746,12 +746,13 @@ begin
   end;
   if Button.Hint = 'Все бюджеты' then           // если режим все бюджеты то нельзя вставлять новые даннные
     begin
-      cxGrid1DBTableView1.OptionsData.Editing := False;
-      cxGridDBTableView1.OptionsData.Editing := False;
-    end else
+      cxGrid1DBTableView1.OptionsSelection.CellSelect:=false;
+      cxGridDBTableView1.OptionsSelection.CellSelect:=false;
+    end
+  else
     begin
-      cxGrid1DBTableView1.OptionsData.Editing := True;
-      cxGridDBTableView1.OptionsData.Editing := True;
+      cxGrid1DBTableView1.OptionsSelection.CellSelect:=true;
+      cxGridDBTableView1.OptionsSelection.CellSelect:=true;
     end;
 
   FormAccessControl;

@@ -1,6 +1,6 @@
 object PlannedManualValueForm: TPlannedManualValueForm
-  Left = 185
-  Top = 246
+  Left = 308
+  Top = 249
   Caption = #1057#1087#1088#1072#1074#1086#1095#1085#1080#1082
   ClientHeight = 465
   ClientWidth = 1105
@@ -1101,7 +1101,7 @@ object PlannedManualValueForm: TPlannedManualValueForm
       PrinterPage.PageSize.Y = 297000
       PrinterPage._dxMeasurementUnits_ = 0
       PrinterPage._dxLastMU_ = 2
-      ReportDocument.CreationDate = 41127.906529583330000000
+      ReportDocument.CreationDate = 41128.819251296300000000
       OptionsCards.AutoWidth = True
       OptionsExpanding.ExpandGroupRows = True
       OptionsExpanding.ExpandMasterRows = True

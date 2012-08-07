@@ -1,6 +1,6 @@
 object PlannedWorkForm: TPlannedWorkForm
-  Left = 240
-  Top = 202
+  Left = 348
+  Top = 197
   Caption = #1057#1087#1088#1072#1074#1086#1095#1085#1080#1082
   ClientHeight = 536
   ClientWidth = 1020
@@ -796,6 +796,9 @@ object PlannedWorkForm: TPlannedWorkForm
           OptionsView.HeaderAutoHeight = True
           OptionsView.HeaderEndEllipsis = True
           OptionsView.Indicator = True
+          Styles.Content = MainForm.cxStyle40
+          Styles.ContentEven = MainForm.cxStyle27
+          Styles.ContentOdd = MainForm.cxStyle27
           Styles.StyleSheet = MainForm.GridTableViewStyleSheetDevExpress
           object cxGrid1DBTableView1divisionGUID: TcxGridDBColumn
             Caption = #1054#1090#1076#1077#1083
@@ -1270,7 +1273,7 @@ object PlannedWorkForm: TPlannedWorkForm
       PrinterPage.PageSize.Y = 297000
       PrinterPage._dxMeasurementUnits_ = 0
       PrinterPage._dxLastMU_ = 2
-      ReportDocument.CreationDate = 41127.882941979170000000
+      ReportDocument.CreationDate = 41128.866084884260000000
       OptionsCards.AutoWidth = True
       OptionsExpanding.ExpandGroupRows = True
       OptionsExpanding.ExpandMasterRows = True

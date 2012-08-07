@@ -182,6 +182,7 @@ type
     TabSet: TTabSet;
     TabMenu: TPopupMenu;
     N1: TMenuItem;
+    cxStyle40: TcxStyle;
     procedure SprFormAccountingHoursShowExecute(Sender: TObject);
     procedure Action5Execute(Sender: TObject);
     procedure Action3Execute(Sender: TObject);

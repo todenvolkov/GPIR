@@ -12420,6 +12420,10 @@ object MainForm: TMainForm
       Color = 12937777
       TextColor = clWhite
     end
+    object cxStyle40: TcxStyle
+      AssignedValues = [svColor]
+      Color = 15790320
+    end
     object GridTableViewStyleSheetDevExpress: TcxGridTableViewStyleSheet
       Caption = 'DevExpress'
       Styles.Background = cxStyle26
