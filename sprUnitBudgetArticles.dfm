@@ -214,6 +214,7 @@ inherited sprBudgetArticles: TsprBudgetArticles
         inherited cxGrid1Level1: TcxGridLevel
           object cxGrid1Level2: TcxGridLevel
             GridView = cxGrid1DBTableView2
+            Visible = False
           end
         end
       end
