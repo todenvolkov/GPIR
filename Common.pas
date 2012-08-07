@@ -70,6 +70,9 @@ begin
         end;
       end;
     end;
+
+
+
     ACanvas.FillRect(AViewInfo.Bounds);
 end;
 

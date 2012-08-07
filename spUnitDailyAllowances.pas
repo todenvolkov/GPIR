@@ -49,6 +49,7 @@ type
       AViewInfo: TcxGridTableDataCellViewInfo; var ADone: Boolean);
     procedure ADOQuery1AfterPost(DataSet: TDataSet);
     procedure ImageButton2Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
     procedure HistoryFromSprJournalShow;
@@ -145,6 +146,12 @@ begin
               end;
           end;
       end;
+end;
+
+procedure TDailyAllowancesForm.FormCreate(Sender: TObject);
+begin
+  inherited;
+ TableName:='DailyAllowances';
 end;
 
 procedure TDailyAllowancesForm.HistoryFromSprJournalShow;

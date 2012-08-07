@@ -4,8 +4,6 @@ inherited TypesTransportForm: TTypesTransportForm
   Caption = #1042#1080#1076#1099' '#1090#1088#1072#1085#1089#1087#1086#1088#1090#1072
   ExplicitLeft = 475
   ExplicitTop = 259
-  ExplicitWidth = 949
-  ExplicitHeight = 469
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel2: TPanel

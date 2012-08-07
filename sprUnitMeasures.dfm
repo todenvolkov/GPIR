@@ -4,8 +4,6 @@ inherited UnitMeasuresForm: TUnitMeasuresForm
   Caption = #1057#1087#1088#1072#1074#1086#1095#1085#1080#1082' "'#1045#1076#1080#1085#1080#1094#1099' '#1080#1079#1084#1077#1088#1077#1085#1080#1103'"'
   ExplicitLeft = 455
   ExplicitTop = 242
-  ExplicitWidth = 949
-  ExplicitHeight = 469
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel2: TPanel

@@ -30,6 +30,7 @@ uses
 
 type
   TSprFormAccountingHours = class(TGridVewTemplateFormSource)
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -72,6 +73,13 @@ begin
       SprFormAccountingHours.Visible := true;
       SprFormAccountingHours.BringToFront;
     end;
+end;
+
+procedure TSprFormAccountingHours.FormCreate(Sender: TObject);
+begin
+  inherited;
+  TableName:='AccountingHours';
+
 end;
 
 end.

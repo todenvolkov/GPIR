@@ -152,7 +152,6 @@ inherited SprFormAccountingHours: TSprFormAccountingHours
   end
   inherited TopSplitter: TcxSplitter
     Width = 786
-    ExplicitWidth = 8
   end
   inherited ADOQuery1: TADOQuery
     SQL.Strings = (

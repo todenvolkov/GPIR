@@ -92,6 +92,10 @@ type
     RichEdit: TcxRichEdit;
     TopSplitter: TcxSplitter;
     ImageButton2: TImageButton;
+    ImageButton3: TImageButton;
+    PopupMenu1: TPopupMenu;
+    DefaultItem: TMenuItem;
+    DuplicatesQuery: TADOQuery;
 
     procedure btnColumnAutoWidthClick(Sender: TObject);
     procedure btnDecreaseFontClick(Sender: TObject);
@@ -117,6 +121,8 @@ type
     procedure cxGrid1DBTableView1KeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure ImageButton2Click(Sender: TObject);
     procedure FormActivate(Sender: TObject);
+    procedure ImageButton3Click(Sender: TObject);
+    procedure DefaultItemClick(Sender: TObject);
   private
     procedure ChangeFontSize(S: TcxGridTableViewStyles;
       SizeDifference: Integer = 0);
@@ -132,7 +138,9 @@ type
 
 var
   GridVewTemplateFormSource: TGridVewTemplateFormSource;
-
+  TableName:string;
+  DuplicatesArray:array[0..1000]of Integer;
+  EnableDuplicatesColoring:boolean;
 implementation
 
 uses Main, routines, TreeUnit, Budgets;
@@ -188,9 +196,23 @@ end;
 procedure TGridVewTemplateFormSource.cxGrid1DBTableView1CustomDrawCell
   (Sender: TcxCustomGridTableView; ACanvas: TcxCanvas;
   AViewInfo: TcxGridTableDataCellViewInfo; var ADone: Boolean);
-
+  var i:integer;
 begin
   ColorRecordByState(Sender, ACanvas, AViewInfo, RL);
+
+   if EnableDuplicatesColoring then
+    begin
+      for i := 0 to 1000 do
+        if DuplicatesArray[i]<>0 then
+         if AViewInfo.GridRecord.Values[TcxGridDBTableView(Sender).GetColumnByFieldName('ID').Index]=DuplicatesArray[i]
+         then  // Если совпали ID - то красим!
+         begin
+            ACanvas.Brush.Color := clCream;
+            ACanvas.Font.Color := clBlack;
+            ACanvas.FillRect(AViewInfo.Bounds);
+         end;
+    end;
+
 end;
 
 procedure TGridVewTemplateFormSource.cxGrid1DBTableView1EditKeyDown(Sender: TcxCustomGridTableView;
@@ -214,6 +236,49 @@ begin
     end;
 end;
 
+procedure TGridVewTemplateFormSource.DefaultItemClick(Sender: TObject);
+var
+  j,i: Integer;
+  s,field,sql:string;
+
+begin
+  s:=(Sender as TMenuItem).Caption;
+  j:=0;
+
+  if (s<>'') and(s<>'Не отображать дубликаты') then
+    begin
+      for i := 0 to cxGrid1DBTableView1.ColumnCount-1 do
+        begin
+          if cxGrid1DBTableView1.Columns[i].Caption=s then      //Если имя пунка меню и колонки совпало - найдем поле
+            begin
+               field:=cxGrid1DBTableView1.Columns[i].DataBinding.FieldName;
+               sql:='exec dbo.SprFindDuplicates '+#39+TableName+#39+','+#39+field+#39;
+               OpenQ(DuplicatesQuery,sql);
+               if DuplicatesQuery.Active then
+                begin
+                  if DuplicatesQuery.RecordCount>0 then
+                    begin
+                      while not(DuplicatesQuery.Eof) do   // Заполним массив данными, чтобы не гонять сто раз по таблице
+                      begin
+                        if j>=1000 then break; // Если больше 1000 совпадений, чтобы не залезьт за границы массива... ну и если больше 1000 - нет смысла
+                        
+                        DuplicatesArray[j]:=DuplicatesQuery.FieldByName('id').AsInteger;
+                        j:=j+1;
+                        DuplicatesQuery.Next;
+                      end;
+                     EnableDuplicatesColoring:=true;
+                    end;
+                end;
+            end;
+
+        end;
+    end
+  else
+  begin
+    EnableDuplicatesColoring:=false;
+  end;
+end;
+
 procedure TGridVewTemplateFormSource.FormActivate(Sender: TObject);
 begin
   MainForm.ActivateTab(MainForm.TabSet, TForm(Sender));
@@ -232,6 +297,10 @@ procedure TGridVewTemplateFormSource.FormCreate(Sender: TObject);
 var
   I: Integer;
 begin
+  for i:= 0 to 1000 do
+    DuplicatesArray[i]:=0;
+  EnableDuplicatesColoring:=false;
+  TableName:='';
   LeftSplitter.CloseSplitter;
   RightSplitter.CloseSplitter;
 //  self.Top:=MainForm.top+MainForm.Height+5;
@@ -315,7 +384,34 @@ end;
 
 procedure TGridVewTemplateFormSource.ImageButton2Click(Sender: TObject);
 begin
-  if HistoryShow then HistoryShow := False else HistoryShow := True;  
+  if HistoryShow then HistoryShow := False else HistoryShow := True;
+end;
+
+procedure TGridVewTemplateFormSource.ImageButton3Click(Sender: TObject);
+var
+  i: Integer;
+  MenuItem:TMenuItem;
+begin
+  if  ADOQuery1.Active then
+    if ADOQuery1.RecordCount>0 then
+      begin
+         PopupMenu1.Items.Clear;
+         MenuItem:=TMenuItem.Create(nil);
+         MenuItem.Caption:='Не отображать дубликаты';
+         MenuItem.OnClick:=DefaultItemClick;
+         PopupMenu1.Items.Add(MenuItem);
+        for i:= 0 to cxGrid1DBTableView1.ColumnCount-1 do
+          begin
+             if cxGrid1DBTableView1.Columns[i].Visible then
+              begin
+                 MenuItem:=TMenuItem.Create(nil);
+                 MenuItem.Caption:=cxGrid1DBTableView1.Columns[i].Caption;
+                 MenuItem.OnClick:=DefaultItemClick;
+                 PopupMenu1.Items.Add(MenuItem);
+              end;
+          end;
+        PopupMenu1.Popup(Mouse.CursorPos.X,Mouse.CursorPos.Y);
+      end;
 end;
 
 procedure TGridVewTemplateFormSource.btnRightColumnToggleClick(Sender: TObject);

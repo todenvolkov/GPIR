@@ -38,6 +38,7 @@ type
     cxGrid1DBTableView2DateChange: TcxGridDBColumn;
     cxGrid1DBTableView2Version: TcxGridDBColumn;
     procedure ADOQuery1AfterPost(DataSet: TDataSet);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -97,6 +98,12 @@ begin
       sprOrganizationsForm.Adoquery4.SQL.Text := 'exec SprOrganizationsJournalShow :BudgetGUID';
       sprOrganizationsForm.Adoquery4.Parameters.ParamByName('BudgetGUID').Value := GlobalBudgetGUID;
       sprOrganizationsForm.Adoquery4.Open;
+end;
+
+procedure TsprOrganizationsForm.FormCreate(Sender: TObject);
+begin
+  inherited;
+ TableName:='Organizations';
 end;
 
 end.

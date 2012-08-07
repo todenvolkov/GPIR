@@ -36,6 +36,7 @@ type
     cxGrid1DBTableView1GUID: TcxGridDBColumn;
     cxGrid1DBTableView1BudgetGUID: TcxGridDBColumn;
     cxGrid1DBTableView1RecordState: TcxGridDBColumn;
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -77,6 +78,12 @@ begin
       DirectionsForm.Visible := true;
       DirectionsForm.BringToFront;
     end;
+end;
+
+procedure TDirectionsForm.FormCreate(Sender: TObject);
+begin
+  inherited;
+ TableName:='Directions';;
 end;
 
 end.

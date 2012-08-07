@@ -4,8 +4,6 @@ inherited PostsForm: TPostsForm
   Caption = #1057#1087#1088#1072#1074#1086#1095#1085#1080#1082' "'#1044#1086#1083#1078#1085#1086#1089#1090#1080'"'
   ExplicitLeft = 474
   ExplicitTop = 292
-  ExplicitWidth = 949
-  ExplicitHeight = 469
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel2: TPanel
@@ -255,7 +253,7 @@ inherited PostsForm: TPostsForm
       BuiltIn = True
     end
   end
-  object DepartmentsQuery: TADOQuery
+  object DepartmentsQuery: TADOQuery [15]
     Connection = MainForm.MainConnection
     CursorType = ctStatic
     Parameters = <>
@@ -264,12 +262,12 @@ inherited PostsForm: TPostsForm
     Left = 536
     Top = 296
   end
-  object DepartmentsDatasource: TDataSource
+  object DepartmentsDatasource: TDataSource [16]
     DataSet = DepartmentsQuery
     Left = 528
     Top = 376
   end
-  object ADOQuery4: TADOQuery
+  object ADOQuery4: TADOQuery [17]
     Connection = MainForm.MainConnection
     CursorType = ctStatic
     Parameters = <>
@@ -278,7 +276,7 @@ inherited PostsForm: TPostsForm
     Left = 672
     Top = 184
   end
-  object DataSource4: TDataSource
+  object DataSource4: TDataSource [18]
     DataSet = ADOQuery4
     Left = 672
     Top = 232

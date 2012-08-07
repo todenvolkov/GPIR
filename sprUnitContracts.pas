@@ -45,6 +45,7 @@ type
     procedure cxGrid1DBTableView1FocusedRecordChanged(Sender: TcxCustomGridTableView; APrevFocusedRecord,
       AFocusedRecord: TcxCustomGridRecord; ANewItemRecordFocusingChanged: Boolean);
     procedure ADOQuery3BeforePost(DataSet: TDataSet);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -110,6 +111,12 @@ begin
         end;
   except
   end;
+end;
+
+procedure TContractsForm.FormCreate(Sender: TObject);
+begin
+  inherited;
+ TableName:='NumbersContracts';
 end;
 
 end.

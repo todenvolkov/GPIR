@@ -1,9 +1,7 @@
 inherited sprCities: TsprCities
   Left = 418
-  Top = 293
   Caption = #1043#1086#1088#1086#1076#1072
   ExplicitLeft = 418
-  ExplicitTop = 293
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel2: TPanel
@@ -194,7 +192,7 @@ inherited sprCities: TsprCities
       BuiltIn = True
     end
   end
-  object ADOQuery4: TADOQuery
+  object ADOQuery4: TADOQuery [15]
     Connection = MainForm.MainConnection
     CursorType = ctStatic
     Parameters = <>
@@ -203,7 +201,7 @@ inherited sprCities: TsprCities
     Left = 672
     Top = 184
   end
-  object DataSource4: TDataSource
+  object DataSource4: TDataSource [16]
     DataSet = ADOQuery4
     Left = 672
     Top = 232

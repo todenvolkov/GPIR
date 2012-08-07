@@ -182,9 +182,10 @@ begin
 
       if PostFilterQuery.Active then PostFilterQuery.Close;
 
-      PostFilterQuery.SQL.Text := 'exec PostsShow :BudgetGUID, :DepartmentGUID ';
+      PostFilterQuery.SQL.Text := 'exec PostsShow :BudgetGUID, :DepartmentGUID, :FormType ';
       PostFilterQuery.Parameters.ParamByName('BudgetGUID').Value := GlobalBudgetGUID;
       PostFilterQuery.Parameters.ParamByName('DepartmentGUID').Value := ItemValue;
+            PostFilterQuery.Parameters.ParamByName('FormType').Value := 'Форма ввода';
 
       LookupProperty := TcxLookupComboBox(AEdit).Properties;
       LookupProperty.ListSource := PostFilterDataset;
@@ -197,7 +198,7 @@ procedure TSprFormAccountingHourValues.FormCreate(Sender: TObject);
 var i:integer;
 begin
   inherited;
- 
+ TableName:='AccountingHourValues';
 end;
 
 end.

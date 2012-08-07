@@ -4,8 +4,6 @@ inherited sprConformityArticles: TsprConformityArticles
   Caption = #1057#1086#1086#1090#1074#1077#1090#1089#1090#1074#1080#1077' '#1089#1090#1072#1090#1077#1081' '#1079#1072#1090#1088#1072#1090' '#1074' '#1041#1091#1093' '#1080' '#1059#1087#1088' '#1091#1095#1077#1090#1077
   ExplicitLeft = 335
   ExplicitTop = 332
-  ExplicitWidth = 949
-  ExplicitHeight = 469
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel2: TPanel

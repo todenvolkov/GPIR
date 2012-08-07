@@ -58,6 +58,7 @@ type
     procedure btnColumnAutoWidthClick(Sender: TObject);
     procedure btnWordWrapClick(Sender: TObject);
     procedure ADOQuery1AfterPost(DataSet: TDataSet);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -212,6 +213,12 @@ begin
       end;
     end;
     ACanvas.FillRect(AViewInfo.Bounds);
+end;
+
+procedure TsprBudgetArticles.FormCreate(Sender: TObject);
+begin
+  inherited;
+ TableName:='BudgetArticles';
 end;
 
 end.

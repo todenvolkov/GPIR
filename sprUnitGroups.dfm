@@ -4,8 +4,6 @@ inherited GroupsForm: TGroupsForm
   Caption = #1057#1087#1088#1072#1074#1086#1095#1085#1080#1082' '#1043#1088#1091#1087#1087#1099
   ExplicitLeft = 435
   ExplicitTop = 298
-  ExplicitWidth = 949
-  ExplicitHeight = 469
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel2: TPanel

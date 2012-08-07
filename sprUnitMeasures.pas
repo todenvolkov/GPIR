@@ -49,6 +49,7 @@ type
     cxGrid1DBTableView2DateChange: TcxGridDBColumn;
     cxGrid1DBTableView2Version: TcxGridDBColumn;
     procedure ADOQuery1AfterPost(DataSet: TDataSet);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -105,6 +106,12 @@ begin
       UnitMeasuresForm.Adoquery4.SQL.Text := 'exec SprUnitsMeasureJournalShow :BudgetGUID';
       UnitMeasuresForm.Adoquery4.Parameters.ParamByName('BudgetGUID').Value := GlobalBudgetGUID;
       UnitMeasuresForm.Adoquery4.Open;
+end;
+
+procedure TUnitMeasuresForm.FormCreate(Sender: TObject);
+begin
+  inherited;
+ TableName:='UnitsMeasure';
 end;
 
 end.

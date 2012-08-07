@@ -58,6 +58,7 @@ type
     procedure cxGrid1DBTableView1CustomDrawCell(Sender: TcxCustomGridTableView; ACanvas: TcxCanvas;
       AViewInfo: TcxGridTableDataCellViewInfo; var ADone: Boolean);
     procedure ADOQuery1AfterPost(DataSet: TDataSet);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -171,6 +172,12 @@ begin
               end;
           end;
       end;
+end;
+
+procedure TsprCostTripForm.FormCreate(Sender: TObject);
+begin
+  inherited;
+ TableName:='Coststrip';
 end;
 
 end.

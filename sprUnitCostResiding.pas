@@ -62,6 +62,7 @@ type
     procedure cxGrid1DBTableView1CustomDrawCell(Sender: TcxCustomGridTableView; ACanvas: TcxCanvas;
       AViewInfo: TcxGridTableDataCellViewInfo; var ADone: Boolean);
     procedure ADOQuery1AfterPost(DataSet: TDataSet);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -257,6 +258,12 @@ begin
       LookupProperty.ListSource := PlaceResidenceFilterDataset;
       PlaceResidenceFilterQuery.Open;
     end;
+end;
+
+procedure TsprCostResidingForm.FormCreate(Sender: TObject);
+begin
+  inherited;
+TableName:='CostsResiding';
 end;
 
 end.

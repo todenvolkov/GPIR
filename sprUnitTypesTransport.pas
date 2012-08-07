@@ -44,6 +44,7 @@ type
     ADOQuery4: TADOQuery;
     DataSource4: TDataSource;
     procedure ADOQuery1AfterPost(DataSet: TDataSet);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -100,6 +101,12 @@ begin
       TypesTransportForm.Adoquery4.SQL.Text := 'exec SprTypesTransportJournalShow :BudgetGUID';
       TypesTransportForm.Adoquery4.Parameters.ParamByName('BudgetGUID').Value := GlobalBudgetGUID;
       TypesTransportForm.Adoquery4.Open;
+end;
+
+procedure TTypesTransportForm.FormCreate(Sender: TObject);
+begin
+  inherited;
+ TableName:='TypesTransport';
 end;
 
 end.

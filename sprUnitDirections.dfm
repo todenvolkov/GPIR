@@ -105,9 +105,6 @@ inherited DirectionsForm: TDirectionsForm
       end
     end
   end
-  inherited TopSplitter: TcxSplitter
-    ExplicitWidth = 8
-  end
   inherited ADOQuery1: TADOQuery
     SQL.Strings = (
       'exec DirectionsShow')
