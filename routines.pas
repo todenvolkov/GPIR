@@ -102,7 +102,8 @@ end;
 
 Function DoFree(PA: Pointer): Boolean;
 begin
-  HeapFree(GetProcessHeap, 0, PA);
+ DoFree:=HeapFree(GetProcessHeap, 0, PA);
+
 end;
 
 function BoolToInt(Value: Boolean): integer;

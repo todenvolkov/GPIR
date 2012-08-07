@@ -27,7 +27,7 @@ uses
   dxBkgnd, dxWrap, dxPrnDev, dxPSCompsProvider, dxPSFillPatterns, dxPSEdgePatterns, dxPSPDFExportCore, dxPSPDFExport,
   cxDrawTextUtils, dxPSPrVwStd, dxPSPrVwAdv, dxPSPrVwRibbon, dxPScxPageControlProducer, dxPScxGridLnk,
   dxPScxGridLayoutViewLnk, dxPScxEditorProducers, dxPScxExtEditorProducers, dxPSCore, dxPScxCommon, cxRichEdit, cxMemo,
-  Common, cxDBExtLookupComboBox, Main;
+  Common, cxDBExtLookupComboBox, Main, Types;
 
 type
   TPlannedWorkForm = class(TForm)
@@ -146,8 +146,8 @@ type
     procedure FormActivate(Sender: TObject);
   private
     QueryState: Integer;
-    procedure ChangeFontSize(S: TcxGridTableViewStyles;
-      SizeDifference: Integer = 0);
+//    procedure ChangeFontSize(S: TcxGridTableViewStyles;
+  //    SizeDifference: Integer = 0);
     procedure RefreshMonths(NewItem: Boolean);
     procedure RefreshPlan(WithSaveID: Integer);
     procedure ShowPlanData(Button: TcxButton);
@@ -351,16 +351,7 @@ begin
   cxGrid1.SetFocus;
 end;
 
-procedure TPlannedWorkForm.ChangeFontSize(S: TcxGridTableViewStyles;
-  SizeDifference: Integer = 0);
-var
-  i: Integer;
-begin
-  for i := 0 to S.Count - 1 do
-    begin
-      S.Values[i].Font.size := S.Values[i].Font.size + SizeDifference;
-    end;
-end;
+
 
 procedure TPlannedWorkForm.cxButton1Click(Sender: TObject);
 begin

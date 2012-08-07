@@ -17,7 +17,7 @@ uses
   dxPScxExtEditorProducers, dxSkinsdxBarPainter, dxPSCore, dxPScxCommon, ADODB, cxRichEdit, cxTextEdit, cxMemo,
   cxSplitter, cxGridLevel, cxGridCustomTableView, cxGridTableView, cxGridDBTableView, cxClasses, cxGridCustomView,
   cxGrid, StdCtrls, cxButtons, ImageButton, ExtCtrls, dxStatusBar, Main, Common, cxDBLookupComboBox,
-  cxGridDBDataDefinitions, cxVariants, cxCurrencyEdit, Budgets;
+  cxGridDBDataDefinitions, cxVariants, cxCurrencyEdit, Budgets, types;
 
 type
   TStagesForm = class(TForm)
@@ -128,7 +128,7 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
-    Bookmark: TBookmark;
+  //  Bookmark: TBookmark;
     QueryState: Integer;
   public
     { Public declarations }

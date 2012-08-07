@@ -30,7 +30,7 @@ uses
   dxPScxPageControlProducer, dxPScxGridLnk, dxPScxGridLayoutViewLnk,
   dxPScxEditorProducers, dxPScxExtEditorProducers,
   dxPSCore, dxPScxCommon, cxDBLookupComboBox, cxDropDownEdit, cxGridExportLink ,ShellApi, ImageButton,
-  cxGridDBDataDefinitions, cxVariants, cxLookupDBGrid, cxRichEdit, cxMemo, Common;
+  cxGridDBDataDefinitions, cxVariants, cxLookupDBGrid, cxRichEdit, cxMemo, Common, types;
   //cxExport, cxXLSExport, dxXLSXExport
 
 type
@@ -124,8 +124,8 @@ type
     procedure ImageButton3Click(Sender: TObject);
     procedure DefaultItemClick(Sender: TObject);
   private
-    procedure ChangeFontSize(S: TcxGridTableViewStyles;
-      SizeDifference: Integer = 0);
+  //  procedure ChangeFontSize(S: TcxGridTableViewStyles;
+///      SizeDifference: Integer = 0);
       function GetTrueCaption(C: string): string;
       procedure CheckAccess;
     { Private declarations }
@@ -159,16 +159,7 @@ begin
 end;
 
 
-procedure TGridVewTemplateFormSource.ChangeFontSize(S: TcxGridTableViewStyles;
-  SizeDifference: Integer = 0);
-var
-  i: Integer;
-begin
-  for i := 0 to S.Count - 1 do
-    begin
-      S.Values[i].Font.size := S.Values[i].Font.size + SizeDifference;
-    end;
-end;
+
 
 procedure TGridVewTemplateFormSource.cxButton1Click(Sender: TObject);
 var filename:string;
@@ -458,8 +449,7 @@ begin
 end;
 
 procedure TGridVewTemplateFormSource.btnDecreaseFontClick(Sender: TObject);
-var
-  i: Integer;
+
 begin
   cxGrid1DBTableView1.BeginUpdate;
   with cxGrid1DBTableView1.Styles do

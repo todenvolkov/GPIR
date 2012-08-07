@@ -1,6 +1,6 @@
 object PlannedWorkOISIForm: TPlannedWorkOISIForm
-  Left = 377
-  Top = 254
+  Left = 622
+  Top = 395
   Caption = #1057#1087#1088#1072#1074#1086#1095#1085#1080#1082
   ClientHeight = 427
   ClientWidth = 1026
@@ -1329,7 +1329,7 @@ object PlannedWorkOISIForm: TPlannedWorkOISIForm
       PrinterPage.PageSize.Y = 297000
       PrinterPage._dxMeasurementUnits_ = 0
       PrinterPage._dxLastMU_ = 2
-      ReportDocument.CreationDate = 41127.894115486110000000
+      ReportDocument.CreationDate = 41128.885759363420000000
       OptionsCards.AutoWidth = True
       OptionsExpanding.ExpandGroupRows = True
       OptionsExpanding.ExpandMasterRows = True

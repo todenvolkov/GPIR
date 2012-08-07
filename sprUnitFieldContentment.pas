@@ -130,7 +130,7 @@ procedure TFieldContentmentForm.cxGrid1DBTableView1CustomDrawCell(Sender: TcxCus
   AViewInfo: TcxGridTableDataCellViewInfo; var ADone: Boolean);
 var Index1, Index2: Integer;
     BrushColor, FontColor: TColor;
-    Date: TDate;
+//    Date: TDate;
 begin
   inherited;
    // раскраска при выходе дат за пределы действия договора

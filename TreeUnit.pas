@@ -498,7 +498,7 @@ end;
 
 procedure TTreeForm.N22Click(Sender: TObject);
 var ptr: PFolder;
-    node: TcxTreeListNode;
+//    node: TcxTreeListNode;
     Options: CreateOptionsBudgets;
 begin
   if cxTreeList1.SelectionCount > 0 then

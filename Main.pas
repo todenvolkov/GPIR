@@ -1511,7 +1511,7 @@ begin
 end;
 
 procedure TMainForm.N1Click(Sender: TObject);
-var NewTab: Integer;
+//var NewTab: Integer;
 begin
   if TabSet.Tabs.Count > 0 then
     begin
@@ -1820,7 +1820,7 @@ begin
 end;
 
 procedure TMainForm.ActivateTab(Tab: TTabSet; Form: TForm);
-var i, NewTab: Integer;
+var i: Integer;
 begin
   for i := 0 to Tab.Tabs.Count - 1 do
     begin

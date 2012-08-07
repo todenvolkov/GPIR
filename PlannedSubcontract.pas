@@ -17,7 +17,7 @@ uses
   cxFilter, cxData, cxDataStorage, cxEdit, cxDBData, cxDBLookupComboBox, cxCurrencyEdit, cxContainer, cxRichEdit,
   cxTextEdit, cxMemo, cxSplitter, cxGridLevel, cxGridCustomTableView, cxGridTableView, cxGridDBTableView, cxClasses,
   cxGridCustomView, cxGrid, StdCtrls, cxButtons, ImageButton, ExtCtrls, dxStatusBar,
-  Main, Common, SQLRoutines1, routines, TreeUnit;
+  Main, Common, SQLRoutines1, routines, TreeUnit,types;
 
 type
   TPlannedSubcontractForm = class(TForm)

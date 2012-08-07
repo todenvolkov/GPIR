@@ -1,6 +1,6 @@
 object PlannedWorkForm: TPlannedWorkForm
-  Left = 348
-  Top = 197
+  Left = 502
+  Top = 472
   Caption = #1057#1087#1088#1072#1074#1086#1095#1085#1080#1082
   ClientHeight = 536
   ClientWidth = 1020
