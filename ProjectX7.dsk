@@ -26,8 +26,8 @@ EditWindowCount=1
 
 [C:\LastBuild\Reports.pas]
 ModuleType=TSourceModule
-FormState=0
-FormOnTop=0
+FormState=1
+FormOnTop=1
 
 [C:\LastBuild\XLS1CImport.pas]
 ModuleType=TSourceModule
@@ -47,6 +47,10 @@ FormOnTop=0
 []
 ModuleType=TURLModule
 
+[C:\todenvolkov-GPIR-2fcf9f8\Main.pas]
+FormState=0
+FormOnTop=0
+
 [EditWindow0]
 ViewCount=5
 CurrentEditView=C:\LastBuild\Reports.pas
@@ -60,14 +64,14 @@ Create=1
 Visible=1
 Docked=0
 State=0
-Left=1839
-Top=1048
-Width=6365
-Height=8762
-MaxLeft=-21
-MaxTop=1219
-ClientWidth=6323
-ClientHeight=8505
+Left=1656
+Top=1352
+Width=6521
+Height=8648
+MaxLeft=-5
+MaxTop=-10
+ClientWidth=6479
+ClientHeight=8390
 DockedToMainForm=0
 BorlandEditorCodeExplorer=BorlandEditorCodeExplorer@EditWindow0
 TopPanelSize=0
@@ -78,7 +82,7 @@ RightPanelSize=0
 BottomPanelSize=0
 BottomMiddlePanelSize=1361
 BottomMiddlePanelClients=DockSite0,ToDo List,MessageView
-BottomMiddelPanelData=0000080001020100000009000000446F636B5369746530E92B0000000000000251050000000000000100000000771C00000F0000004D65737361676556696577466F726D0100000000E92B00000E000000546F446F4C69737457696E646F77FFFFFFFF
+BottomMiddelPanelData=0000080001020100000009000000446F636B5369746530FF2C0000000000000251050000000000000100000000771C00000F0000004D65737361676556696577466F726D0100000000FF2C00000E000000546F446F4C69737457696E646F77FFFFFFFF
 
 [View0]
 CustomEditViewType=TWelcomePageView
@@ -98,8 +102,8 @@ EditViewName=C:\LastBuild\Main.pas
 [View2]
 CustomEditViewType=TEditView
 Module=C:\LastBuild\Reports.pas
-CursorX=10
-CursorY=1201
+CursorX=17
+CursorY=1186
 TopLine=1184
 LeftCol=1
 Elisions=
@@ -171,11 +175,11 @@ Docked=0
 State=0
 Left=0
 Top=0
-Width=8719
+Width=10000
 Height=1257
 MaxLeft=-5
 MaxTop=-10
-ClientWidth=8677
+ClientWidth=9958
 ClientHeight=1000
 BottomPanelSize=0
 
@@ -403,11 +407,11 @@ Docked=1
 State=0
 Left=787
 Top=23
-Width=2224
+Width=2380
 Height=1181
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=2224
+ClientWidth=2380
 ClientHeight=1181
 TBDockHeight=1181
 LRDockWidth=3672
@@ -445,7 +449,7 @@ SplitPos=162
 [PropInspDesignerSelection]
 ArrangeBy=Name
 SelectedItem=Caption,
-ExpandedItems=Anchors=0,BorderIcons=0,Constraints=0,Font=0,GlassFrame=0
+ExpandedItems=Anchors=0,Colors=0,Constraints=0,Font=0,LookAndFeel=0,Margins=0,BorderIcons=0,GlassFrame=0
 
 [DataExplorer]
 PercentageSizes=1
