@@ -48,6 +48,7 @@ type
     DS4: TADODataSet;
     DS5: TADODataSet;
     DS6: TADODataSet;
+    Progress: TProgressBar;
     procedure SubcontractRerportBtnClick(Sender: TObject);
     procedure StagesReportBtnClick(Sender: TObject);
     procedure MSFOReportBtnClick(Sender: TObject);
@@ -113,6 +114,11 @@ begin
   try
     // формируем набор данных
     //OpenParamsQ(ReportQuery, 'exec ReportSubcontractDataQtr', ['{54744EC8-9E74-4C9B-993F-A7E3DCC68A65}']);
+    if VarIsNull(cxLookupComboBox1.EditValue) then
+      begin
+        MessageDlg('Не выбран бюджет', mtError, [mbOk], 0);
+        Exit;
+      end;
     ReportQuery.Close;
     ReportQuery.sql.Text := 'exec ReportSubcontractDataQtr ' + #39 + cxLookupComboBox1.EditValue + #39;
     ReportQuery.Open;
@@ -121,8 +127,15 @@ begin
     DS2.RecordSet := ReportQuery.NextRecordset(Affected);
 
     RowCount := DS2.FieldByName('RecordCount').AsInteger;
-    ColumnCount := Trunc(DS1.RecordCount/RowCount);
 
+
+    if (RowCount = 0) or (DS1.RecordCount = 0) then
+      begin
+        MessageDlg('Нет данных по этому бюджету', mtError, [mbOk], 0);
+        Exit;
+      end;
+
+    ColumnCount := Trunc(DS1.RecordCount/RowCount);
 
     // начало формирования плоской таблицы
     XL := TXLSReadWriteII4.Create(nil);
@@ -146,6 +159,8 @@ begin
 
     XL.Sheet[0].AsString[6+ColumnCount*2,0] := 'Остаток, руб.';
     TXLSRange(XL.Sheet[0].Range).Items[6+ColumnCount*2,0,6+ColumnCount*2,1].Merged := True;
+
+    TXLSRange(XL.Sheet[0].Range).Items[1,0,6+ColumnCount*2,1].FillPatternForeColor := xcSky;
 
     for k := 0 to ColumnCount - 1 do
       begin
@@ -186,8 +201,12 @@ begin
             TXLSRange(XL.Sheet[0].Range).Items[1,0,6+ColumnCount*2,1+RowCount].BorderOutlineStyle := cbsThin;
             TXLSRange(XL.Sheet[0].Range).Items[1,0,6+ColumnCount*2,1+RowCount].FormatOptions := [foWrapText];
 
+    XL.Sheet[0].Columns.SetColWidth(1,6+ColumnCount*2,3500);
+    XL.Sheet[0].Columns.SetColWidth(1,1,10000);
+    TXLSRange(XL.Sheet[0].Range).Items[6,0,5+ColumnCount*2,1].FillPatternForeColor := xcYellow;
+
     CoCreateGuid(GUID);
-    XL.Filename := GetCurrentDir + '\' + GUIDToString(GUID) + '_субподряд.xls';
+    XL.Filename := GetCurrentDir + '\субподряд_' + GUIDToString(GUID) + '.xls';
     XL.Write;
   finally
     XL.Free;
@@ -267,6 +286,11 @@ begin
 
     // формируем набор данных
     //OpenParamsQ(ReportQuery, 'exec ReportSubcontractDataQtr', ['{54744EC8-9E74-4C9B-993F-A7E3DCC68A65}']);
+    if VarIsNull(cxLookupComboBox2.EditValue) then
+      begin
+        MessageDlg('Не выбран бюджет', mtError, [mbOk], 0);
+        Exit;
+      end;
     ReportQuery.Close;
     ReportQuery.sql.Text := 'exec ReportStagesDataQtr ' + #39 + cxLookupComboBox2.EditValue + #39;
     ReportQuery.Open;
@@ -276,6 +300,11 @@ begin
     DS3.RecordSet := ReportQuery.NextRecordset(Affected);
 
     RowCount := DS2.FieldByName('RecordCount').AsInteger;
+    if (RowCount = 0) or (DS1.RecordCount = 0) then
+      begin
+        MessageDlg('Нет данных по этому бюджету', mtError, [mbOk], 0);
+        Exit;
+      end;
     ColumnCount := Trunc(DS1.RecordCount/RowCount);
 
     // начало формирования плоской таблицы
@@ -313,13 +342,8 @@ begin
     XL.Sheet[0].AsString[10,0] := 'Плановая сумма выручки без НДС, руб.';
     TXLSRange(XL.Sheet[0].Range).Items[10,0,10,1].Merged := True;
 
+    TXLSRange(XL.Sheet[0].Range).Items[1,0,10,1].FillPatternForeColor := xcSky;
 
-
-//    for k := 0 to ColumnCount - 1 do
-//      begin
-//        XL.Sheet[0].AsString[13+k*2,0] := 'План';
-//        XL.Sheet[0].AsString[14+k*2,0] := 'Факт';
-//      end;
 
     // формирование таблицы
     DS1.First;
@@ -392,8 +416,12 @@ begin
             TXLSRange(XL.Sheet[0].Range).Items[1,0,QtrColumn+1,1+RowCount].BorderOutlineStyle := cbsThin;
             TXLSRange(XL.Sheet[0].Range).Items[1,0,QtrColumn+1,1+RowCount].FormatOptions := [foWrapText];
 
+    XL.Sheet[0].Columns.SetColWidth(1,QtrColumn+1,3500);
+    XL.Sheet[0].Columns.SetColWidth(1,1,10000);
+    TXLSRange(XL.Sheet[0].Range).Items[11,0,QtrColumn+1,1].FillPatternForeColor := xcYellow;
+
     CoCreateGuid(GUID);
-    XL.Filename := GetCurrentDir + '\' + GUIDToString(GUID) + '_выручка.xls';
+    XL.Filename := GetCurrentDir + '\выручка_' + GUIDToString(GUID) + '.xls';
     XL.Write;
   finally
     XL.Free;
@@ -410,6 +438,7 @@ var XL: TXLSReadWriteII4;
     QtrColumn, QtrNumber, Month: Integer;
 
     ReportDate: string;
+    MonthName: string;
 begin
   try
     // формируем набор данных
@@ -583,7 +612,7 @@ begin
               begin
                 if not TXLSRange(XL.Sheet[0].Range).Items[g,1,g+DS6.RecordCount-1,1].Merged then
                   begin
-                    XL.Sheet[0].AsString[g,1] := 'Фактические затраты по договору с начала действия договора  до 01.01.2011 г.';
+                    XL.Sheet[0].AsString[g,1] := 'Фактические затраты по договору с начала действия договора  до 01.01.' + IntToStr(DS6.FieldByName('ArticleName').AsInteger - 1) + 'г.';
                     XL.Sheet[0].Cell[g,1].HorizAlignment := chaCenter;
                     TXLSRange(XL.Sheet[0].Range).Items[g,1,g+DS6.RecordCount-1,1].Merged := True;
                     TXLSRange(XL.Sheet[0].Range).Items[g,1,g+DS6.RecordCount-1,3].FillPatternForeColor := xcLightOrange;
@@ -607,7 +636,7 @@ begin
               begin
                 if not TXLSRange(XL.Sheet[0].Range).Items[g,1,g+DS6.RecordCount-1,1].Merged then
                   begin
-                    XL.Sheet[0].AsString[g,1] := 'Фактические затраты по договору за 2011 г.';
+                    XL.Sheet[0].AsString[g,1] := 'Фактические затраты по договору за ' + IntToStr(DS6.FieldByName('ArticleName').AsInteger - 1) + 'г.';
                     XL.Sheet[0].Cell[g,1].HorizAlignment := chaCenter;
                     TXLSRange(XL.Sheet[0].Range).Items[g,1,g+DS6.RecordCount-1,1].Merged := True;
                     TXLSRange(XL.Sheet[0].Range).Items[g,1,g+DS6.RecordCount-1,3].FillPatternForeColor := xcSky;
@@ -631,7 +660,7 @@ begin
               begin
                 if not TXLSRange(XL.Sheet[0].Range).Items[g,1,g+DS6.RecordCount-1,1].Merged then
                   begin
-                    XL.Sheet[0].AsString[g,1] := 'Фактические затраты по договору с начала действия договора  до 01.01.2012 г.';
+                    XL.Sheet[0].AsString[g,1] := 'Фактические затраты по договору с начала действия договора  до 01.01.' + DS6.FieldByName('Years').AsString  + 'г.';
                     XL.Sheet[0].Cell[g,1].HorizAlignment := chaCenter;
                     TXLSRange(XL.Sheet[0].Range).Items[g,1,g+DS6.RecordCount-1,1].Merged := True;
                     TXLSRange(XL.Sheet[0].Range).Items[g,1,g+DS6.RecordCount-1,3].FillPatternForeColor := xcRose;
@@ -655,7 +684,21 @@ begin
               begin
                 if not TXLSRange(XL.Sheet[0].Range).Items[g,1,g+DS6.RecordCount-1,1].Merged then
                   begin
-                    XL.Sheet[0].AsString[g,1] := 'Фактические затраты по договору за февраль 2012 г.';
+                    case DS6.FieldByName('Years').AsInteger of
+                      1: MonthName := 'январь';
+                      2: MonthName := 'февраль';
+                      3: MonthName := 'март';
+                      4: MonthName := 'апрель';
+                      5: MonthName := 'май';
+                      6: MonthName := 'июнь';
+                      7: MonthName := 'июль';
+                      8: MonthName := 'август';
+                      9: MonthName := 'сентябрь';
+                      10: MonthName := 'октябрь';
+                      11: MonthName := 'ноябрь';
+                      12: MonthName := 'декабрь';
+                    end;
+                    XL.Sheet[0].AsString[g,1] := 'Фактические затраты по договору за ' + MonthName + ' ' + DS6.FieldByName('Years').AsString + 'г.';
                     XL.Sheet[0].Cell[g,1].HorizAlignment := chaCenter;
                     TXLSRange(XL.Sheet[0].Range).Items[g,1,g+DS6.RecordCount-1,1].Merged := True;
                     TXLSRange(XL.Sheet[0].Range).Items[g,1,g+DS6.RecordCount-1,3].FillPatternForeColor := xcGray40;
@@ -792,6 +835,7 @@ var XL: TXLSReadWriteII4;
     QtrColumn, QtrNumber, Month: Integer;
 
     ReportDate: string;
+    MonthName: string;
 begin
   try
     // формируем набор данных
@@ -899,8 +943,14 @@ begin
 
     i := 4;
 
+    Progress.Visible := True;
+    Progress.Position := 0;
+    Progress.Max := DS1.RecordCount;
+
     while not DS1.Eof do
       begin
+             Progress.Position := Progress.Position + 1;
+             Application.ProcessMessages;
              Excel.Cells.Item[i,1].Value := DS1.FieldByName('CounterpartName').AsString;
              Excel.Cells.Item[i,2].Value := DS1.FieldByName('NumbersContractsExt').AsString;
              Excel.Cells.Item[i,3].Value := DS1.FieldByName('GIP').AsString;
@@ -911,76 +961,108 @@ begin
              Excel.Cells.Item[i,8].Value := DS1.FieldByName('CostTotal').AsString;
              Excel.Cells.Item[i,9].Value := DS1.FieldByName('CostFact').AsString;
 
-
-            ///// блок выручки по годам
             DS3.Filtered := False;
             DS3.Filter := 'ContractID = ' + DS1.FieldByName('ContractID').AsString;
             DS3.Filtered := True;
             k := 10;
             if DS3.RecordCount > 0 then
               begin
-//                if not Excel.Cells.Item[1,k].Value = 'в том числе' then
-//                  begin
+
                     Excel.Cells.Item[1,k].Value := 'в том числе';
                     Excel.Range[Excel.Cells[1,k],Excel.Cells[1,k+DS3.RecordCount-1]].Select;
                     Excel.Selection.MergeCells := True;
                     Excel.Selection.HorizontalAlignment := 3;
                     Excel.Range[Excel.Cells[1,k],Excel.Cells[3,k+DS3.RecordCount-1]].Select;
                     Excel.Selection.Interior.Color := rgb(192, 255, 192);
-                  //end;
+
                 DS3.First;
                 while not DS3.Eof do
                   begin
                     Excel.Cells.Item[i,k].Value := DS3.FieldByName('CostFact').AsString;
-                    Excel.Cells.Item[3,k].Value := DS3.FieldByName('Years').AsString;;
+                    Excel.Cells.Item[3,k].Value := DS3.FieldByName('Years').AsString;
                     Inc(k);
                     DS3.Next;
                   end;
               end;
-            //////////////////
-            ///
-            ///// блок выручки за последний год помесячно
+
             DS4.Filtered := False;
             DS4.Filter := 'ContractID = ' + DS1.FieldByName('ContractID').AsString;
             DS4.Filtered := True;
-            //k := 10;
+
             if DS4.RecordCount > 0 then
               begin
-//                if not TXLSRange(XL.Sheet[0].Range).Items[k,1,k+DS4.RecordCount-1,1].Merged then
-//                  begin
+
                     Excel.Cells.Item[1,k].Value := 'в том числе';
                     Excel.Range[Excel.Cells[1,k],Excel.Cells[1,k+DS4.RecordCount-1]].Select;
                     Excel.Selection.MergeCells := True;
                     Excel.Selection.HorizontalAlignment := 3;
                     Excel.Range[Excel.Cells[1,k],Excel.Cells[3,k+DS4.RecordCount-1]].Select;
-                    Excel.Selection.Interior.Color := rgb(192, 210, 192);
-                  //end;
+                    Excel.Selection.Interior.Color := rgb(202, 0, 255);
+
+                    Excel.Cells.Item[3,k].Value := 'январь ' + DS4.FieldByName('Years').AsString + 'г.';
+                    Excel.Cells.Item[3,k+1].Value := 'февраль ' + DS4.FieldByName('Years').AsString + 'г.';
+                    Excel.Cells.Item[3,k+2].Value := 'март ' + DS4.FieldByName('Years').AsString + 'г.';
+                    Excel.Cells.Item[3,k+3].Value := '1 кв. ' + DS4.FieldByName('Years').AsString + 'г.';
+                    Excel.Cells.Item[3,k+4].Value := 'апрель ' + DS4.FieldByName('Years').AsString + 'г.';
+                    Excel.Cells.Item[3,k+5].Value := 'май ' + DS4.FieldByName('Years').AsString + 'г.';
+                    Excel.Cells.Item[3,k+6].Value := 'июнь ' + DS4.FieldByName('Years').AsString + 'г.';
+                    Excel.Cells.Item[3,k+7].Value := '2 кв. ' + DS4.FieldByName('Years').AsString + 'г.';
+                    Excel.Cells.Item[3,k+8].Value := '1 полугодие ' + DS4.FieldByName('Years').AsString + 'г.';
+                    Excel.Cells.Item[3,k+9].Value := 'июль ' + DS4.FieldByName('Years').AsString + 'г.';
+                    Excel.Cells.Item[3,k+10].Value := 'август ' + DS4.FieldByName('Years').AsString + 'г.';
+                    Excel.Cells.Item[3,k+11].Value := 'сентябрь ' + DS4.FieldByName('Years').AsString + 'г.';
+                    Excel.Cells.Item[3,k+12].Value := '3 кв. ' + DS4.FieldByName('Years').AsString + 'г.';
+                    Excel.Cells.Item[3,k+13].Value := 'октябрь ' + DS4.FieldByName('Years').AsString + 'г.';
+                    Excel.Cells.Item[3,k+14].Value := 'ноябрь ' + DS4.FieldByName('Years').AsString + 'г.';
+                    Excel.Cells.Item[3,k+15].Value := 'декабрь ' + DS4.FieldByName('Years').AsString + 'г.';
+                    Excel.Cells.Item[3,k+16].Value := '4 кв. ' + DS4.FieldByName('Years').AsString + 'г.';
+                    Excel.Cells.Item[3,k+17].Value := '2 полугодие ' + DS4.FieldByName('Years').AsString + 'г.';
+                    Excel.Cells.Item[3,k+18].Value := '' + DS4.FieldByName('Years').AsString + 'г.';
+
                 DS4.First;
                 while not DS4.Eof do
                   begin
-                   Excel.Cells.Item[i,k].Value := DS4.FieldByName('CostFact').AsString;
+                    Excel.Cells.Item[i,k].Value := DS4.FieldByName('CostFact').AsString;
                     Inc(k);
                     DS4.Next;
                   end;
               end;
-            //////////////////
-            ///
-            ///// блок производственной себестоимости
+
             DS5.Filtered := False;
             DS5.Filter := 'ContractID = ' + DS1.FieldByName('ContractID').AsString;
             DS5.Filtered := True;
-            //k := 10;
             if DS5.RecordCount > 0 then
               begin
-//                if not TXLSRange(XL.Sheet[0].Range).Items[k+1,1,k+DS5.RecordCount-1,1].Merged then
-//                  begin
+                    case DS5.FieldByName('Months').AsInteger of
+                      1: MonthName := 'январь';
+                      2: MonthName := 'февраль';
+                      3: MonthName := 'март';
+                      4: MonthName := 'апрель';
+                      5: MonthName := 'май';
+                      6: MonthName := 'июнь';
+                      7: MonthName := 'июль';
+                      8: MonthName := 'август';
+                      9: MonthName := 'сентябрь';
+                      10: MonthName := 'октябрь';
+                      11: MonthName := 'ноябрь';
+                      12: MonthName := 'декабрь';
+                    end;
+
                     Excel.Cells.Item[1,k+1].Value := 'в том числе';
                     Excel.Range[Excel.Cells[1,k],Excel.Cells[1,k+DS5.RecordCount-1]].Select;
                     Excel.Selection.MergeCells := True;
                     Excel.Selection.HorizontalAlignment := 3;
                     Excel.Range[Excel.Cells[1,k],Excel.Cells[3,k+DS5.RecordCount-1]].Select;
-                    Excel.Selection.Interior.Color := rgb(192, 180, 192);
-                  //end;
+                    Excel.Selection.Interior.Color := rgb(255, 216, 0);
+
+                    Excel.Cells.Item[3,k].Value := 'Производственная себестоимость с начала действия договора по состоянию на отчетную дату (' + MonthName + ' ' + DS5.FieldByName('Years').AsString + 'г.)';
+                    Excel.Cells.Item[3,k+1].Value := 'с начала действия договора до 01.01.' + IntToStr(DS5.FieldByName('Years').AsInteger-1)  + 'г.';
+                    Excel.Cells.Item[3,k+2].Value := 'за ' + IntToStr(DS5.FieldByName('Years').AsInteger-1)  + 'г.';
+                    Excel.Cells.Item[3,k+3].Value := 'за 1 кв. ' + DS5.FieldByName('Years').AsString  + 'г.';
+                    Excel.Cells.Item[3,k+4].Value := 'за 1 полугодие ' + DS5.FieldByName('Years').AsString  + 'г.';
+                    Excel.Cells.Item[3,k+5].Value := 'за 9 мес. ' + DS5.FieldByName('Years').AsString  + 'г.';
+                    Excel.Cells.Item[3,k+6].Value := 'за ' + DS5.FieldByName('Years').AsString  + 'г.';
+
                 DS5.First;
                 while not DS5.Eof do
                   begin
@@ -989,32 +1071,26 @@ begin
                     DS5.Next;
                   end;
               end;
-            //////////////////
-            ///
-            ///
+
             DS6.Filtered := False;
             DS6.Filter := 'ContractID = ' + DS1.FieldByName('ContractID').AsString + ' and ID = 1';
             DS6.Filtered := True;
             g := k;
             if DS6.RecordCount > 0 then
               begin
-//                if not TXLSRange(XL.Sheet[0].Range).Items[g,1,g+DS6.RecordCount-1,1].Merged then
-//                  begin
-                    Excel.Cells.Item[1,g] := 'Фактические затраты по договору с начала действия договора  до 01.01.2011 г.';
+
+                    Excel.Cells.Item[1,g] := 'Фактические затраты по договору с начала действия договора  до 01.01.' + DS6.FieldByName('Years').AsString  + 'г.';
                     Excel.Range[Excel.Cells[1,g],Excel.Cells[1,g+DS6.RecordCount-1]].Select;
                     Excel.Selection.MergeCells := True;
                     Excel.Selection.HorizontalAlignment := 3;
                     Excel.Range[Excel.Cells[1,g],Excel.Cells[3,g+DS6.RecordCount-1]].Select;
-                    Excel.Selection.Interior.Color := rgb(180, 255, 192);
-                  //end;
+                    Excel.Selection.Interior.Color := rgb(66, 255, 148);
+
                 DS6.First;
                 while not DS6.Eof do
                   begin
                     Excel.Cells.Item[i,g] := DS6.FieldByName('CostFact').AsString;
                     Excel.Cells.Item[3,g] := DS6.FieldByName('ArticleName').AsString;
-                    Excel.Range[Excel.Cells[3,g],Excel.Cells[3,g]].Select;
-                    Excel.Selection.HorizontalAlignment := 3;
-                    Excel.Selection.VerticalAlignment := 2;
                     Inc(g);
                     DS6.Next;
                   end;
@@ -1025,23 +1101,19 @@ begin
             DS6.Filtered := True;
             if DS6.RecordCount > 0 then
               begin
-//                if not TXLSRange(XL.Sheet[0].Range).Items[g,1,g+DS6.RecordCount-1,1].Merged then
-//                  begin
-                    Excel.Cells.Item[1,g] := 'Фактические затраты по договору за 2011 г.';
+
+                    Excel.Cells.Item[1,g] := 'Фактические затраты по договору за ' + DS6.FieldByName('Years').AsString + 'г.';
                     Excel.Range[Excel.Cells[1,g],Excel.Cells[1,g+DS6.RecordCount-1]].Select;
                     Excel.Selection.MergeCells := True;
                     Excel.Selection.HorizontalAlignment := 3;
                     Excel.Range[Excel.Cells[1,g],Excel.Cells[3,g+DS6.RecordCount-1]].Select;
-                    Excel.Selection.Interior.Color := rgb(180, 255, 180);
-                  //end;
+                    Excel.Selection.Interior.Color := rgb(66, 170, 255);
+
                 DS6.First;
                 while not DS6.Eof do
                   begin
                     Excel.Cells.Item[i,g] := DS6.FieldByName('CostFact').AsString;
                     Excel.Cells.Item[3,g] := DS6.FieldByName('ArticleName').AsString;
-                    Excel.Range[Excel.Cells[3,g],Excel.Cells[3,g]].Select;
-                    Excel.Selection.HorizontalAlignment := 3;
-                    Excel.Selection.VerticalAlignment := 2;
                     Inc(g);
                     DS6.Next;
                   end;
@@ -1052,23 +1124,19 @@ begin
             DS6.Filtered := True;
             if DS6.RecordCount > 0 then
               begin
-//                if not TXLSRange(XL.Sheet[0].Range).Items[g,1,g+DS6.RecordCount-1,1].Merged then
-//                  begin
-                    Excel.Cells.Item[1,g] := 'Фактические затраты по договору с начала действия договора  до 01.01.2012 г.';
+
+                    Excel.Cells.Item[1,g] := 'Фактические затраты по договору с начала действия договора  до 01.01.' + DS6.FieldByName('Years').AsString  + 'г.';
                     Excel.Range[Excel.Cells[1,g],Excel.Cells[1,g+DS6.RecordCount-1]].Select;
                     Excel.Selection.MergeCells := True;
                     Excel.Selection.HorizontalAlignment := 3;
                     Excel.Range[Excel.Cells[1,g],Excel.Cells[3,g+DS6.RecordCount-1]].Select;
-                    Excel.Selection.Interior.Color := rgb(180, 180, 180);
-//                  end;
+                    Excel.Selection.Interior.Color := rgb(230, 230, 250);
+
                 DS6.First;
                 while not DS6.Eof do
                   begin
                     Excel.Cells.Item[i,g] := DS6.FieldByName('CostFact').AsString;
                     Excel.Cells.Item[3,g] := DS6.FieldByName('ArticleName').AsString;
-                    Excel.Range[Excel.Cells[3,g],Excel.Cells[3,g]].Select;
-                    Excel.Selection.HorizontalAlignment := 3;
-                    Excel.Selection.VerticalAlignment := 2;
                     Inc(g);
                     DS6.Next;
                   end;
@@ -1079,23 +1147,37 @@ begin
             DS6.Filtered := True;
             if DS6.RecordCount > 0 then
               begin
-//                if not TXLSRange(XL.Sheet[0].Range).Items[g,1,g+DS6.RecordCount-1,1].Merged then
-//                  begin
-                    Excel.Cells.Item[1,g] := 'Фактические затраты по договору за февраль 2012 г.';
-                    Excel.Range[Excel.Cells[1,g],Excel.Cells[1,g+DS6.RecordCount-1]].Select;
-                    Excel.Selection.MergeCells := True;
-                    Excel.Selection.HorizontalAlignment := 3;
+
                     Excel.Range[Excel.Cells[1,g],Excel.Cells[3,g+DS6.RecordCount-1]].Select;
-                    Excel.Selection.Interior.Color := rgb(180, 190, 180);
-//                  end;
+                    Excel.Selection.Interior.Color := rgb(38, 227, 201);
+
                 DS6.First;
                 while not DS6.Eof do
                   begin
                     Excel.Cells.Item[i,g] := DS6.FieldByName('CostFact').AsString;
                     Excel.Cells.Item[3,g] := DS6.FieldByName('ArticleName').AsString;
-                    Excel.Range[Excel.Cells[3,g],Excel.Cells[3,g]].Select;
-                    Excel.Selection.HorizontalAlignment := 3;
-                    Excel.Selection.VerticalAlignment := 2;
+                    if DS6.FieldByName('ArticleOrder').AsInteger = 100 then
+                      begin
+                        case DS6.FieldByName('Months').AsInteger of
+                         1: MonthName := 'январь';
+                         2: MonthName := 'февраль';
+                         3: MonthName := 'март';
+                         4: MonthName := 'апрель';
+                         5: MonthName := 'май';
+                         6: MonthName := 'июнь';
+                         7: MonthName := 'июль';
+                         8: MonthName := 'август';
+                         9: MonthName := 'сентябрь';
+                        10: MonthName := 'октябрь';
+                        11: MonthName := 'ноябрь';
+                        12: MonthName := 'декабрь';
+                        end;
+                        Excel.Cells.Item[1,g] := 'Фактические затраты по договору за ' + MonthName + ' ' + DS6.FieldByName('Years').AsString + 'г.';
+                        Excel.Range[Excel.Cells[1,g],Excel.Cells[1,g+18]].Select;
+                        Excel.Selection.MergeCells := True;
+                        Excel.Selection.HorizontalAlignment := 3;
+                      end;
+
                     Inc(g);
                     DS6.Next;
                   end;
@@ -1106,23 +1188,19 @@ begin
             DS6.Filtered := True;
             if DS6.RecordCount > 0 then
               begin
-//                if not TXLSRange(XL.Sheet[0].Range).Items[g,1,g+DS6.RecordCount-1,1].Merged then
-//                  begin
+
                     Excel.Cells.Item[1,g] := 'Фактические затраты по договору с начала действия договора по состоянию на отчетную дату';
                     Excel.Range[Excel.Cells[1,g],Excel.Cells[1,g+DS6.RecordCount-1]].Select;
                     Excel.Selection.MergeCells := True;
                     Excel.Selection.HorizontalAlignment := 3;
                     Excel.Range[Excel.Cells[1,g],Excel.Cells[3,g+DS6.RecordCount-1]].Select;
-                    Excel.Selection.Interior.Color := rgb(180, 190, 190);
-//                  end;
+                    Excel.Selection.Interior.Color := rgb(133, 227, 38);
+
                 DS6.First;
                 while not DS6.Eof do
                   begin
                     Excel.Cells.Item[i,g] := DS6.FieldByName('CostFact').AsString;
                     Excel.Cells.Item[3,g] := DS6.FieldByName('ArticleName').AsString;
-                    Excel.Range[Excel.Cells[3,g],Excel.Cells[3,g]].Select;
-                    Excel.Selection.HorizontalAlignment := 3;
-                    Excel.Selection.VerticalAlignment := 2;
                     Inc(g);
                     DS6.Next;
                   end;
@@ -1133,23 +1211,19 @@ begin
             DS6.Filtered := True;
             if DS6.RecordCount > 0 then
               begin
-//                if not TXLSRange(XL.Sheet[0].Range).Items[g,1,g+DS6.RecordCount-1,1].Merged then
-//                  begin
+
                     Excel.Cells.Item[1,g] := 'Плановые расходы на период действия договора по состоянию на отчетную дату';
                     Excel.Range[Excel.Cells[1,g],Excel.Cells[1,g+DS6.RecordCount-1]].Select;
                     Excel.Selection.MergeCells := True;
                     Excel.Selection.HorizontalAlignment := 3;
                     Excel.Range[Excel.Cells[1,g],Excel.Cells[3,g+DS6.RecordCount-1]].Select;
-                    Excel.Selection.Interior.Color := rgb(190, 190, 190);
-//                  end;
+                    Excel.Selection.Interior.Color := rgb(227, 38, 54);
+
                 DS6.First;
                 while not DS6.Eof do
                   begin
                     Excel.Cells.Item[i,g] := DS6.FieldByName('CostPlan').AsString;
                     Excel.Cells.Item[3,g] := DS6.FieldByName('ArticleName').AsString;
-                    Excel.Range[Excel.Cells[3,g],Excel.Cells[3,g]].Select;
-                    Excel.Selection.HorizontalAlignment := 3;
-                    Excel.Selection.VerticalAlignment := 2;
                     Inc(g);
                     DS6.Next;
                   end;
@@ -1160,27 +1234,19 @@ begin
             DS6.Filtered := True;
             if DS6.RecordCount > 0 then
               begin
-//                if not TXLSRange(XL.Sheet[0].Range).Items[g,1,g+DS6.RecordCount-1,1].Merged then
-//                  begin
+
                     Excel.Cells.Item[1,g] := 'Оставшиеся плановые расходы (S2) до конца срока действия договора по состоянию на отчетную дату';
                     Excel.Range[Excel.Cells[1,g],Excel.Cells[1,g+DS6.RecordCount-1]].Select;
                     Excel.Selection.MergeCells := True;
                     Excel.Selection.HorizontalAlignment := 3;
                     Excel.Range[Excel.Cells[1,g],Excel.Cells[3,g+DS6.RecordCount-1]].Select;
-                    Excel.Selection.Interior.Color := rgb(171, 190, 244);
-//                  end;
+                    Excel.Selection.Interior.Color := rgb(255, 204, 0);
+
                 DS6.First;
                 while not DS6.Eof do
                   begin
                     Excel.Cells.Item[i,g] := DS6.FieldByName('Rest').AsString;
-//                    if not TXLSRange(XL.Sheet[0].Range).Items[g,2,g,3].Merged then
-//                      begin
-                        Excel.Cells.Item[2,g] := DS6.FieldByName('ArticleName').AsString;
-                        Excel.Range[Excel.Cells[2,g],Excel.Cells[3,g]].Select;
-                        Excel.Selection.HorizontalAlignment := 3;
-                        Excel.Selection.VerticalAlignment := 2;
-                        Excel.Selection.MergeCells := True;
-//                      end;
+                    Excel.Cells.Item[3,g] := DS6.FieldByName('ArticleName').AsString;
                     Inc(g);
                     DS6.Next;
                   end;
@@ -1190,32 +1256,68 @@ begin
             DS1.Next;
       end;
 
-//    TXLSRange(XL.Sheet[0].Range).Items[1,1,9,3].BorderInsideVertStyle := cbsThin;
-//    TXLSRange(XL.Sheet[0].Range).Items[1,1,9,3].BorderInsideHorizStyle := cbsThin;
-//    TXLSRange(XL.Sheet[0].Range).Items[1,1,9,3].BorderOutlineStyle := cbsThin;
-//    TXLSRange(XL.Sheet[0].Range).Items[1,1,9,3].FormatOptions := [foWrapText];
-//
-//    TXLSRange(XL.Sheet[0].Range).Items[1,4,9,5+RowCount].BorderInsideVertStyle := cbsThin;
-//    TXLSRange(XL.Sheet[0].Range).Items[1,4,9,5+RowCount].BorderInsideHorizStyle := cbsThin;
-//    TXLSRange(XL.Sheet[0].Range).Items[1,4,9,5+RowCount].BorderOutlineStyle := cbsThin;
-//    TXLSRange(XL.Sheet[0].Range).Items[1,4,9,5+RowCount].FormatOptions := [{foWrapText}];
-//
-//
-//    TXLSRange(XL.Sheet[0].Range).Items[9,4,g-1,5+RowCount].BorderInsideVertStyle := cbsThin;
-//    TXLSRange(XL.Sheet[0].Range).Items[9,4,g-1,5+RowCount].BorderInsideHorizStyle := cbsThin;
-//    TXLSRange(XL.Sheet[0].Range).Items[9,4,g-1,5+RowCount].BorderOutlineStyle := cbsThin;
-//
-//    TXLSRange(XL.Sheet[0].Range).Items[9,1,g-1,3].BorderInsideVertStyle := cbsThin;
-//    TXLSRange(XL.Sheet[0].Range).Items[9,1,g-1,3].BorderInsideHorizStyle := cbsThin;
-//    TXLSRange(XL.Sheet[0].Range).Items[9,1,g-1,3].BorderOutlineStyle := cbsThin;
-//    TXLSRange(XL.Sheet[0].Range).Items[9,1,g-1,3].FormatOptions := [foWrapText];
-//
-//    XL.Sheet[0].Columns.SetColWidth(2,g-1,4000);
+                    Excel.Range[Excel.Cells[3,9],Excel.Cells[3,g-1]].Select;
+                    Excel.Selection.HorizontalAlignment := 3;
+                    Excel.Selection.VerticalAlignment := 2;
+                    Excel.Selection.WrapText := True;
+
+
+      Excel.Range[Excel.Cells[1,1],Excel.Cells[3,9]].Select;
+
+          Excel.Selection.Borders[7].Weight := 2;
+          Excel.Selection.Borders[8].Weight := 2;
+          Excel.Selection.Borders[9].Weight := 2;
+          Excel.Selection.Borders[10].Weight := 2;
+          Excel.Selection.Borders[11].Weight := 2;
+          Excel.Selection.Borders[12].Weight := 2;
+
+
+
+      Excel.Range[Excel.Cells[4,1],Excel.Cells[3+RowCount,9]].Select;
+
+          Excel.Selection.Borders[7].Weight := 2;
+          Excel.Selection.Borders[8].Weight := 2;
+          Excel.Selection.Borders[9].Weight := 2;
+          Excel.Selection.Borders[10].Weight := 2;
+          Excel.Selection.Borders[11].Weight := 2;
+          Excel.Selection.Borders[12].Weight := 2;
+
+
+      Excel.Range[Excel.Cells[4,9],Excel.Cells[3+RowCount,g-1]].Select;
+
+          Excel.Selection.Borders[7].Weight := 2;
+          Excel.Selection.Borders[8].Weight := 2;
+          Excel.Selection.Borders[9].Weight := 2;
+          Excel.Selection.Borders[10].Weight := 2;
+          Excel.Selection.Borders[11].Weight := 2;
+          Excel.Selection.Borders[12].Weight := 2;
+
+
+
+      Excel.Range[Excel.Cells[1,9],Excel.Cells[3,g-1]].Select;
+
+          Excel.Selection.Borders[7].Weight := 2;
+          Excel.Selection.Borders[8].Weight := 2;
+          Excel.Selection.Borders[9].Weight := 2;
+          Excel.Selection.Borders[10].Weight := 2;
+          Excel.Selection.Borders[11].Weight := 2;
+          Excel.Selection.Borders[12].Weight := 2;
+
+      Excel.Range[Excel.Cells[1,1],Excel.Cells[3+RowCount,g-1]].Select;
+      Excel.Selection.ColumnWidth := 20;
+
+     for i := 7 to g-1 do
+      begin
+        Excel.Cells[4+RowCount,i].FormulaR1C1 := '=SUM(R[-' + IntToStr(RowCount) + ']C:R[-1]C)';
+      end;
+
+    Excel.Range[Excel.Cells[4,7], Excel.Cells[4+RowCount,g-1]].NumberFormatLocal := '0' + DecimalSeparator + '00';
 
     CoCreateGuid(GUID);
     SaveWorkBook(GetCurrentDir + '\МСФО_' + GUIDToString(GUID) + '.xls');
   finally
     StopExcel;
+    Progress.Visible := False;
   end;
 end;
 
@@ -1246,49 +1348,64 @@ begin
     RowCount := DS2.FieldByName('RecordCount').AsInteger;
     ColumnCount := 9;
 
+    if RowCount = 0 then
+      begin
+        MessageDlg('Нет данных для этого бюджета', mtError, [mbOk], 0);
+        Exit;
+      end;
+
     // начало формирования плоской таблицы
     XL := TXLSReadWriteII4.Create(nil);
     XL.Sheets.Add();
 
     // формирование заголовка отчета
-    XL.Sheet[0].AsString[1,0] := 'Код номенклатуры в 1С (шифр договора)';
-    TXLSRange(XL.Sheet[0].Range).Items[1,0,1,1].Merged := True;
+    XL.Sheet[0].AsString[1,0] := 'Форма для внесения в 1С информации по показателям S2 (оставшиеся расходы) и D1 (плановая выручка)';
+    TXLSRange(XL.Sheet[0].Range).Items[1,0,9,0].Merged := True;
+    TXLSRange(XL.Sheet[0].Range).Items[1,0,9,0].FillPatternForeColor := xcPaleGreen;
+    TXLSRange(XL.Sheet[0].Range).Items[1,0,9,0].VertAlignment := cvaCenter;
+    TXLSRange(XL.Sheet[0].Range).Items[1,0,9,0].HorizAlignment := chaCenter;
 
-    XL.Sheet[0].AsString[2,0] := 'Наименование контрагента в 1С';
-    TXLSRange(XL.Sheet[0].Range).Items[2,0,2,1].Merged := True;
+    XL.Sheet[0].AsString[1,1] := 'Код номенклатуры в 1С (шифр договора)';
+    TXLSRange(XL.Sheet[0].Range).Items[1,1,1,2].Merged := True;
 
-    XL.Sheet[0].AsString[3,0] := 'Номенклатурная группа в 1 С';
-    TXLSRange(XL.Sheet[0].Range).Items[3,0,3,1].Merged := True;
+    XL.Sheet[0].AsString[2,1] := 'Наименование контрагента в 1С';
+    TXLSRange(XL.Sheet[0].Range).Items[2,1,2,2].Merged := True;
 
-    XL.Sheet[0].AsString[4,1] := 'Фактические расходы на';
+    XL.Sheet[0].AsString[3,1] := 'Номенклатурная группа в 1 С';
+    TXLSRange(XL.Sheet[0].Range).Items[3,1,3,2].Merged := True;
+
+    XL.Sheet[0].AsString[4,2] := 'Фактические расходы на';
     //TXLSRange(XL.Sheet[0].Range).Items[4,0,4,1].Merged := True;
 
-    XL.Sheet[0].AsString[5,1] := 'Фактические расходы за';
+    XL.Sheet[0].AsString[5,2] := 'Фактические расходы за';
     //TXLSRange(XL.Sheet[0].Range).Items[5,0,5,1].Merged := True;
 
-    XL.Sheet[0].AsString[6,1] := 'Фактические расходы на';
+    XL.Sheet[0].AsString[6,2] := 'Фактические расходы на';
     //TXLSRange(XL.Sheet[0].Range).Items[6,0,6,1].Merged := True;
 
-    XL.Sheet[0].AsString[4,0] := 'Данные по БУ';
-    TXLSRange(XL.Sheet[0].Range).Items[4,0,6,0].Merged := True;
+    XL.Sheet[0].AsString[4,1] := 'Данные по БУ';
+    TXLSRange(XL.Sheet[0].Range).Items[4,1,6,1].Merged := True;
 
-    XL.Sheet[0].AsString[7,1] := 'Плановые затраты по договору, Sобщ на';
+    XL.Sheet[0].AsString[7,2] := 'Плановые затраты по договору, Sобщ на';
     //TXLSRange(XL.Sheet[0].Range).Items[7,0,7,1].Merged := True;
 
-    XL.Sheet[0].AsString[8,1] := 'Сумма предстоящих затрат по производству работ, руб. (S2) на';
+    XL.Sheet[0].AsString[8,2] := 'Сумма предстоящих затрат по производству работ, руб. (S2) на';
     //TXLSRange(XL.Sheet[0].Range).Items[8,0,8,1].Merged := True;
 
-    XL.Sheet[0].AsString[9,1] := 'Договорная стоимость работ с учетом корректировок, руб. (D1) без НДС на';
+    XL.Sheet[0].AsString[9,2] := 'Договорная стоимость работ с учетом корректировок, руб. (D1) без НДС на';
     //TXLSRange(XL.Sheet[0].Range).Items[9,0,9,1].Merged := True;
 
-    XL.Sheet[0].AsString[7,0] := 'вносим в 1С с датой начала месяца, который закрываем';
-    TXLSRange(XL.Sheet[0].Range).Items[7,0,9,0].Merged := True;
+    XL.Sheet[0].AsString[7,1] := 'вносим в 1С с датой начала месяца, который закрываем';
+    TXLSRange(XL.Sheet[0].Range).Items[7,1,9,1].Merged := True;
 
+    TXLSRange(XL.Sheet[0].Range).Items[1,1,9,2].FillPatternForeColor := xcGrass;
+    TXLSRange(XL.Sheet[0].Range).Items[8,1,8,2].FillPatternForeColor := xcYellow;
+    TXLSRange(XL.Sheet[0].Range).Items[9,1,9,2].FillPatternForeColor := xcSky;
 
     // формирование таблицы
     DS1.First;
 
-    i := 2;
+    i := 3;
 
     while not DS1.Eof do
       begin
@@ -1305,13 +1422,16 @@ begin
             DS1.Next;
       end;
 
-    TXLSRange(XL.Sheet[0].Range).Items[1,0,9,1+RowCount].BorderInsideVertStyle := cbsThin;
-    TXLSRange(XL.Sheet[0].Range).Items[1,0,9,1+RowCount].BorderInsideHorizStyle := cbsThin;
-    TXLSRange(XL.Sheet[0].Range).Items[1,0,9,1+RowCount].BorderOutlineStyle := cbsThin;
-    TXLSRange(XL.Sheet[0].Range).Items[1,0,9,1+RowCount].FormatOptions := [foWrapText];
+    TXLSRange(XL.Sheet[0].Range).Items[1,1,9,2+RowCount].BorderInsideVertStyle := cbsThin;
+    TXLSRange(XL.Sheet[0].Range).Items[1,1,9,2+RowCount].BorderInsideHorizStyle := cbsThin;
+    TXLSRange(XL.Sheet[0].Range).Items[1,1,9,2+RowCount].BorderOutlineStyle := cbsThin;
+    TXLSRange(XL.Sheet[0].Range).Items[1,1,9,2+RowCount].FormatOptions := [foWrapText];
+    TXLSRange(XL.Sheet[0].Range).Items[1,1,9,2].VertAlignment := cvaCenter;
+    TXLSRange(XL.Sheet[0].Range).Items[1,1,9,2].HorizAlignment := chaCenter;
+    XL.Sheet[0].Columns.SetColWidth(1,9,4000);
 
     CoCreateGuid(GUID);
-    XL.Filename := GetCurrentDir + '\' + GUIDToString(GUID) + '_D1S2.xls';
+    XL.Filename := GetCurrentDir + '\D1S2_' + GUIDToString(GUID) + '.xls';
     XL.Write;
   finally
     XL.Free;

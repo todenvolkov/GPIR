@@ -1,6 +1,6 @@
 object ReportsForm: TReportsForm
-  Left = 740
-  Top = 310
+  Left = 846
+  Top = 358
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = #1054#1090#1095#1077#1090#1099
@@ -110,7 +110,7 @@ object ReportsForm: TReportsForm
     Left = 0
     Top = 49
     Width = 341
-    Height = 117
+    Height = 111
     ActivePage = TabSheet2
     Align = alClient
     Style = tsFlatButtons
@@ -118,6 +118,10 @@ object ReportsForm: TReportsForm
     object TabSheet1: TTabSheet
       Caption = 'TabSheet1'
       TabVisible = False
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Label1: TLabel
         Left = 0
         Top = 0
@@ -182,10 +186,14 @@ object ReportsForm: TReportsForm
       Caption = 'TabSheet3'
       ImageIndex = 2
       TabVisible = False
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Label3: TLabel
         Left = 0
         Top = 0
-        Width = 333
+        Width = 330
         Height = 39
         Align = alTop
         Caption = 
@@ -193,7 +201,6 @@ object ReportsForm: TReportsForm
           #1089#1082#1086#1084' '#1091#1082#1072#1078#1080#1090#1077' '#1084#1077#1089#1103#1094' '#1080' '#1075#1086#1076'. '#1042#1099#1087#1086#1083#1085#1103#1077#1090#1089#1103' '#1087#1086' '#1074#1089#1077#1084' '#1085#1077' '#1079#1072#1082#1088#1099#1090#1099#1084' '#1076#1086#1075#1086#1074#1086 +
           #1088#1072#1084'.'
         WordWrap = True
-        ExplicitWidth = 330
       end
       object YearSpin: TcxSpinEdit
         Left = 85
@@ -229,10 +236,14 @@ object ReportsForm: TReportsForm
       Caption = 'TabSheet4'
       ImageIndex = 3
       TabVisible = False
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Label4: TLabel
         Left = 0
         Top = 0
-        Width = 333
+        Width = 331
         Height = 39
         Align = alTop
         Caption = 
@@ -240,7 +251,6 @@ object ReportsForm: TReportsForm
           #1077#1088#1077#1076' '#1079#1072#1087#1091#1089#1082#1086#1084' '#1091#1082#1072#1078#1080#1090#1077' '#1084#1077#1089#1103#1094' '#1080' '#1075#1086#1076'. '#1042#1099#1087#1086#1083#1085#1103#1077#1090#1089#1103' '#1087#1086' '#1074#1089#1077#1084' '#1085#1077' '#1079#1072#1082#1088#1099#1090 +
           #1099#1084' '#1076#1086#1075#1086#1074#1086#1088#1072#1084'.'
         WordWrap = True
-        ExplicitWidth = 331
       end
       object cxSpinEdit1: TcxSpinEdit
         Left = 85
@@ -272,6 +282,17 @@ object ReportsForm: TReportsForm
         Width = 82
       end
     end
+  end
+  object Progress: TProgressBar
+    Left = 0
+    Top = 160
+    Width = 341
+    Height = 6
+    Align = alBottom
+    Smooth = True
+    SmoothReverse = True
+    TabOrder = 2
+    Visible = False
   end
   object XLS: TXLSReadWriteII4
     Version = xvExcel2007
