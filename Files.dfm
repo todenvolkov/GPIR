@@ -1,6 +1,6 @@
 object FilesForm: TFilesForm
-  Left = 622
-  Top = 316
+  Left = 552
+  Top = 262
   Caption = #1047#1072#1075#1088#1091#1079#1082#1080
   ClientHeight = 421
   ClientWidth = 655
@@ -793,7 +793,7 @@ object FilesForm: TFilesForm
       PrinterPage.PageSize.Y = 297000
       PrinterPage._dxMeasurementUnits_ = 0
       PrinterPage._dxLastMU_ = 2
-      ReportDocument.CreationDate = 41114.422203587960000000
+      ReportDocument.CreationDate = 41138.385505092600000000
       OptionsCards.AutoWidth = True
       OptionsExpanding.ExpandGroupRows = True
       OptionsExpanding.ExpandMasterRows = True

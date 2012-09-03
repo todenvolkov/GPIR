@@ -246,6 +246,9 @@
 				<Form>HintForm</Form>
 			</DCCReference>
 			<DCCReference Include="WorkWithExcel.pas"/>
+			<DCCReference Include="Roles.pas">
+				<Form>RolesForm</Form>
+			</DCCReference>
 			<None Include="ProjectX7.todo"/>
 			<None Include="options.ini"/>
 			<BuildConfiguration Include="Debug">
@@ -276,7 +279,7 @@
 						<VersionInfo Name="MajorVer">1</VersionInfo>
 						<VersionInfo Name="MinorVer">0</VersionInfo>
 						<VersionInfo Name="Release">0</VersionInfo>
-						<VersionInfo Name="Build">78</VersionInfo>
+						<VersionInfo Name="Build">80</VersionInfo>
 						<VersionInfo Name="Debug">True</VersionInfo>
 						<VersionInfo Name="PreRelease">False</VersionInfo>
 						<VersionInfo Name="Special">False</VersionInfo>
@@ -286,7 +289,7 @@
 						<VersionInfo Name="CodePage">1251</VersionInfo>
 					</VersionInfo>
 					<VersionInfoKeys>
-						<VersionInfoKeys Name="FileVersion">1.0.0.78</VersionInfoKeys>
+						<VersionInfoKeys Name="FileVersion">1.0.0.80</VersionInfoKeys>
 						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
 						<VersionInfoKeys Name="CompanyName"/>
 						<VersionInfoKeys Name="FileDescription"/>

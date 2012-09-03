@@ -1,6 +1,6 @@
 object UsersForm: TUsersForm
-  Left = 481
-  Top = 269
+  Left = 413
+  Top = 319
   Caption = #1064#1080#1092#1088#1099' '#1076#1086#1075#1086
   ClientHeight = 530
   ClientWidth = 919
@@ -503,6 +503,17 @@ object UsersForm: TUsersForm
       ShadowState = ssSkypeStyle
       LightState = ls10Percent
     end
+    object RolesBtn: TcxButton
+      Left = 360
+      Top = 9
+      Width = 57
+      Height = 25
+      Caption = #1056#1086#1083#1080
+      LookAndFeel.NativeStyle = False
+      LookAndFeel.SkinName = 'McSkin'
+      TabOrder = 0
+      OnClick = RolesBtnClick
+    end
   end
   object Panel3: TPanel
     Left = 0
@@ -618,6 +629,8 @@ object UsersForm: TUsersForm
               #1041#1102#1076#1078#1077#1090' '#1053#1048#1054
               #1041#1102#1076#1078#1077#1090' '#1055#1088#1086#1077#1082#1090#1080#1088#1086#1074#1097#1080#1082#1080
               #1041#1102#1076#1078#1077#1090' '#1054#1040#1053)
+            Visible = False
+            VisibleForCustomization = False
             Width = 80
           end
           object cxGridDBTableView1LastLoginTime: TcxGridDBColumn
@@ -628,6 +641,20 @@ object UsersForm: TUsersForm
           end
           object cxGridDBTableView1Email: TcxGridDBColumn
             DataBinding.FieldName = 'Email'
+            Width = 100
+          end
+          object cxGridDBTableView1RoleID: TcxGridDBColumn
+            Caption = #1056#1086#1083#1100
+            DataBinding.FieldName = 'RoleID'
+            PropertiesClassName = 'TcxLookupComboBoxProperties'
+            Properties.DropDownSizeable = True
+            Properties.KeyFieldNames = 'ID'
+            Properties.ListColumns = <
+              item
+                FieldName = 'RoleName'
+              end>
+            Properties.ListOptions.ShowHeader = False
+            Properties.ListSource = RolesDS
             Width = 100
           end
         end
@@ -661,7 +688,10 @@ object UsersForm: TUsersForm
           OptionsBehavior.EditAutoHeight = eahRow
           OptionsCustomize.ColumnHiding = True
           OptionsCustomize.ColumnsQuickCustomization = True
+          OptionsData.CancelOnExit = False
           OptionsData.Deleting = False
+          OptionsData.DeletingConfirmation = False
+          OptionsData.Editing = False
           OptionsData.Inserting = False
           OptionsSelection.HideFocusRectOnExit = False
           OptionsView.CellEndEllipsis = True
@@ -675,40 +705,11 @@ object UsersForm: TUsersForm
           OptionsView.HeaderEndEllipsis = True
           OptionsView.Indicator = True
           Styles.StyleSheet = MainForm.GridTableViewStyleSheetDevExpress
-          object cxGridDBTableView2ID: TcxGridDBColumn
-            DataBinding.FieldName = 'ID'
-            Visible = False
-            VisibleForCustomization = False
-          end
-          object cxGridDBTableView2GUID: TcxGridDBColumn
-            DataBinding.FieldName = 'GUID'
-            Visible = False
-            VisibleForCustomization = False
-          end
           object cxGridDBTableView2ActionGUID: TcxGridDBColumn
-            Caption = #1069#1083#1077#1084#1077#1085#1090' '#1087#1088#1086#1075#1088#1072#1084#1084#1099
-            DataBinding.FieldName = 'ActionGUID'
-            PropertiesClassName = 'TcxLookupComboBoxProperties'
-            Properties.KeyFieldNames = 'GUID'
-            Properties.ListColumns = <
-              item
-                FieldName = 'ActionCaption'
-              end>
-            Properties.ListOptions.ShowHeader = False
-            Properties.ListSource = ActionsDS
+            Caption = #1044#1086#1089#1090#1091#1087#1085#1099#1077' '#1101#1083#1077#1084#1077#1085#1090#1099' '#1087#1088#1086#1075#1088#1072#1084#1084#1099
+            DataBinding.FieldName = 'ActionCaption'
             Options.Editing = False
             Width = 160
-          end
-          object cxGridDBTableView2UserID: TcxGridDBColumn
-            DataBinding.FieldName = 'UserID'
-            Visible = False
-            VisibleForCustomization = False
-          end
-          object cxGridDBTableView2Permissions: TcxGridDBColumn
-            Caption = #1044#1086#1089#1090#1091#1087
-            DataBinding.FieldName = 'Permissions'
-            PropertiesClassName = 'TcxCheckBoxProperties'
-            Width = 117
           end
         end
         object cxGridLevel2: TcxGridLevel
@@ -743,22 +744,6 @@ object UsersForm: TUsersForm
     DataSet = Query
     Left = 296
     Top = 176
-  end
-  object ActionToUserQ: TADOQuery
-    Connection = MainForm.MainConnection
-    CursorType = ctStatic
-    BeforePost = ActionToUserQBeforePost
-    AfterPost = ActionToUserQAfterPost
-    Parameters = <>
-    SQL.Strings = (
-      '')
-    Left = 672
-    Top = 240
-  end
-  object ActionToUserDS: TDataSource
-    DataSet = ActionToUserQ
-    Left = 672
-    Top = 288
   end
   object ActionsQ: TADOQuery
     Connection = MainForm.MainConnection
@@ -806,5 +791,36 @@ object UsersForm: TUsersForm
       OptionsView.FilterBar = False
       BuiltInReportLink = True
     end
+  end
+  object RolesQ: TADOQuery
+    Connection = MainForm.MainConnection
+    CursorType = ctStatic
+    BeforePost = ActionToUserQBeforePost
+    Parameters = <>
+    SQL.Strings = (
+      'exec ActionsShow')
+    Left = 184
+    Top = 240
+  end
+  object RolesDS: TDataSource
+    DataSet = RolesQ
+    Left = 184
+    Top = 296
+  end
+  object ActionToUserQ: TADOQuery
+    Connection = MainForm.MainConnection
+    CursorType = ctStatic
+    BeforePost = ActionToUserQBeforePost
+    AfterPost = ActionToUserQAfterPost
+    Parameters = <>
+    SQL.Strings = (
+      '')
+    Left = 672
+    Top = 240
+  end
+  object ActionToUserDS: TDataSource
+    DataSet = ActionToUserQ
+    Left = 672
+    Top = 288
   end
 end

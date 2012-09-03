@@ -1,6 +1,6 @@
 object XLSImportForm: TXLSImportForm
-  Left = 724
-  Top = 385
+  Left = 726
+  Top = 387
   Caption = #1047#1072#1075#1088#1091#1079#1082#1072' '#1082#1072#1083#1100#1082#1091#1083#1103#1094#1080#1081' '#1080#1079' Excel'
   ClientHeight = 370
   ClientWidth = 674
@@ -68,7 +68,6 @@ object XLSImportForm: TXLSImportForm
     PositionAfterOpen = 50
     ResizeUpdate = True
     Control = Panel3
-    ExplicitWidth = 8
   end
   object BudgetPanel: TPanel
     Left = 0

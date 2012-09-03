@@ -56,13 +56,7 @@ type
     cxGrid3: TcxGrid;
     cxGridDBTableView2: TcxGridDBTableView;
     cxGridLevel2: TcxGridLevel;
-    ActionToUserQ: TADOQuery;
-    ActionToUserDS: TDataSource;
-    cxGridDBTableView2ID: TcxGridDBColumn;
-    cxGridDBTableView2GUID: TcxGridDBColumn;
     cxGridDBTableView2ActionGUID: TcxGridDBColumn;
-    cxGridDBTableView2UserID: TcxGridDBColumn;
-    cxGridDBTableView2Permissions: TcxGridDBColumn;
     ActionsQ: TADOQuery;
     ActionsDS: TDataSource;
     RightSplitter: TcxSplitter;
@@ -77,6 +71,12 @@ type
     dxComponentPrinter1: TdxComponentPrinter;
     dxComponentPrinter1Link1: TdxGridReportLink;
     cxGridDBTableView1Email: TcxGridDBColumn;
+    RolesBtn: TcxButton;
+    cxGridDBTableView1RoleID: TcxGridDBColumn;
+    RolesQ: TADOQuery;
+    RolesDS: TDataSource;
+    ActionToUserQ: TADOQuery;
+    ActionToUserDS: TDataSource;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure cxButton1Click(Sender: TObject);
     procedure cxButton2Click(Sender: TObject);
@@ -102,6 +102,7 @@ type
       AEdit: TcxCustomEdit; var Key: Word; Shift: TShiftState);
     procedure cxGridDBTableView1KeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormActivate(Sender: TObject);
+    procedure RolesBtnClick(Sender: TObject);
   private
     procedure ChangeFontSize(S: TcxGridTableViewStyles;
       SizeDifference: integer = 0);
@@ -118,7 +119,7 @@ function ShowUsers(Options: CreateOptionsUser): integer;
 
 implementation
 
-uses Main, routines;
+uses Main, routines, Roles, SQLRoutines1;
 {$R *.dfm}
 
 function ShowUsers(Options: CreateOptionsUser): integer;
@@ -139,9 +140,14 @@ procedure TUsersForm.RefreshData;
 begin
   try
     OpenQ(ActionsQ, 'exec ActionsShow', False);
-    //OpenQ(OrganisationQ, 'exec OrganizationsShow', False);
+    OpenQ(RolesQ, 'exec ROlesShow', False);
   except
   end;
+end;
+
+procedure TUsersForm.RolesBtnClick(Sender: TObject);
+begin
+  RolesForm.ShowModal;
 end;
 
 procedure TUsersForm.ActionToUserQAfterPost(DataSet: TDataSet);
@@ -317,12 +323,8 @@ begin
   try
     if Query.Active then
       begin
-        ActionToUserQ.Close;
-        ActionToUserQ.SQL.Text := 'exec UserPermissionsShow :UserID';
-        ActionToUserQ.Parameters.ParseSQL(ActionToUserQ.SQL.Text, True);
-        ActionToUserQ.Parameters.ParamByName('UserID').Value := Query.FieldByName('ID').AsVariant;
-        ActionToUserQ.Open;
-       end;
+        OpenParamsQ(ActionToUserQ, 'exec RolesShowTrue :RoleID', [Query.FieldByName('RoleID').AsVariant]);
+      end;
   except
   end;
 end;

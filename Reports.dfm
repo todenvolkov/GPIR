@@ -1,6 +1,6 @@
 object ReportsForm: TReportsForm
-  Left = 846
-  Top = 358
+  Left = 847
+  Top = 359
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = #1054#1090#1095#1077#1090#1099

@@ -84,7 +84,7 @@ begin
    cxProgressBar1.Properties.Max:=XL.Sheets[0].LastRow;
 
     CurString:=trim(StringReplace(xl.Sheets[0].AsString[DataBeginsCol,DataBeginsRow],',','.',[rfReplaceAll]));
-    if CurString='Категории сотрудников' then
+    if CurString='отдел/статья' then
       LogInfo(RichEdit,'Начало файла определено правильно')
     else
     begin
@@ -107,7 +107,7 @@ begin
               CurArticleName := trim(xl.Sheets[0].AsString[j,i]);
               if j=DataBeginsCol then  // Если это первая колонка
                 begin
-                   if pos('!',CurString)<>0 then     // Если  отдел
+                   {if pos('!',CurString)<>0 then     // Если  отдел
                       begin
                          DepartmentName:=CurString;
                          DepartmentName := Copy(DepartmentName,2, Length(DepartmentName) - 1);
@@ -125,7 +125,7 @@ begin
                              PostGUID:=ADOQuery1.FieldByName('GUID').AsString;
                            end else PostGUID := '';
                          ThisIsDepartmentLine:=false;
-                       end;
+                       end;}
                  end
                else
                  begin     // Не первая колонка

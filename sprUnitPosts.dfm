@@ -1,9 +1,9 @@
 inherited PostsForm: TPostsForm
-  Left = 474
-  Top = 292
+  Left = 436
+  Top = 236
   Caption = #1057#1087#1088#1072#1074#1086#1095#1085#1080#1082' "'#1044#1086#1083#1078#1085#1086#1089#1090#1080'"'
-  ExplicitLeft = 474
-  ExplicitTop = 292
+  ExplicitLeft = 436
+  ExplicitTop = 236
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel2: TPanel
@@ -108,6 +108,12 @@ inherited PostsForm: TPostsForm
             Properties.Items.Strings = (
               #1044#1086#1089#1090#1091#1087#1085#1072
               #1042' '#1082#1086#1088#1079#1080#1085#1077)
+            Width = 80
+          end
+          object cxGrid1DBTableView1PostCode: TcxGridDBColumn
+            Caption = #1050#1086#1076
+            DataBinding.FieldName = 'PostCode'
+            HeaderImageIndex = 0
             Width = 80
           end
         end

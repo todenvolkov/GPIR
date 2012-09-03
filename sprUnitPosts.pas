@@ -58,6 +58,7 @@ type
     cxGrid1DBTableView3UsernameChange: TcxGridDBColumn;
     cxGrid1DBTableView3DateChange: TcxGridDBColumn;
     cxGrid1DBTableView3Version: TcxGridDBColumn;
+    cxGrid1DBTableView1PostCode: TcxGridDBColumn;
     procedure ADOQuery1AfterPost(DataSet: TDataSet);
     procedure FormCreate(Sender: TObject);
   private

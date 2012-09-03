@@ -1,6 +1,6 @@
 object GridVewTemplateFormSource: TGridVewTemplateFormSource
-  Left = 444
-  Top = 293
+  Left = 446
+  Top = 295
   Caption = #1057#1087#1088#1072#1074#1086#1095#1085#1080#1082
   ClientHeight = 442
   ClientWidth = 941
@@ -980,7 +980,6 @@ object GridVewTemplateFormSource: TGridVewTemplateFormSource
     PositionAfterOpen = 50
     ResizeUpdate = True
     Control = Panel6
-    ExplicitWidth = 8
   end
   object ADOQuery1: TADOQuery
     Connection = MainForm.MainConnection
@@ -1046,7 +1045,7 @@ object GridVewTemplateFormSource: TGridVewTemplateFormSource
       PrinterPage.PageSize.Y = 297000
       PrinterPage._dxMeasurementUnits_ = 0
       PrinterPage._dxLastMU_ = 2
-      ReportDocument.CreationDate = 41128.482603252310000000
+      ReportDocument.CreationDate = 41137.395143946760000000
       OptionsCards.AutoWidth = True
       OptionsExpanding.ExpandGroupRows = True
       OptionsExpanding.ExpandMasterRows = True

@@ -6054,77 +6054,78 @@ END
 /* C:\Program Files\DevExpress VCL\ExpressPrinting System\Sources\dxPSTVLnk.DFM */
 /* C:\Program Files\DevExpress VCL\ExpressPrinting System\Sources\dxPSLVLnk.DFM */
 /* C:\Program Files\DevExpress VCL\ExpressPrinting System\Sources\dxPScxMCListBoxLnk.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\GridViewTemplateSource.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\sprUnitOrganizations.dfm */
+/* W:\Desktop\GitHub\GPIR\GridViewTemplateSource.dfm */
+/* W:\Desktop\GitHub\GPIR\sprUnitOrganizations.dfm */
 /* c:\program files\embarcadero\rad studio\8.0\lib\Win32\release\Tabs.res */
-/* C:\todenvolkov-GPIR-2fcf9f8\Splash.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\TaskBar.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\sprUnitAccountingHours.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\spUnitDepartments.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\sprUnitAccountingHourValues.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\NumbersContracts.dfm */
+/* W:\Desktop\GitHub\GPIR\Splash.dfm */
+/* W:\Desktop\GitHub\GPIR\TaskBar.dfm */
+/* W:\Desktop\GitHub\GPIR\sprUnitAccountingHours.dfm */
+/* W:\Desktop\GitHub\GPIR\spUnitDepartments.dfm */
+/* W:\Desktop\GitHub\GPIR\sprUnitAccountingHourValues.dfm */
+/* W:\Desktop\GitHub\GPIR\NumbersContracts.dfm */
 /* C:\Program Files\DevExpress VCL\ExpressVerticalGrid\Sources\cxVGridNewCategory.DFM */
 /* C:\Program Files\DevExpress VCL\ExpressVerticalGrid\Sources\cxInsCur.res */
-/* C:\todenvolkov-GPIR-2fcf9f8\sprUnitBudgetArticles.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\spUnitCities.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\spUnitConformityArticles.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\PlannedWork.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\PlannedWorkOISI.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\PlannedRent.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\PlannedTransport.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\PlannedFieldContentment.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\PlannedManualValue.dfm */
+/* W:\Desktop\GitHub\GPIR\sprUnitBudgetArticles.dfm */
+/* W:\Desktop\GitHub\GPIR\spUnitCities.dfm */
+/* W:\Desktop\GitHub\GPIR\spUnitConformityArticles.dfm */
+/* W:\Desktop\GitHub\GPIR\PlannedWork.dfm */
+/* W:\Desktop\GitHub\GPIR\PlannedWorkOISI.dfm */
+/* W:\Desktop\GitHub\GPIR\PlannedRent.dfm */
+/* W:\Desktop\GitHub\GPIR\PlannedTransport.dfm */
+/* W:\Desktop\GitHub\GPIR\PlannedFieldContentment.dfm */
+/* W:\Desktop\GitHub\GPIR\PlannedManualValue.dfm */
 /* C:\Program Files\DevExpress VCL\ExpressSpreadSheet\Sources\cxSSDesigner.dfm */
 /* C:\Program Files\DevExpress VCL\ExpressSpreadSheet\Sources\cxSSheet.res */
-/* C:\todenvolkov-GPIR-2fcf9f8\XLS1CImport.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\Files.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\XLSImportUnit.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\PlannedTrips.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\PlannedTripsShift.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\sprUnitDivisions.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\sprUnitEmployees.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\sprUnitFieldContentment.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\sprUnitGroups.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\sprUnitContracts.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\sprUnitPosts.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\sprUnitMeasures.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\sprUnitConformityPosts.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\sprUnitCostResiding.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\sprUnitCostTrip.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\sprUnitDirections.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\sprUnitPlaceResidense.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\sprUnitSectors.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\sprUnitTypesTransport.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\sprUnitTypesWork.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\spUnitDailyAllowances.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\Users.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\NewTask.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\Tasks.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\PlannedWorkSelect.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\PlannedWorkOISISelect.dfm */
+/* W:\Desktop\GitHub\GPIR\XLS1CImport.dfm */
+/* W:\Desktop\GitHub\GPIR\Files.dfm */
+/* W:\Desktop\GitHub\GPIR\XLSImportUnit.dfm */
+/* W:\Desktop\GitHub\GPIR\PlannedTrips.dfm */
+/* W:\Desktop\GitHub\GPIR\PlannedTripsShift.dfm */
+/* W:\Desktop\GitHub\GPIR\sprUnitDivisions.dfm */
+/* W:\Desktop\GitHub\GPIR\sprUnitEmployees.dfm */
+/* W:\Desktop\GitHub\GPIR\sprUnitFieldContentment.dfm */
+/* W:\Desktop\GitHub\GPIR\sprUnitGroups.dfm */
+/* W:\Desktop\GitHub\GPIR\sprUnitContracts.dfm */
+/* W:\Desktop\GitHub\GPIR\sprUnitPosts.dfm */
+/* W:\Desktop\GitHub\GPIR\sprUnitMeasures.dfm */
+/* W:\Desktop\GitHub\GPIR\sprUnitConformityPosts.dfm */
+/* W:\Desktop\GitHub\GPIR\sprUnitCostResiding.dfm */
+/* W:\Desktop\GitHub\GPIR\sprUnitCostTrip.dfm */
+/* W:\Desktop\GitHub\GPIR\sprUnitDirections.dfm */
+/* W:\Desktop\GitHub\GPIR\sprUnitPlaceResidense.dfm */
+/* W:\Desktop\GitHub\GPIR\sprUnitSectors.dfm */
+/* W:\Desktop\GitHub\GPIR\sprUnitTypesTransport.dfm */
+/* W:\Desktop\GitHub\GPIR\sprUnitTypesWork.dfm */
+/* W:\Desktop\GitHub\GPIR\spUnitDailyAllowances.dfm */
+/* W:\Desktop\GitHub\GPIR\Roles.dfm */
+/* W:\Desktop\GitHub\GPIR\Users.dfm */
+/* W:\Desktop\GitHub\GPIR\NewTask.dfm */
+/* W:\Desktop\GitHub\GPIR\Tasks.dfm */
+/* W:\Desktop\GitHub\GPIR\PlannedWorkSelect.dfm */
+/* W:\Desktop\GitHub\GPIR\PlannedWorkOISISelect.dfm */
 /* c:\program files\embarcadero\rad studio\8.0\lib\Win32\release\DBGrids.res */
-/* C:\todenvolkov-GPIR-2fcf9f8\BudgetOrgFlow.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\ArticleToBudget.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\PlannedRentSelect.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\PlannedTransportSelect.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\PlannedManualValueSelect.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\PlannedTripsSelect.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\PlannedTripsShiftSelect.dfm */
+/* W:\Desktop\GitHub\GPIR\BudgetOrgFlow.dfm */
+/* W:\Desktop\GitHub\GPIR\ArticleToBudget.dfm */
+/* W:\Desktop\GitHub\GPIR\PlannedRentSelect.dfm */
+/* W:\Desktop\GitHub\GPIR\PlannedTransportSelect.dfm */
+/* W:\Desktop\GitHub\GPIR\PlannedManualValueSelect.dfm */
+/* W:\Desktop\GitHub\GPIR\PlannedTripsSelect.dfm */
+/* W:\Desktop\GitHub\GPIR\PlannedTripsShiftSelect.dfm */
 /* C:\Program Files\DevExpress VCL\ExpressPivotGrid\Sources\cxPivotGridAdvancedCustomization.DFM */
 /* C:\Program Files\DevExpress VCL\ExpressPivotGrid\Sources\cxCustomPivotGrid.res */
 /* C:\Program Files\DevExpress VCL\ExpressPrinting System\Sources\dxPScxPivotGridLnk.dfm */
 /* C:\Program Files\DevExpress VCL\ExpressPrinting System\Sources\dxPScxPivotGridLnk.res */
-/* C:\todenvolkov-GPIR-2fcf9f8\ArticleToBudgetExt.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\Options.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\Sessions.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\History.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\Stages.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\StageXLSImport.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\PlannedSubcontract.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\Reports.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\Main.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\Hint.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\TreeUnit.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\Budgets.dfm */
-/* C:\todenvolkov-GPIR-2fcf9f8\ProjectX7.res */
-/* C:\todenvolkov-GPIR-2fcf9f8\ProjectX7.drf */
+/* W:\Desktop\GitHub\GPIR\ArticleToBudgetExt.dfm */
+/* W:\Desktop\GitHub\GPIR\Options.dfm */
+/* W:\Desktop\GitHub\GPIR\Sessions.dfm */
+/* W:\Desktop\GitHub\GPIR\History.dfm */
+/* W:\Desktop\GitHub\GPIR\Stages.dfm */
+/* W:\Desktop\GitHub\GPIR\StageXLSImport.dfm */
+/* W:\Desktop\GitHub\GPIR\PlannedSubcontract.dfm */
+/* W:\Desktop\GitHub\GPIR\Reports.dfm */
+/* W:\Desktop\GitHub\GPIR\Main.dfm */
+/* W:\Desktop\GitHub\GPIR\Hint.dfm */
+/* W:\Desktop\GitHub\GPIR\TreeUnit.dfm */
+/* W:\Desktop\GitHub\GPIR\Budgets.dfm */
+/* W:\Desktop\GitHub\GPIR\ProjectX7.res */
+/* W:\Desktop\GitHub\GPIR\ProjectX7.drf */

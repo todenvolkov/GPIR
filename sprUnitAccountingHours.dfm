@@ -1,11 +1,11 @@
 inherited SprFormAccountingHours: TSprFormAccountingHours
-  Left = 573
-  Top = 202
+  Left = 576
+  Top = 204
   Caption = #1057#1087#1088#1072#1074#1086#1095#1085#1080#1082' "'#1050#1072#1083#1100#1082#1091#1083#1103#1094#1080#1080'"'
   ClientHeight = 488
   ClientWidth = 786
-  ExplicitLeft = 573
-  ExplicitTop = 202
+  ExplicitLeft = 576
+  ExplicitTop = 204
   ExplicitWidth = 794
   ExplicitHeight = 515
   PixelsPerInch = 96
@@ -13,7 +13,7 @@ inherited SprFormAccountingHours: TSprFormAccountingHours
   inherited dxStatusBar1: TdxStatusBar
     Top = 469
     Width = 786
-    ExplicitTop = 426
+    ExplicitTop = 469
     ExplicitWidth = 786
   end
   inherited Panel1: TPanel
@@ -24,13 +24,13 @@ inherited SprFormAccountingHours: TSprFormAccountingHours
     Width = 786
     Height = 381
     ExplicitWidth = 786
-    ExplicitHeight = 377
+    ExplicitHeight = 381
     inherited Panel3: TPanel
       Height = 381
-      ExplicitHeight = 375
+      ExplicitHeight = 381
       inherited cxGrid3: TcxGrid
         Height = 381
-        ExplicitHeight = 375
+        ExplicitHeight = 381
         inherited cxGrid3DBTableView1: TcxGridDBTableView
           Styles.Background = nil
           Styles.Content = nil
@@ -52,12 +52,12 @@ inherited SprFormAccountingHours: TSprFormAccountingHours
     inherited Panel4: TPanel
       Left = 686
       Height = 381
-      ExplicitLeft = 580
-      ExplicitHeight = 375
+      ExplicitLeft = 686
+      ExplicitHeight = 381
       inherited cxGrid2: TcxGrid
         Height = 381
         LookAndFeel.SkinName = ''
-        ExplicitHeight = 375
+        ExplicitHeight = 381
         inherited cxGridDBTableView1: TcxGridDBTableView
           OptionsView.CellAutoHeight = False
           Styles.Background = nil
@@ -80,14 +80,14 @@ inherited SprFormAccountingHours: TSprFormAccountingHours
     inherited Panel5: TPanel
       Width = 570
       Height = 381
-      ExplicitWidth = 331
-      ExplicitHeight = 375
+      ExplicitWidth = 570
+      ExplicitHeight = 381
       inherited cxGrid1: TcxGrid
         Width = 570
         Height = 381
         LookAndFeel.SkinName = ''
-        ExplicitWidth = 331
-        ExplicitHeight = 375
+        ExplicitWidth = 570
+        ExplicitHeight = 381
         inherited cxGrid1DBTableView1: TcxGridDBTableView
           Styles.Background = nil
           Styles.Content = nil
@@ -125,13 +125,13 @@ inherited SprFormAccountingHours: TSprFormAccountingHours
     end
     inherited LeftSplitter: TcxSplitter
       Height = 381
-      ExplicitHeight = 375
+      ExplicitHeight = 381
     end
     inherited RightSplitter: TcxSplitter
       Left = 678
       Height = 381
-      ExplicitLeft = 572
-      ExplicitHeight = 375
+      ExplicitLeft = 678
+      ExplicitHeight = 381
     end
   end
   inherited Panel6: TPanel
@@ -152,6 +152,7 @@ inherited SprFormAccountingHours: TSprFormAccountingHours
   end
   inherited TopSplitter: TcxSplitter
     Width = 786
+    ExplicitWidth = 786
   end
   inherited ADOQuery1: TADOQuery
     SQL.Strings = (

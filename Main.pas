@@ -183,6 +183,8 @@ type
     TabMenu: TPopupMenu;
     N1: TMenuItem;
     cxStyle40: TcxStyle;
+    cxStyle41: TcxStyle;
+    cxStyle42: TcxStyle;
     procedure SprFormAccountingHoursShowExecute(Sender: TObject);
     procedure Action5Execute(Sender: TObject);
     procedure Action3Execute(Sender: TObject);
@@ -239,7 +241,6 @@ type
     procedure ActExitExecute(Sender: TObject);
     procedure ActArticleToBudgetExecute(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
-    procedure XLSImportExecute(Sender: TObject);
     procedure ImageButton2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure ActFilesExecute(Sender: TObject);
@@ -285,6 +286,7 @@ type
     Search: string;
     ExclusiveMode: Boolean;
     GetCloseRequest: Boolean;
+    AltAuthorized: Boolean;
     procedure LoginTrue(WinAuth: Boolean);
     procedure GetBudgetInfo;
     procedure DoActualInterface;
@@ -382,6 +384,20 @@ begin
       'Tag with column collation when possible', '');
     MainConnection.ConnectionString := s;
     Search :=  ini.ReadString('App', 'Search', '');
+    if ini.ReadString('App', 'AltAuthorize', '0') = '' then
+      begin
+       AltAuthorized := False;
+      end else
+          begin
+            if ini.ReadString('App', 'AltAuthorize', '0') = '1' then
+              begin
+                AltAuthorized := True;
+              end else
+                  begin
+                    AltAuthorized := False;
+                  end;
+          end;
+
     ini.WriteString('App','WorkPath', GetCurrentDir);
   finally
     ini.Free;
@@ -1690,12 +1706,6 @@ begin
   ExportGridToExcel(filepath, Grid, True, True, True, 'xls');
     ShellExecute(0,'open',pchar(filepath),PChar(ExtractFileDir(Application.ExeName)),'',SW_SHOW);
 
-end;
-
-procedure TMainForm.XLSImportExecute(Sender: TObject);
-begin
-  XLSImportForm.Visible:=true;
-  XLSImportForm.BringToFront;
 end;
 
 procedure TMainForm.PlanGetRecordCount(Query: TADOQuery; Plan: string; PlanForm: TForm);

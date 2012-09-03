@@ -51,6 +51,8 @@ type
     procedure TestLoad1CTotal;
     procedure TestLoadKASTotal;
     procedure LoadKASTotal;
+    procedure TestLoad1CCalc;
+    procedure Load1CCalc;
   public
     { Public declarations }
     Operation: string;
@@ -91,6 +93,10 @@ begin
   if Operation = 'KASTotal' then
     begin
       LoadKASTotal;
+    end;
+  if Operation = '1CCalc' then
+    begin
+      Load1CCalc;
     end;
 end;
 
@@ -141,7 +147,12 @@ begin
       YearSpin.Visible := False;
       MonthsCombo.Visible := False;
     end;
-
+  if Operation = '1CCalc' then
+    begin
+      Caption := 'Загрузка калькуляции из Excel';
+      YearSpin.Visible := False;
+      MonthsCombo.Visible := False;
+    end;
   //TopSplitter.CloseSplitter;
   DataBeginsCol := 0;
   DataBeginsRow := 0;
@@ -217,6 +228,11 @@ begin
     begin
       TestLoadKASTotal;
     end;
+  if Operation = '1CCalc' then
+    begin
+      TestLoad1CCalc;
+    end;
+
 end;
 
 procedure TXLS1CImportForm.Load1C;
@@ -280,12 +296,12 @@ begin
       begin
         FilesForm.FileToBase(OpenDialog1.FileName, 'Затраты из &1С');
         FilesForm.N11.Click;
-        {try
+        try
           MainForm.Query.Close;
-          MainForm.Query.SQL.Text := 'exec RestExpensesProcessing';
+          MainForm.Query.SQL.Text := 'exec FactValues1CProcessing';
           MainForm.Query.Open;
         except
-        end; }
+        end;
       end;
   end;
 end;
@@ -1951,6 +1967,169 @@ begin
           MainForm.Query.Open;
         except
         end;
+      end;
+  end;
+end;
+
+
+procedure TXLS1CImportForm.TestLoad1CCalc;
+var XL: TXLSReadWriteII4;
+    CurString: Variant;
+    i,j: Integer;
+
+    ErrorCount: Integer;
+begin
+  try
+    xl := TXLSReadWriteII4.create(nil);
+    xl.Filename := OpenDialog1.FileName;
+    xl.Read;
+    cxProgressBar1.Properties.Min := DataBeginsRow;
+    cxProgressBar1.Properties.Max := XL.Sheets[0].LastRow;
+
+    CurString := Trim(StringReplace(xl.Sheets[0].AsString[DataBeginsCol,DataBeginsRow],',','.',[rfReplaceAll]));
+    if CurString = 'отдел/статья' then
+      LogInfo(RichEdit,'Начало файла определено правильно')
+    else begin
+      LogError(RichEdit,'Начало файла определено НЕправильно');
+      Inc(ErrorCount);
+      TopSplitter.OpenSplitter;
+      Exit;
+    end;
+
+    ErrorCount := 0;
+
+    for i := DataBeginsCol + 1 to XL.Sheets[0].LastCol do
+      begin
+        CurString := Trim(xl.Sheets[0].AsString[i,DataBeginsRow]);
+        OpenParamsQ(AdoQuery1,'exec Excel1CCalcTest :Code, :CodeType', [CurString, 'Article']);
+        if AdoQuery1.FieldByName('ResultValue').AsString = 'None' then
+          begin
+            LogError(RichEdit,'Статья с кодом ' + CurString + ' не найдена.');
+            Inc(ErrorCount);
+        end;
+      end;
+
+    for i := DataBeginsRow + 1 to XL.Sheets[0].LastRow do
+      begin
+        CurString := Trim(xl.Sheets[0].AsString[DataBeginsCol,i]);
+        if Copy(CurString,1,1) = '!' then
+          begin
+            OpenParamsQ(AdoQuery1,'exec Excel1CCalcTest :Code, :CodeType', [Copy(CurString, 2, Length(CurString)-1), 'Depart']);
+            if AdoQuery1.FieldByName('ResultValue').AsString = 'None' then
+              begin
+                LogError(RichEdit,'Отдел с кодом ' + Copy(CurString, 2, Length(CurString)-1) + ' не найден.');
+                Inc(ErrorCount);
+              end;
+          end else
+          begin
+            OpenParamsQ(AdoQuery1,'exec Excel1CCalcTest :Code, :CodeType', [CurString, 'Post']);
+            if AdoQuery1.FieldByName('ResultValue').AsString = 'None' then
+              begin
+                LogError(RichEdit,'Категория специалиста с кодом ' + CurString + ' не найдена.');
+                Inc(ErrorCount);
+              end;
+          end;
+      end;
+
+    for i := DataBeginsRow + 1 to XL.Sheets[0].LastRow do
+      begin
+        for j := DataBeginsCol + 1 to XL.Sheets[0].LastCol do
+          begin
+            CurString := Trim(xl.Sheets[0].AsString[j,i]);
+            if CurString = '' then
+              begin
+                LogError(RichEdit,'Строка'+IntToStr(i)+', значение калькуляции '+IntToStr((j))+ ' = ' + ' пустая ячейка');
+                Inc(ErrorCount);
+                TopSplitter.OpenSplitter;
+              end;
+          end;
+      end;
+
+  finally
+    xl.Free;
+    if ErrorCount = 0 then
+      begin
+        DownLoadBtn.Enabled := True;
+        LogInfo(RichEdit,'Загрузка доступна.');
+      end else
+      begin
+        DownloadBtn.Enabled := False;
+        LogError(RichEdit,'Загрузка будет возможна после исправления файла.');
+      end;
+
+  end;
+end;
+
+procedure TXLS1CImportForm.Load1CCalc;
+var XL: TXLSReadWriteII4;
+    CurString: Variant;
+    i,j: Integer;
+
+    ErrorCount: Integer;
+    DepartmentCode, PostCode, ArticleCode: string;
+begin
+  try
+    xl := TXLSReadWriteII4.create(nil);
+    xl.Filename := OpenDialog1.FileName;
+    xl.Read;
+    cxProgressBar1.Properties.Min := DataBeginsRow;
+    cxProgressBar1.Properties.Max := XL.Sheets[0].LastRow;
+
+    CurString := Trim(StringReplace(xl.Sheets[0].AsString[DataBeginsCol,DataBeginsRow],',','.',[rfReplaceAll]));
+    if CurString = 'отдел/статья' then
+      LogInfo(RichEdit,'Начало файла определено правильно')
+    else begin
+      LogError(RichEdit,'Начало файла определено НЕправильно');
+      Inc(ErrorCount);
+      TopSplitter.OpenSplitter;
+      Exit;
+    end;
+
+    ErrorCount := 0;
+
+    for i := DataBeginsRow to XL.Sheets[0].LastRow do
+      begin
+        for j := DataBeginsCol to XL.Sheets[0].LastCol do
+          begin
+            CurString := Trim(xl.Sheets[0].AsString[j,i]);
+            if CurString <> '' then
+              begin
+
+                if (j = DataBeginsCol) and (i <> DataBeginsRow) then
+                  begin
+                    if Copy(CurString,1,1)= '!' then
+                      begin
+                        DepartmentCode := Copy(CurString, 2, Length(CurString)-1);
+                      end else
+                      begin
+                        PostCode := CurString;
+                      end;
+                  end;
+
+                if (j <> DataBeginsCol) and (i <> DataBeginsRow) then
+                  begin
+                    ArticleCode := Trim(xl.Sheets[0].AsString[j,DataBeginsRow]);
+                    if (DepartmentCode <> '') and (PostCode <> '') and (ArticleCode <> '') then
+                      begin
+                        OpenParamsQ(Adoquery1,'exec UpdateAccountingHours2 :Value, :BudgetArticleGUID, :DepartmentGUID, :PostGUID',
+                        [DepartmentCode, PostCode, ArticleCode, CurString]);
+                      end;
+                  end;
+
+              end;
+          end;
+
+            cxProgressBar1.Position := cxProgressBar1.Position + 1;
+            cxProgressBar1.Repaint;
+            Application.ProcessMessages;
+      end;
+
+  finally
+    xl.Free;
+    if FilesForm <> nil then
+      begin
+        FilesForm.FileToBase(OpenDialog1.FileName, 'Калькуляции');
+        FilesForm.N2.Click;
       end;
   end;
 end;

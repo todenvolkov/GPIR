@@ -1,43 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.195,=C:\LastBuild\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.453,=C:\LastBuild\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.500,=C:\LastBuild\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.531,=C:\LastBuild\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.656,=C:\LastBuild\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.984,=C:\LastBuild\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.734,=C:\LastBuild\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.890,=C:\LastBuild\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.292,=C:\LastBuild\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.984,=C:\LastBuild\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.656,=C:\LastBuild\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.640,C:\LastBuild\History.pas=C:\LastBuild\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.890,=C:\LastBuild\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.796,C:\LastBuild\Unit1.pas=C:\LastBuild\Stages.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.453,=C:\LastBuild\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.093,C:\LastBuild\Unit1.pas=C:\LastBuild\Reports.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.500,=C:\LastBuild\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.718,=C:\LastBuild\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.546,=C:\LastBuild\WorkWithExcel.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.796,C:\LastBuild\Unit1.dfm=C:\LastBuild\Stages.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.093,C:\LastBuild\Unit1.dfm=C:\LastBuild\Reports.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.733,=W:\Desktop\GitHub\GPIR\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.260,C:\LastBuild\Hint.dfm=C:\LastBuild\Unit1.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.203,C:\LastBuild\PlannedSubcontract.pas=C:\LastBuild\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.140,C:\LastBuild\Unit1.dfm=C:\LastBuild\StageXLSImport.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.280,W:\Desktop\GitHub\GPIR\Roles.dfm=W:\Desktop\GitHub\GPIR\Unit1.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.375,C:\LastBuild\Options.dfm=C:\LastBuild\Unit1.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.640,C:\LastBuild\History.pas=C:\LastBuild\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.093,C:\LastBuild\Unit1.dfm=C:\LastBuild\Reports.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.140,C:\LastBuild\Unit1.dfm=C:\LastBuild\StageXLSImport.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.796,C:\LastBuild\Unit1.dfm=C:\LastBuild\Stages.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.793,C:\LastBuild\Unit1.dfm=C:\LastBuild\NewTask.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.718,=C:\LastBuild\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.260,C:\LastBuild\Hint.pas=C:\LastBuild\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.640,C:\LastBuild\History.dfm=C:\LastBuild\Unit1.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.375,C:\LastBuild\Options.pas=C:\LastBuild\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.484,C:\LastBuild\Sessions.pas=C:\LastBuild\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.203,C:\LastBuild\PlannedSubcontract.dfm=C:\LastBuild\Unit1.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.703,C:\LastBuild\Stages.pas=</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.984,C:\LastBuild\Stages.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.260,C:\LastBuild\Hint.pas=C:\LastBuild\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.484,C:\LastBuild\Sessions.dfm=C:\LastBuild\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.484,C:\LastBuild\Sessions.pas=C:\LastBuild\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.609,C:\LastBuild\Stages.pas=C:\LastBuild\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.812,C:\LastBuild\Stages.pas=C:\LastBuild\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.140,C:\LastBuild\Unit1.pas=C:\LastBuild\StageXLSImport.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.796,C:\LastBuild\Unit1.pas=C:\LastBuild\Stages.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.390,=C:\LastBuild\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.515,=C:\LastBuild\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.093,C:\LastBuild\Unit1.pas=C:\LastBuild\Reports.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.812,C:\LastBuild\Stages.dfm=C:\LastBuild\Unit1.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.484,C:\LastBuild\Sessions.dfm=C:\LastBuild\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.984,C:\LastBuild\Stages.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.280,W:\Desktop\GitHub\GPIR\Roles.pas=W:\Desktop\GitHub\GPIR\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.703,C:\LastBuild\Stages.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.531,=C:\LastBuild\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.793,C:\LastBuild\Unit1.pas=C:\LastBuild\NewTask.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.195,=C:\LastBuild\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.390,=C:\LastBuild\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.140,C:\LastBuild\Unit1.pas=C:\LastBuild\StageXLSImport.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.812,C:\LastBuild\Stages.dfm=C:\LastBuild\Unit1.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.609,C:\LastBuild\Stages.dfm=C:\LastBuild\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.375,C:\LastBuild\Options.pas=C:\LastBuild\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.734,=C:\LastBuild\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.515,=C:\LastBuild\Unit1.pas</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="ArticleToBudget.pas"/>
@@ -169,5 +172,7 @@
     <File Path="Hint.pas"/>
     <File Path="Hint.dfm"/>
     <File Path="WorkWithExcel.pas"/>
+    <File Path="Roles.pas"/>
+    <File Path="Roles.dfm"/>
   </ProjectSortOrder>
 </BorlandProject>

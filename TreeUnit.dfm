@@ -1,6 +1,6 @@
 object TreeForm: TTreeForm
-  Left = 332
-  Top = 225
+  Left = 380
+  Top = 259
   ActiveControl = cxTreeList1
   BorderStyle = bsSizeToolWin
   Caption = #1053#1072#1074#1080#1075#1072#1090#1086#1088

@@ -67,7 +67,8 @@ uses
   Reports in 'Reports.pas' {ReportsForm},
   NewTask in 'NewTask.pas' {NewTaskForm},
   Hint in 'Hint.pas' {HintForm},
-  WorkWithExcel in 'WorkWithExcel.pas';
+  WorkWithExcel in 'WorkWithExcel.pas',
+  Roles in 'Roles.pas' {RolesForm};
 
 {$R *.res}
 
@@ -84,6 +85,7 @@ begin
   Application.CreateForm(TReportsForm, ReportsForm);
   Application.CreateForm(TNewTaskForm, NewTaskForm);
   Application.CreateForm(THintForm, HintForm);
+  Application.CreateForm(TRolesForm, RolesForm);
   //Application.CreateForm(TStagesForm, StagesForm);
   Application.CreateForm(TStageXLSImportForm, StageXLSImportForm);
   //Application.CreateForm(TPlannedSubcontractForm, PlannedSubcontractForm);

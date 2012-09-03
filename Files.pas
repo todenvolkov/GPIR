@@ -302,8 +302,9 @@ end;
 
 procedure TFilesForm.N1Click(Sender: TObject);
 begin
-  XLSImportForm.Show;
-  XLSImportForm.OpenBtn.Click;
+  XLS1CImportForm.Operation := '1CCalc';
+  XLS1CImportForm.Show;
+  XLS1CImportForm.OpenBtn.Click;
 end;
 
 procedure TFilesForm.N2Click(Sender: TObject);

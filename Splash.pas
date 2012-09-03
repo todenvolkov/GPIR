@@ -67,6 +67,8 @@ begin
   Label3.Caption := sUserName;
   Label1.Caption:= 'Версия: ' + FileVersion(Application.ExeName);
   MainForm.WindowsAccount := sUserName;
+
+  Label4.Visible := MainForm.AltAuthorized;
   //ShowLoad;
 end;
 

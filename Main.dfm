@@ -1,6 +1,6 @@
 object MainForm: TMainForm
-  Left = 365
-  Top = 434
+  Left = 514
+  Top = 160
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = #1055#1088#1086#1077#1082#1090' '#1061'7'
   ClientHeight = 43
@@ -432,37 +432,30 @@ object MainForm: TMainForm
     end
     object ActPlannedWorkSelect: TAction
       Caption = #1042#1099#1073#1088#1072#1090#1100' '#1087#1083#1072#1085' '#1090#1088#1091#1076#1086#1079#1072#1090#1088#1072#1090
-      Visible = False
       OnExecute = ActPlannedWorkSelectExecute
     end
     object ActPlannedWorkOISISelect: TAction
       Caption = #1042#1099#1073#1088#1072#1090#1100' '#1087#1083#1072#1085' '#1090#1088#1091#1076#1086#1079#1072#1090#1088#1072#1090' '#1054#1048#1057#1048
-      Visible = False
       OnExecute = ActPlannedWorkOISISelectExecute
     end
     object ActPlannedRentSelect: TAction
       Caption = #1042#1099#1073#1088#1072#1090#1100' '#1087#1083#1072#1085' '#1072#1088#1077#1085#1076#1099
-      Visible = False
       OnExecute = ActPlannedRentSelectExecute
     end
     object ActPlannedTransportSelect: TAction
       Caption = #1042#1099#1073#1088#1072#1090#1100' '#1087#1083#1072#1085' '#1090#1088#1072#1085#1089#1087#1086#1088#1090#1072
-      Visible = False
       OnExecute = ActPlannedTransportSelectExecute
     end
     object ActPlannedManualValueSelect: TAction
       Caption = #1042#1099#1073#1088#1072#1090#1100' '#1092#1086#1088#1084#1091' '#1088#1091#1095#1085#1086#1075#1086' '#1074#1074#1086#1076#1072
-      Visible = False
       OnExecute = ActPlannedManualValueSelectExecute
     end
     object ActPlannedTripsSelect: TAction
       Caption = #1042#1099#1073#1088#1072#1090#1100' '#1087#1083#1072#1085' '#1082#1086#1084#1072#1085#1076#1080#1088#1086#1074#1086#1082
-      Visible = False
       OnExecute = ActPlannedTripsSelectExecute
     end
     object ActPlannedTripsShiftSelect: TAction
       Caption = #1042#1099#1073#1088#1072#1090#1100' '#1087#1083#1072#1085' '#1082#1086#1084#1072#1085#1076#1080#1088#1086#1074#1086#1082' - '#1074#1072#1093#1090#1072
-      Visible = False
       OnExecute = ActPlannedTripsShiftSelectExecute
     end
     object ActTaskOut: TAction
@@ -488,7 +481,6 @@ object MainForm: TMainForm
     object XLSImport: TAction
       Category = #1060#1072#1081#1083
       Caption = #1047#1072#1075#1088#1091#1079#1082#1072' '#1082#1072#1083#1100#1082#1091#1083#1103#1094#1080#1081' '#1080#1079' Excel'
-      OnExecute = XLSImportExecute
     end
     object ActFiles: TAction
       Caption = #1047#1072#1075#1088#1091#1079#1082#1080
@@ -12340,7 +12332,7 @@ object MainForm: TMainForm
     end
     object cxStyle27: TcxStyle
       AssignedValues = [svColor, svFont, svTextColor]
-      Color = clWhite
+      Color = clRed
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
       Font.Height = -11
@@ -12423,6 +12415,14 @@ object MainForm: TMainForm
     object cxStyle40: TcxStyle
       AssignedValues = [svColor]
       Color = 15790320
+    end
+    object cxStyle41: TcxStyle
+      AssignedValues = [svColor]
+      Color = clWhite
+    end
+    object cxStyle42: TcxStyle
+      AssignedValues = [svColor]
+      Color = clWhite
     end
     object GridTableViewStyleSheetDevExpress: TcxGridTableViewStyleSheet
       Caption = 'DevExpress'
