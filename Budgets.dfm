@@ -507,9 +507,9 @@ object BudgetsForm: TBudgetsForm
     end
     object btnAddBudgetVersion: TcxButton
       AlignWithMargins = True
-      Left = 31
+      Left = 133
       Top = 4
-      Width = 18
+      Width = 130
       Height = 33
       Align = alLeft
       Caption = #1055#1083#1072#1085#1086#1074#1099#1081' '#1073#1102#1076#1078#1077#1090
@@ -519,12 +519,13 @@ object BudgetsForm: TBudgetsForm
       PaintStyle = bpsCaption
       TabOrder = 0
       Visible = False
+      ExplicitLeft = 31
     end
     object cxButton4: TcxButton
       AlignWithMargins = True
-      Left = 55
+      Left = 269
       Top = 4
-      Width = 18
+      Width = 124
       Height = 33
       Align = alLeft
       Caption = #1050#1086#1087#1080#1088#1086#1074#1072#1090#1100
@@ -534,12 +535,13 @@ object BudgetsForm: TBudgetsForm
       PaintStyle = bpsCaption
       TabOrder = 1
       Visible = False
+      ExplicitLeft = 55
     end
     object cxButton1: TcxButton
       AlignWithMargins = True
-      Left = 79
+      Left = 399
       Top = 4
-      Width = 18
+      Width = 100
       Height = 33
       Align = alLeft
       Caption = #1047#1072#1082#1088#1099#1090#1100' '#1073#1102#1076#1078#1077#1090
@@ -549,12 +551,14 @@ object BudgetsForm: TBudgetsForm
       PaintStyle = bpsCaption
       TabOrder = 2
       Visible = False
+      ExplicitLeft = 201
+      ExplicitTop = 3
     end
     object cxButton2: TcxButton
       AlignWithMargins = True
       Left = 4
       Top = 4
-      Width = 21
+      Width = 123
       Height = 33
       Align = alLeft
       Caption = #1056#1072#1089#1095#1077#1090
@@ -845,7 +849,7 @@ object BudgetsForm: TBudgetsForm
       PrinterPage.PageSize.Y = 297000
       PrinterPage._dxMeasurementUnits_ = 0
       PrinterPage._dxLastMU_ = 2
-      ReportDocument.CreationDate = 41134.411291956020000000
+      ReportDocument.CreationDate = 41159.827745497680000000
       OptionsCards.AutoWidth = True
       OptionsExpanding.ExpandGroupRows = True
       OptionsExpanding.ExpandMasterRows = True

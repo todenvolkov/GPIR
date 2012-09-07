@@ -237,7 +237,7 @@ end;
 
 procedure TXLS1CImportForm.Load1C;
 var XL: TXLSReadWriteII4;
-    CellValue: Variant;
+    CellValue,x: Variant;
     i,j: Integer;
 begin
   try
@@ -264,9 +264,13 @@ begin
             MainForm.Query.SQL.Text := 'exec FactValues1CAddOrChange :ArticleCode1C, :ArticleCode, :ArticleName,' +
                                        ':DepartmentCode, :DepartmentName, :ContractCode, :ContractName,' +
                                        ':DateCost, :FactValue';
+                                       x:='';
             for j := DataBeginsCol to XL.Sheets[0].LastCol do
               begin
                 CellValue := Trim(xl.Sheets[0].AsString[j,i]);
+              //  X:=X+'; '+CellValue;
+                //TODO: Сделать проверку когда отсутствует более 1 параметра (пустые) - значит строка левая и надо выдать
+              //  номер ошибки!
                 //LogInfo(RichEdit,'Строка'+IntToStr(i)+', колонка '+IntToStr((j))+ ' = ' + CellValue);
                 if j = DataBeginsCol then MainForm.Query.Parameters.ParamByName('ArticleCode1C').Value := CellValue;
                 if j = DataBeginsCol + 1 then MainForm.Query.Parameters.ParamByName('ArticleCode').Value := CellValue;
@@ -282,6 +286,9 @@ begin
                     MainForm.Query.Parameters.ParamByName('FactValue').Value := StrToFloat(CellValue);
                   end;
               end;
+             // LogInfo(RichEdit,x);
+     //       Mainform.Query.Prepared:=true;
+         //   mainform.Query.Parameters.ParseSQL(MainForm.Query.SQL.Text,true);
 
             MainForm.Query.ExecSQL;
 

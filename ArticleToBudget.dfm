@@ -1,6 +1,6 @@
 object ArticleToBudgetForm: TArticleToBudgetForm
-  Left = 593
-  Top = 409
+  Left = 594
+  Top = 410
   Caption = #1057#1087#1088#1072#1074#1086#1095#1085#1080#1082
   ClientHeight = 442
   ClientWidth = 856
@@ -851,7 +851,7 @@ object ArticleToBudgetForm: TArticleToBudgetForm
       PrinterPage.PageSize.Y = 297000
       PrinterPage._dxMeasurementUnits_ = 0
       PrinterPage._dxLastMU_ = 2
-      ReportDocument.CreationDate = 41110.584139351850000000
+      ReportDocument.CreationDate = 41159.834844155090000000
       OptionsCards.AutoWidth = True
       OptionsExpanding.ExpandGroupRows = True
       OptionsExpanding.ExpandMasterRows = True

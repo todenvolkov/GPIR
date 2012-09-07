@@ -1,10 +1,10 @@
 object MainForm: TMainForm
-  Left = 514
-  Top = 160
+  Left = 515
+  Top = 161
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = #1055#1088#1086#1077#1082#1090' '#1061'7'
   ClientHeight = 43
-  ClientWidth = 675
+  ClientWidth = 916
   Color = clBtnFace
   TransparentColorValue = clWhite
   Constraints.MaxHeight = 70
@@ -23,7 +23,7 @@ object MainForm: TMainForm
   object Panel1: TPanel
     Left = 0
     Top = 23
-    Width = 675
+    Width = 916
     Height = 20
     Align = alClient
     BevelOuter = bvNone
@@ -32,7 +32,7 @@ object MainForm: TMainForm
     object TabSet: TTabSet
       Left = 0
       Top = -1
-      Width = 675
+      Width = 916
       Height = 21
       Hint = 'What a fuck'
       Align = alBottom
@@ -55,7 +55,7 @@ object MainForm: TMainForm
   object ActionMainMenuBar1: TActionMainMenuBar
     Left = 0
     Top = 0
-    Width = 675
+    Width = 916
     Height = 23
     UseSystemFont = False
     ActionManager = ActionManager
@@ -177,6 +177,37 @@ object MainForm: TMainForm
           end
           item
             Action = ActNumberContracts
+          end
+          item
+            Items = <
+              item
+                Action = ActArticleToBudget
+              end
+              item
+                Action = ActPlannedWork
+              end
+              item
+                Action = ActPlannedWorkOISI
+              end
+              item
+                Action = ActPlannedRent
+              end
+              item
+                Action = ActPlannedTransport
+              end
+              item
+                Action = ActPlannedDailyAllowance
+              end
+              item
+                Action = ActPlannedManualValue
+              end
+              item
+                Action = ActPlannedTrips
+              end
+              item
+                Action = ActPlannedTripsShift
+              end>
+            Caption = #1060#1086#1088#1084#1099' '#1074#1074#1086#1076#1072
           end
           item
             Action = ActBudgets

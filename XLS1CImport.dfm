@@ -1,6 +1,6 @@
 object XLS1CImportForm: TXLS1CImportForm
-  Left = 780
-  Top = 534
+  Left = 536
+  Top = 343
   Caption = #1047#1072#1075#1088#1091#1079#1082#1072' '#1092#1072#1082#1090#1080#1095#1077#1089#1082#1080#1093' '#1079#1072#1090#1088#1072#1090' '#1080#1079' 1'#1057' (Excel)'
   ClientHeight = 389
   ClientWidth = 672
@@ -69,6 +69,7 @@ object XLS1CImportForm: TXLS1CImportForm
     PositionAfterOpen = 50
     ResizeUpdate = True
     Control = Panel3
+    ExplicitWidth = 8
   end
   object BudgetPanel: TPanel
     Left = 0
@@ -225,6 +226,7 @@ object XLS1CImportForm: TXLS1CImportForm
     OptionsDialog.RecalcBeforeSave = False
     OptionsDialog.Uncalced = False
     OptionsDialog.SaveRecalc = True
+    OptionsDialog.RightToLeft = False
     BookProtected = False
     Backup = False
     RefreshAll = False
@@ -233,7 +235,7 @@ object XLS1CImportForm: TXLS1CImportForm
     ShowFormulas = False
     IsMac = False
     PreserveMacros = True
-    ComponentVersion = '4.00.52a'
+    ComponentVersion = '4.00.60a'
     MSOPictures = <>
     RecomendReadOnly = False
     TempFileMode = tfmOnDisk

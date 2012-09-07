@@ -1,6 +1,6 @@
 object ArticleToBudgetExtForm: TArticleToBudgetExtForm
-  Left = 471
-  Top = 300
+  Left = 472
+  Top = 301
   Caption = 'ArticleToBudgetExtForm'
   ClientHeight = 515
   ClientWidth = 1025
