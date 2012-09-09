@@ -447,6 +447,7 @@ end;
 procedure TNumbersContractsForm.QueryAfterPost(DataSet: TDataSet);
 begin
   RL.RecordControlID := DataSet.FieldByName('ID').AsInteger;
+ // Не вызываем пересчет дат (создание месяцев) так как оно делается в триггере
 end;
 
 procedure TNumbersContractsForm.QueryBeforePost(DataSet: TDataSet);

@@ -111,17 +111,13 @@ object ReportsForm: TReportsForm
     Top = 49
     Width = 341
     Height = 111
-    ActivePage = TabSheet2
+    ActivePage = TabSheet4
     Align = alClient
     Style = tsFlatButtons
     TabOrder = 1
     object TabSheet1: TTabSheet
       Caption = 'TabSheet1'
       TabVisible = False
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Label1: TLabel
         Left = 0
         Top = 0
@@ -142,7 +138,13 @@ object ReportsForm: TReportsForm
         Properties.KeyFieldNames = 'GUID'
         Properties.ListColumns = <
           item
-            FieldName = 'TotalName'
+            FieldName = 'CodeNumber'
+          end
+          item
+            FieldName = 'Version'
+          end
+          item
+            FieldName = 'ContractName'
           end>
         Properties.ListOptions.ShowHeader = False
         Properties.ListSource = BudgetDS
@@ -174,7 +176,18 @@ object ReportsForm: TReportsForm
         Properties.KeyFieldNames = 'GUID'
         Properties.ListColumns = <
           item
-            FieldName = 'TotalName'
+            Caption = #1064#1080#1092#1088' '#1087#1088#1086#1077#1082#1090#1072
+            Width = 200
+            FieldName = 'CodeNumber'
+          end
+          item
+            Caption = #1042#1077#1088#1089#1080#1103' '#1073#1102#1076#1078#1077#1090#1072
+            FieldName = 'Version'
+          end
+          item
+            Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' '#1087#1088#1086#1077#1082#1090#1072
+            Width = 200
+            FieldName = 'ContractName'
           end>
         Properties.ListOptions.ShowHeader = False
         Properties.ListSource = BudgetDS
@@ -186,14 +199,10 @@ object ReportsForm: TReportsForm
       Caption = 'TabSheet3'
       ImageIndex = 2
       TabVisible = False
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Label3: TLabel
         Left = 0
         Top = 0
-        Width = 330
+        Width = 333
         Height = 39
         Align = alTop
         Caption = 
@@ -201,6 +210,7 @@ object ReportsForm: TReportsForm
           #1089#1082#1086#1084' '#1091#1082#1072#1078#1080#1090#1077' '#1084#1077#1089#1103#1094' '#1080' '#1075#1086#1076'. '#1042#1099#1087#1086#1083#1085#1103#1077#1090#1089#1103' '#1087#1086' '#1074#1089#1077#1084' '#1085#1077' '#1079#1072#1082#1088#1099#1090#1099#1084' '#1076#1086#1075#1086#1074#1086 +
           #1088#1072#1084'.'
         WordWrap = True
+        ExplicitWidth = 330
       end
       object YearSpin: TcxSpinEdit
         Left = 85
@@ -236,14 +246,10 @@ object ReportsForm: TReportsForm
       Caption = 'TabSheet4'
       ImageIndex = 3
       TabVisible = False
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Label4: TLabel
         Left = 0
         Top = 0
-        Width = 331
+        Width = 333
         Height = 39
         Align = alTop
         Caption = 
@@ -251,6 +257,7 @@ object ReportsForm: TReportsForm
           #1077#1088#1077#1076' '#1079#1072#1087#1091#1089#1082#1086#1084' '#1091#1082#1072#1078#1080#1090#1077' '#1084#1077#1089#1103#1094' '#1080' '#1075#1086#1076'. '#1042#1099#1087#1086#1083#1085#1103#1077#1090#1089#1103' '#1087#1086' '#1074#1089#1077#1084' '#1085#1077' '#1079#1072#1082#1088#1099#1090 +
           #1099#1084' '#1076#1086#1075#1086#1074#1086#1088#1072#1084'.'
         WordWrap = True
+        ExplicitWidth = 331
       end
       object cxSpinEdit1: TcxSpinEdit
         Left = 85
@@ -361,6 +368,7 @@ object ReportsForm: TReportsForm
     OptionsDialog.RecalcBeforeSave = False
     OptionsDialog.Uncalced = False
     OptionsDialog.SaveRecalc = True
+    OptionsDialog.RightToLeft = False
     BookProtected = False
     Backup = False
     RefreshAll = False
@@ -369,7 +377,7 @@ object ReportsForm: TReportsForm
     ShowFormulas = False
     IsMac = False
     PreserveMacros = True
-    ComponentVersion = '4.00.52a'
+    ComponentVersion = '4.00.60a'
     MSOPictures = <>
     RecomendReadOnly = False
     TempFileMode = tfmOnDisk
@@ -398,8 +406,12 @@ object ReportsForm: TReportsForm
     Top = 8
   end
   object BudgetQ: TADOQuery
+    Active = True
     Connection = MainForm.MainConnection
+    CursorType = ctStatic
     Parameters = <>
+    SQL.Strings = (
+      'exec BudgetsForReportsShow')
     Left = 64
     Top = 64
   end

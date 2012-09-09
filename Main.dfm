@@ -602,6 +602,10 @@ object MainForm: TMainForm
   end
   object MainConnection: TADOConnection
     CommandTimeout = 15
+    Connected = True
+    ConnectionString = 
+      'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
+      'fo=False;Initial Catalog=apir;Data Source=server'
     ConnectionTimeout = 10
     CursorLocation = clUseServer
     IsolationLevel = ilReadUncommitted

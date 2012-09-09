@@ -363,6 +363,8 @@ procedure TPlannedSubcontractForm.WorkQAfterPost(DataSet: TDataSet);
 begin
   MainForm.PlanGetRecordCount(MainForm.Query, 'PlannedSubcontract', PlannedSubcontractForm);
   RL.RecordControlID := DataSet.FieldByName('ID').AsInteger;
+  // А почему бы не переместить эту обработку в триггер, как у numbercontracts
+
   if QueryState = 0 then
     begin
       try

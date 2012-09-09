@@ -63,7 +63,7 @@ var
   DataBeginsCol, DataBeginsRow: Integer;
 
 implementation
-     uses Main, Common;
+     uses Main, Common, routines;
 {$R *.dfm}
 
 procedure TXLS1CImportForm.DownloadBtnClick(Sender: TObject);
@@ -676,9 +676,8 @@ begin
         FilesForm.FileToBase(OpenDialog1.FileName, 'Принято ПИР');
         FilesForm.FilesKAS1.Click;
         try
-          MainForm.Query.Close;
-          MainForm.Query.SQL.Text := 'exec FactKASAcceptedProcessing';
-          MainForm.Query.Open;
+          Openq(Mainform.Query,'exec FactKASAcceptedProcessing',true);
+
         except
         end;
       end;
